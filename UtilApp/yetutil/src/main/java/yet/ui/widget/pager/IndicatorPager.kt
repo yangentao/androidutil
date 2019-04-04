@@ -11,20 +11,7 @@ import android.widget.RelativeLayout
 import yet.ext.AGRAY
 import yet.ext.GRAY
 import yet.log.logd
-import yet.ui.ext.CenterHorizontal
-import yet.ui.ext.HeightWrap
-import yet.ui.ext.LParam
-import yet.ui.ext.ParentBottom
-import yet.ui.ext.RParam
-import yet.ui.ext.WidthFill
-import yet.ui.ext.Wrap
-import yet.ui.ext.genId
-import yet.ui.ext.gone
-import yet.ui.ext.margins
-import yet.ui.ext.padding
-import yet.ui.ext.scaleCenterCrop
-import yet.ui.ext.scaleCenterInside
-import yet.ui.ext.size
+import yet.ui.ext.*
 import yet.ui.res.D
 import yet.ui.res.Shapes
 import yet.ui.res.sized
@@ -35,176 +22,179 @@ import yet.util.MyTimer
 import yet.util.Task
 
 class IndicatorPager(context: Context) : RelativeLayout(context) {
-	val pointSize: Int = 8
-	val adapter = ViewPagerAdapter()
-	val viewPager = MyViewPager(context)
-	val indicatorLayout: LinearLayout
+    val pointSize: Int = 8
+    val adapter = ViewPagerAdapter()
+    val viewPager = MyViewPager(context)
+    val indicatorLayout: LinearLayout
+    var imageScaleType: ImageView.ScaleType = ImageView.ScaleType.FIT_XY
 
-	var onNewView: (Context, Int) -> View = { c, _ ->
-		val v = c.createImageView()
-		v.scaleCenterCrop()
-		v
-	}
-	var onDestroyItem: (View, Int) -> Unit = { _, _ -> }
+    var onNewView: (Context, Int) -> View = { c, _ ->
+        val v = c.createImageView()
+        v.scaleType = imageScaleType
+        v
+    }
+    var onDestroyItem: (View, Int) -> Unit = { _, _ -> }
 
-	var onPageClick: (View, Int) -> Unit = { _, _ -> }
+    var onPageClick: (View, Int) -> Unit = { _, _ -> }
 
-	var dotColor = AGRAY(180, 150)
-	var dotLightColor = GRAY(255)
+    var dotColor = AGRAY(180, 150)
+    var dotLightColor = GRAY(255)
 
-	var timer: MyTimer = MyTimer()
-
-	init {
-		genId()
-		addView(viewPager, RParam.WidthFill.HeightWrap)
-		indicatorLayout = linearHor(RParam.Wrap.CenterHorizontal.ParentBottom) {
-			padding(10)
-		}
+    var timer: MyTimer = MyTimer()
 
 
-		adapter.onNewView = { c, n ->
-			this@IndicatorPager.onNewView(c, n)
-		}
-		adapter.onPageClick = { v, n ->
-			this@IndicatorPager.onPageClick(v, n)
-		}
-		adapter.onDestroyItem = { v, n ->
-			this@IndicatorPager.onDestroyItem(v, n)
-		}
-
-		adapter.registerDataSetObserver(object : DataSetObserver() {
-			override fun onChanged() {
-				bind()
-			}
-
-			override fun onInvalidated() {
-
-			}
-		})
-		viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
-			override fun onPageScrollStateChanged(state: Int) {
-
-			}
-
-			override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-			}
-
-			override fun onPageSelected(position: Int) {
-				selectIndicator(position)
-			}
-		})
-		viewPager.adapter = adapter
-
-		viewPager.onUserTouch = {
-			this@IndicatorPager.onUserTouch()
-		}
-
-	}
-
-	val tm = MyTimer {
-		timer.paused = false
-	}
-
-	fun onUserTouch() {
-		logd("用户按下")
-		timer.paused = true
-		tm.cancel()
-		tm.schedule(20000)
-	}
-
-	private fun bind() {
-		indicatorLayout.removeAllViews()
-		for (i in 0 until adapter.count) {
-			indicatorLayout.imageView(LParam.size(pointSize).margins(pointSize / 2, 0, pointSize / 2, 0)) {
-				val d1 = Shapes.oval { fillColor = dotColor}
-				val d2 = Shapes.oval { fillColor = dotLightColor}
-				val d = D.light(d1, d2).sized(pointSize)
-				setImageDrawable(d)
-				scaleCenterInside()
-			}
-		}
-		if (adapter.count > 0) {
-			selectIndicator(getCurrentPage())
-		}
-	}
-
-	fun hideIndicatorView() {
-		indicatorLayout.gone()
-	}
-
-	fun setCurrentPage(n: Int, smooth: Boolean) {
-		viewPager.setCurrentItem(n, smooth)
-	}
-
-	fun getCurrentPage(): Int {
-		return viewPager.currentItem
-	}
-
-	fun setDrawableItems(ls: List<Drawable>) {
-		setImageItems(ls) { v, item ->
-			v.setImageDrawable(item as Drawable)
-		}
-	}
-
-	fun setImageResItems(ls: List<Int>) {
-		setImageItems(ls) { v, item ->
-			v.setImageResource(item as Int)
-		}
-	}
+    init {
+        genId()
+        addView(viewPager, RParam.WidthFill.HeightWrap)
+        indicatorLayout = linearHor(RParam.Wrap.CenterHorizontal.ParentBottom) {
+            padding(10)
+        }
 
 
-	fun setImageItems(ls: List<Any>, block: (ImageView, Any) -> Unit) {
-		onNewView = { c, p ->
-			val v = c.createImageView()
-			v.scaleCenterCrop()
-			block(v, getItem(p))
-			v
-		}
-		setItems(ls)
-	}
+        adapter.onNewView = { c, n ->
+            this@IndicatorPager.onNewView(c, n)
+        }
+        adapter.onPageClick = { v, n ->
+            this@IndicatorPager.onPageClick(v, n)
+        }
+        adapter.onDestroyItem = { v, n ->
+            this@IndicatorPager.onDestroyItem(v, n)
+        }
 
-	fun setViewItems(ls: List<View>) {
-		onNewView = { _, p ->
-			getItem(p) as View
-		}
-		setItems(ls)
-	}
+        adapter.registerDataSetObserver(object : DataSetObserver() {
+            override fun onChanged() {
+                bind()
+            }
 
-	fun setItems(ls: List<Any>) {
-		adapter.setItems(ls)
-	}
+            override fun onInvalidated() {
 
-	fun getCount(): Int {
-		return adapter.count
-	}
+            }
+        })
+        viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {
 
-	fun getItem(position: Int): Any {
-		return adapter.getItem(position)
-	}
+            }
 
-	private fun selectIndicator(p: Int) {
-		for (i in 0 until indicatorLayout.childCount) {
-			indicatorLayout.getChildAt(i).isSelected = i == p
-		}
-	}
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+            }
 
-	private fun timerCallback() {
-		Task.fore {
-			val c = adapter.count
-			val n = viewPager.currentItem
-			viewPager.setCurrentItem((n + 1) % c, true)
-		}
-	}
+            override fun onPageSelected(position: Int) {
+                selectIndicator(position)
+            }
+        })
+        viewPager.adapter = adapter
 
-	fun startFlip(period: Long) {
-		timer.callback = {
-			timerCallback()
-		}
-		timer.repeat(period)
-	}
+        viewPager.onUserTouch = {
+            this@IndicatorPager.onUserTouch()
+        }
 
-	fun stopFlip() {
-		timer.cancel()
-	}
+    }
+
+    val tm = MyTimer {
+        timer.paused = false
+    }
+
+    fun onUserTouch() {
+        logd("用户按下")
+        timer.paused = true
+        tm.cancel()
+        tm.schedule(20000)
+    }
+
+    private fun bind() {
+        indicatorLayout.removeAllViews()
+        for (i in 0 until adapter.count) {
+            indicatorLayout.imageView(LParam.size(pointSize).margins(pointSize / 2, 0, pointSize / 2, 0)) {
+                val d1 = Shapes.oval { fillColor = dotColor }
+                val d2 = Shapes.oval { fillColor = dotLightColor }
+                val d = D.light(d1, d2).sized(pointSize)
+                setImageDrawable(d)
+                this.scaleCenterInside()
+
+            }
+        }
+        if (adapter.count > 0) {
+            selectIndicator(getCurrentPage())
+        }
+    }
+
+    fun hideIndicatorView() {
+        indicatorLayout.gone()
+    }
+
+    fun setCurrentPage(n: Int, smooth: Boolean) {
+        viewPager.setCurrentItem(n, smooth)
+    }
+
+    fun getCurrentPage(): Int {
+        return viewPager.currentItem
+    }
+
+    fun setDrawableItems(ls: List<Drawable>) {
+        setImageItems(ls) { v, item ->
+            v.setImageDrawable(item as Drawable)
+        }
+    }
+
+    fun setImageResItems(ls: List<Int>) {
+        setImageItems(ls) { v, item ->
+            v.setImageResource(item as Int)
+        }
+    }
+
+
+    fun setImageItems(ls: List<Any>, block: (ImageView, Any) -> Unit) {
+        onNewView = { c, p ->
+            val v = c.createImageView()
+            v.scaleType = imageScaleType
+            block(v, getItem(p))
+            v
+        }
+        setItems(ls)
+    }
+
+    fun setViewItems(ls: List<View>) {
+        onNewView = { _, p ->
+            getItem(p) as View
+        }
+        setItems(ls)
+    }
+
+    fun setItems(ls: List<Any>) {
+        adapter.setItems(ls)
+    }
+
+    fun getCount(): Int {
+        return adapter.count
+    }
+
+    fun getItem(position: Int): Any {
+        return adapter.getItem(position)
+    }
+
+    private fun selectIndicator(p: Int) {
+        for (i in 0 until indicatorLayout.childCount) {
+            indicatorLayout.getChildAt(i).isSelected = i == p
+        }
+    }
+
+    private fun timerCallback() {
+        Task.fore {
+            val c = adapter.count
+            val n = viewPager.currentItem
+            viewPager.setCurrentItem((n + 1) % c, true)
+        }
+    }
+
+    fun startFlip(period: Long) {
+        timer.callback = {
+            timerCallback()
+        }
+        timer.repeat(period)
+    }
+
+    fun stopFlip() {
+        timer.cancel()
+    }
 }
 
