@@ -23,7 +23,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.3"
+        versionName "1.0.0"
 
         //multiDexEnabled true
     }
@@ -76,7 +76,7 @@ artifacts {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: 'http://app800.cn/maven/repository/maven-releases/') {
+            repository(url: 'http://app800.cn/maven/repository/releases/') {
                 authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
             }
             pom.artifactId = "yetutil"
