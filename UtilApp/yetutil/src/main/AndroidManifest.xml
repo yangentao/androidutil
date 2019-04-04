@@ -40,8 +40,12 @@
         </receiver>
 
         <receiver android:name="yet.util.app.NotifyReceiver">
-
         </receiver>
+        <provider
+                android:name="yet.util.app.FileProv"
+                android:authorities="${applicationId}.files"
+                android:grantUriPermissions="true"
+                android:exported="false"/>
     </application>
 
 </manifest>

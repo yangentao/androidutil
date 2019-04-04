@@ -22,7 +22,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.4.2711"
+        versionName "1.0.5.2711"
     }
 
     buildTypes {
@@ -46,7 +46,7 @@ dependencies {
     implementation 'com.amap.api:map2d:5.2.0'
     implementation 'com.amap.api:search:5.7.0'
     implementation 'com.amap.api:location:3.8.0'
-    implementation 'dev.entao:yetutil:1.0.4.2711'
+    implementation 'dev.entao:yetutil:1.0.5.2711'
 //    implementation project(':yetutil')
 }
 

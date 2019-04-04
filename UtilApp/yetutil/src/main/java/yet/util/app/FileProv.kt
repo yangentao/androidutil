@@ -16,7 +16,7 @@ import yet.sql.MapTable
 import java.io.File
 import java.io.FileNotFoundException
 
-class FileProvider : ContentProvider() {
+class FileProv : ContentProvider() {
 
     override fun onCreate(): Boolean {
         return true

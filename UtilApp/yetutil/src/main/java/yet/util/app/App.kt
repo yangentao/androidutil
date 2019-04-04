@@ -290,7 +290,7 @@ object App {
         val apkUri = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
             Uri.fromFile(file)
         } else {
-            FileProvider.uriOfFile(file)
+            FileProv.uriOfFile(file)
         }
         val intent = Intent(Intent.ACTION_VIEW)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
