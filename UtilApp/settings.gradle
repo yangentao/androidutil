@@ -1,1 +1,1 @@
-include ':app', ':yetutil'
+include ':app', ':yetutil', ':qrlib', ':gaode'
