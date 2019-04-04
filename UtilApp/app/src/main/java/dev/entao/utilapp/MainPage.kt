@@ -2,6 +2,7 @@ package dev.entao.utilapp
 
 import android.content.Context
 import android.widget.LinearLayout
+import yet.ui.dialogs.alert
 import yet.ui.page.TitlePage
 
 class MainPage : TitlePage() {
@@ -10,6 +11,9 @@ class MainPage : TitlePage() {
         super.onCreateContent(context, contentView)
         titleBar {
             title("Hello")
+            actionText("Hello").onClick = {
+                alert("Messsage", "Title")
+            }
         }
     }
 }
