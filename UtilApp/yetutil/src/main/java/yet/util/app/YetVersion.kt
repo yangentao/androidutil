@@ -34,7 +34,7 @@ class YetVersion(val jo: YsonObject) {
         }
 
     companion object {
-        var SERVER = "http://47.104.75.15"
+        var SERVER = "http://app800.cn"
         val SERVER_CHECK: String get() = SERVER.trimEnd('/') + "/apps/check"
         val SERVER_DOWN: String get() = SERVER.trimEnd('/') + "/apps/res/download"
         var CHECK_HOURS = 4 //最多每4小时检查一次
