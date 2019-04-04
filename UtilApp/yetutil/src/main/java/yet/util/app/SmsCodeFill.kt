@@ -1,3 +1,5 @@
+@file:Suppress("UNUSED_PARAMETER")
+
 package yet.util.app
 
 import android.net.Uri

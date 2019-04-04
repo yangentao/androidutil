@@ -22,7 +22,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.3.2711"
+        versionName "1.0.4.2711"
     }
 
     buildTypes {
@@ -42,10 +42,11 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'dev.entao:yetutil:1.0.3.2711'
+    implementation 'dev.entao:yetutil:1.0.4.2711'
+//    implementation project(':yetutil')
 }
 
 

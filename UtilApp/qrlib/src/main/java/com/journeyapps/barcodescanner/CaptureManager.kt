@@ -1,3 +1,5 @@
+@file:Suppress("UNUSED_PARAMETER")
+
 package com.journeyapps.barcodescanner
 
 import android.Manifest

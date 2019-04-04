@@ -11,7 +11,7 @@ class MainPage : TitlePage() {
         super.onCreateContent(context, contentView)
         titleBar {
             title("Hello")
-            actionText("Hello").onClick = {
+            rightText("Hello").onClick = {
                 alert("Messsage", "Title")
             }
         }

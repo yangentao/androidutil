@@ -9,6 +9,7 @@ import kotlin.reflect.KClass
  */
 
 
+@Suppress("UNCHECKED_CAST")
 fun <T : View> ViewGroup.last(cls: KClass<T>): T? {
 	return this.last {
 		it::class == cls

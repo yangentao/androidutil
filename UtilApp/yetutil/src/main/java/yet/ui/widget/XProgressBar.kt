@@ -74,6 +74,7 @@ class XProgressBar(context: Context) : View(context) {
 		return this
 	}
 
+	@Suppress("DEPRECATION")
 	fun setBackDrawable(drawable: Drawable): XProgressBar {
 		setBackgroundDrawable(drawable)
 		return this

@@ -22,7 +22,7 @@ class DirSelectPage : ListPage() {
 		super.onCreateContent(context, contentView)
 		titleBar {
 			title(file.absolutePath + "/")
-			actionImage(R.drawable.yet_sel_all).onClick = {
+			rightImage(R.drawable.yet_sel_all).onClick = {
 				onValue(file)
 				finish()
 			}

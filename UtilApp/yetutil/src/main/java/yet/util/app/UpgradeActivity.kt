@@ -28,7 +28,7 @@ class UpgradeActivity : TitledActivity(), Progress {
 
     override fun onCreateContent(contentView: LinearLayout) {
         titleBar.title("升级")
-        titleBar.actionText("检查").onClick = {
+        titleBar.rightText("检查").onClick = {
             queryVersion()
         }
         titleBar.showBack().onClick = {

@@ -23,7 +23,7 @@ class FileSelectPage : ListPage() {
 		super.onCreateContent(context, contentView)
 		titleBar {
 			title(dir.absolutePath)
-			actionText(CLEAR).onClick = {
+			rightText(CLEAR).onClick = {
 				onValue(null)
 				finish()
 			}
