@@ -29,8 +29,8 @@ class DialogX(val context: Context) {
     private var titleHeight = 45
     val dlg = Dialog(context, android.R.style.Theme_Holo_Light_Dialog_NoActionBar)
     val dlgParam: WindowManager.LayoutParams = dlg.window?.attributes!!
-    private val rootLayout = context.createLinearVertical()
-    val cardView = CardView(context)
+    val cardView :CardView = CardView(context)
+    private val rootLayout  = context.createLinearVertical()
     var bodyView: View = context.createTextViewB().textColorMajor()
     var bodyViewParam: LinearLayout.LayoutParams = LParam.WidthFill.HeightWrap
     var onDismiss: (DialogX) -> Unit = {}
@@ -60,9 +60,11 @@ class DialogX(val context: Context) {
         cardView.radius = dp(ViewSize.DialogCorner).toFloat()
         cardView.minimumHeight = dp(80)
 //        cardView.minimumWidth = dp(200)
-        cardView.minimumWidth = App.screenWidthPx * 2 / 4
+        val minW = App.screenWidthPx * 2 / 4
+        cardView.minimumWidth = minW
 
         cardView.addView(rootLayout, FParam.WidthFill.HeightWrap)
+        rootLayout.minimumWidth = minW
         rootLayout.divider()
     }
 
