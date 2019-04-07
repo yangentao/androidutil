@@ -23,13 +23,14 @@ import yet.ui.list.SimpleListView
 import yet.ui.viewcreator.*
 import yet.ui.widget.TitleBar
 import yet.util.Task
+import yet.util.app.App
 
 class DialogX(val context: Context) {
     private var titleHeight = 45
-    private val dlg = Dialog(context, android.R.style.Theme_Holo_Light_Dialog_NoActionBar)
-    private val dlgParam: WindowManager.LayoutParams = dlg.window?.attributes!!
+    val dlg = Dialog(context, android.R.style.Theme_Holo_Light_Dialog_NoActionBar)
+    val dlgParam: WindowManager.LayoutParams = dlg.window?.attributes!!
     private val rootLayout = context.createLinearVertical()
-    private val cardView = CardView(context)
+    val cardView = CardView(context)
     var bodyView: View = context.createTextViewB().textColorMajor()
     var bodyViewParam: LinearLayout.LayoutParams = LParam.WidthFill.HeightWrap
     var onDismiss: (DialogX) -> Unit = {}
@@ -58,7 +59,8 @@ class DialogX(val context: Context) {
         cardView.preventCornerOverlap = false
         cardView.radius = dp(ViewSize.DialogCorner).toFloat()
         cardView.minimumHeight = dp(80)
-        cardView.minimumWidth = dp(200)
+//        cardView.minimumWidth = dp(200)
+        cardView.minimumWidth = App.screenWidthPx * 2 / 4
 
         cardView.addView(rootLayout, FParam.WidthFill.HeightWrap)
         rootLayout.divider()
@@ -206,7 +208,7 @@ class DialogX(val context: Context) {
         }
 
         bodyView.minimumHeight = dp(60)
-        bodyView.minimumWidth = dp(240)
+//        bodyView.minimumWidth = dp(240)
         rootLayout.addView(bodyView, bodyViewParam)
 
         if (buttons.isNotEmpty()) {
