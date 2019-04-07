@@ -23,26 +23,32 @@ class YogDir(val logdir: File, val keepDays: Int = 30) : YogPrinter {
         }
     }
 
-    val out: BufferedWriter?
+    private val out: BufferedWriter?
         get() {
             val ff = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
             val ds = ff.format(Date(System.currentTimeMillis()))
             if (ds == dateStr) {
-                return writer
-            } else {
-                writer?.flush()
-                writer?.close()
-                writer = null
+                return makeSureWriter()
             }
+            writer?.flush()
+            writer?.close()
+            writer = null
+
             dateStr = ds
             deleteOldLogs(logdir, keepDays)
+            return makeSureWriter()
+        }
+
+    private fun makeSureWriter(): BufferedWriter? {
+        if (writer == null) {
             try {
                 writer = BufferedWriter(FileWriter(File(logdir, "y$dateStr.log"), true), 20 * 1024)
             } catch (ex: IOException) {
                 ex.printStackTrace()
             }
-            return writer
         }
+        return writer
+    }
 
 
     private fun deleteOldLogs(logdir: File, days: Int) {
@@ -54,6 +60,12 @@ class YogDir(val logdir: File, val keepDays: Int = 30) : YogPrinter {
             }
         }
 
+    }
+
+    override fun uninstall() {
+        writer?.flush()
+        writer?.close()
+        writer = null
     }
 
     override fun flush() {

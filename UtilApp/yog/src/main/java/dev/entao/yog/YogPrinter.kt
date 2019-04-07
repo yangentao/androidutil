@@ -5,6 +5,7 @@ package dev.entao.yog
  */
 
 interface YogPrinter {
-	fun flush()
-	fun printLine(level: LogLevel, msg:String)
+    fun flush()
+    fun printLine(level: LogLevel, msg: String)
+    fun uninstall() {}
 }

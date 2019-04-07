@@ -1,5 +1,7 @@
 package dev.entao.yog
 
+import android.content.Context
+import java.io.File
 import java.io.PrintWriter
 import java.io.StringWriter
 import java.text.SimpleDateFormat
@@ -10,11 +12,26 @@ import java.util.*
  */
 
 object Yog {
-    var printer: YogPrinter? = YogTree(LogcatPrinter)
+
+    private var _printer: YogPrinter? = LogcatPrinter
     var level = LogLevel.DEBUG
 
+    fun init(context: Context) {
+        val d = context.externalCacheDir
+        val ld = File(d, "xlog")
+        if (!ld.exists()) {
+            ld.mkdirs()
+        }
+        setPrinter(YogTree(LogcatPrinter, YogDir(ld)))
+    }
+
+    fun setPrinter(p: YogPrinter) {
+        _printer?.uninstall()
+        _printer = p
+    }
+
     fun flush() {
-        printer?.flush()
+        _printer?.flush()
     }
 
     fun d(vararg args: Any?) {
@@ -27,7 +44,7 @@ object Yog {
 
     fun e(vararg args: Any?) {
         printMessage(LogLevel.ERROR, *args)
-        printer?.flush()
+        _printer?.flush()
     }
 
     fun i(vararg args: Any?) {
@@ -57,7 +74,7 @@ object Yog {
             val s: String = args.joinToString(" ") {
                 toLogString(it)
             }
-            printer?.printLine(level, s)
+            _printer?.printLine(level, s)
         }
     }
 

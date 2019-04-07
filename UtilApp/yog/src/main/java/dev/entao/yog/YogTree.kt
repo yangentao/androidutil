@@ -5,18 +5,24 @@ package dev.entao.yog
  */
 
 class YogTree(vararg ps: YogPrinter) : YogPrinter {
-	val all = ArrayList<YogPrinter>()
+    val all = ArrayList<YogPrinter>()
 
-	init {
-		all += ps
-	}
+    init {
+        all += ps
+    }
 
-	override fun flush() {
-		all.forEach { it.flush() }
-	}
+    override fun flush() {
+        all.forEach { it.flush() }
+    }
 
-	override fun printLine(level: LogLevel, msg: String) {
-		all.forEach { it.printLine(level, msg) }
-	}
+    override fun printLine(level: LogLevel, msg: String) {
+        all.forEach { it.printLine(level, msg) }
+    }
+
+    override fun uninstall() {
+        for (p in all) {
+            p.uninstall()
+        }
+    }
 
 }
