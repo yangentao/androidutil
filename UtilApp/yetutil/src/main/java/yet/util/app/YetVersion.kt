@@ -8,7 +8,6 @@ import yet.sql.MapTable
 import yet.ui.dialogs.DialogX
 import yet.ui.ext.openActivity
 import yet.ui.page.BaseFragment
-import yet.util.MyFiles
 import yet.util.Progress
 import yet.util.Task
 import yet.util.ToastUtil
@@ -117,7 +116,7 @@ class YetVersion(val jo: YsonObject) {
 
         fun download(resId: Int, progress: Progress?): File? {
             val url = Http(YetVersion.SERVER_DOWN).arg("id", resId).buildGetUrl()
-            val f = MyFiles.ex.temp(App.appName + ".apk")
+            val f = App.files.ex.temp(App.appName + ".apk")
             val r = Http(url).download(f, progress)
             if (r.OK) {
                 return f

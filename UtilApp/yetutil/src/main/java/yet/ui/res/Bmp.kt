@@ -11,7 +11,6 @@ import android.util.DisplayMetrics
 import dev.entao.yapp.App
 import yet.ext.closeSafe
 import yet.theme.Colors
-import yet.util.MyFiles
 import yet.util.MySize
 import java.io.File
 import java.io.FileInputStream
@@ -157,7 +156,7 @@ object Bmp {
 	fun compressJpg(from: Uri, maxEdge: Int): File? {
 		val bmp = uri(from, maxEdge, Config.ARGB_8888)
 		if (bmp != null) {
-			val tofile = MyFiles.ex.tempFile(".jpg")
+			val tofile = App.files.ex.tempFile(".jpg")
 			val b = bmp.saveJpg(tofile)
 			if (b && tofile.exists()) {
 				return tofile
@@ -171,7 +170,7 @@ object Bmp {
 	fun compressPng(from: Uri, maxEdge: Int): File? {
 		val bmp = uri(from, maxEdge, Config.ARGB_8888)
 		if (bmp != null) {
-			val tofile = MyFiles.ex.tempFile(".png")
+			val tofile = App.files.ex.tempFile(".png")
 			val b = bmp.savePng(tofile)
 			if (b && tofile.exists()) {
 				return tofile

@@ -1,9 +1,9 @@
 package yet.ext
 
+import dev.entao.ybase.MyDate
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.Node
-import yet.util.MyDate
 import java.io.ByteArrayInputStream
 import java.io.StringWriter
 import java.util.*

@@ -24,6 +24,7 @@ import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
 import dev.entao.yapp.App
+import dev.entao.ybase.MyDate
 import dev.entao.ybase.getValue
 import dev.entao.yog.Yog
 import dev.entao.yog.loge
@@ -269,7 +270,7 @@ open class BaseFragment : Fragment(), MsgListener {
         val onResult = PreferenceManager.OnActivityResultListener { _, resultCode, data ->
             if (resultCode == Activity.RESULT_OK) {
                 if (data != null && data.data != null) {
-                    val outputFile = MyFiles.ex.temp("" + System.currentTimeMillis() + ".jpg")
+                    val outputFile = App.files.ex.temp("" + System.currentTimeMillis() + ".jpg")
                     val bmp = Bmp.uri(data.data, width, Bitmap.Config.ARGB_8888)
                     if (bmp != null) {
                         bmp.saveJpg(outputFile)
@@ -288,7 +289,7 @@ open class BaseFragment : Fragment(), MsgListener {
         val onResult = PreferenceManager.OnActivityResultListener { _, resultCode, data ->
             if (resultCode == Activity.RESULT_OK) {
                 if (data != null && data.data != null) {
-                    val f = MyFiles.ex.tempFile("PNG")
+                    val f = App.files.ex.tempFile("PNG")
                     val bmp = Bmp.uri(data.data, width, Bitmap.Config.ARGB_8888)
                     if (bmp != null) {
                         bmp.savePng(f)
@@ -314,7 +315,7 @@ open class BaseFragment : Fragment(), MsgListener {
 
     fun takePhoto(width: Int, png: Boolean, block: (File) -> Unit) {
         val FMT = if (png) "PNG" else "JPEG"
-        val outputFile = MyFiles.ex.temp("" + System.currentTimeMillis() + "." + FMT)
+        val outputFile = App.files.ex.temp("" + System.currentTimeMillis() + "." + FMT)
         val intent = Intent("android.media.action.IMAGE_CAPTURE")
         intent.putExtra(MediaStore.Images.Media.ORIENTATION, 0)
         var outUri = UriFromSdFile(outputFile)
@@ -322,7 +323,7 @@ open class BaseFragment : Fragment(), MsgListener {
         intent.putExtra("outputFormat", FMT)
         val onResult = PreferenceManager.OnActivityResultListener { _, resultCode, _ ->
             if (resultCode == Activity.RESULT_OK && outputFile.exists()) {
-                val f = MyFiles.ex.tempFile(FMT.toLowerCase())
+                val f = App.files.ex.tempFile(FMT.toLowerCase())
                 val bmp = Bmp.file(outputFile, width, Bitmap.Config.ARGB_8888)
                 if (bmp != null) {
                     if (png) {

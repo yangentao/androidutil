@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import dev.entao.ybase.MyDate
 import yet.ext.RGB
 import yet.theme.Colors
 import yet.theme.IconSize
@@ -15,7 +16,6 @@ import yet.ui.ext.*
 import yet.ui.res.D
 import yet.ui.res.Shapes
 import yet.ui.viewcreator.*
-import yet.util.MyDate
 
 /**
  * Created by entaoyang@163.com on 16/3/13.

@@ -17,7 +17,6 @@ import yet.ui.page.TitlePage
 import yet.ui.res.Res
 import yet.ui.util.TimeDown
 import yet.ui.viewcreator.*
-import yet.util.MyDate
 import yet.util.Task
 import yet.util.ToastUtil
 import java.util.regex.Pattern

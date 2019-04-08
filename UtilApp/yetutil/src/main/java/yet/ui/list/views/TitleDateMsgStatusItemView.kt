@@ -3,6 +3,7 @@ package yet.ui.list.views
 import android.content.Context
 import android.widget.LinearLayout
 import android.widget.TextView
+import dev.entao.ybase.MyDate
 import yet.ext.RGB
 import yet.ui.ext.*
 import yet.ui.res.Shapes
@@ -10,7 +11,6 @@ import yet.ui.viewcreator.createLinearHorizontal
 import yet.ui.viewcreator.createLinearVertical
 import yet.ui.viewcreator.createTextViewB
 import yet.ui.viewcreator.createTextViewC
-import yet.util.MyDate
 
 /**
  * Created by entaoyang@163.com on 16/3/13.

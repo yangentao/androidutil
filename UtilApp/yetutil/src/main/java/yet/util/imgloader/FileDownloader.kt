@@ -1,8 +1,8 @@
 package yet.util.imgloader
 
+import dev.entao.yapp.App
 import yet.net.Http
 import yet.util.MultiHashMap
-import yet.util.MyFiles
 import yet.util.Sleep
 import yet.util.Task
 import java.io.File
@@ -56,7 +56,7 @@ object FileDownloader {
 		if (!processSet.add(url)) {
 			return
 		}
-		val tmp = MyFiles.ex.tempFile()
+		val tmp = App.files.ex.tempFile()
 		val ok = httpDown(url, tmp)
 		if (ok) {
 			ImageLocal.put(url, tmp.absolutePath)
