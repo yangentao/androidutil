@@ -46,6 +46,7 @@ dependencies {
     implementation project(':yog')
     implementation project(':yson')
     implementation project(':base')
+    implementation project(':sql')
 }
 
 task androidSourcesJar(type: Jar) {

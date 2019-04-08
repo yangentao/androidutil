@@ -4,8 +4,8 @@ package dev.entao.sql
 
 import android.util.Log
 import dev.entao.yapp.App
-import dev.entao.ybase.defaultValue
-import dev.entao.ybase.nameProp
+import dev.entao.base.defaultValue
+import dev.entao.base.nameProp
 import dev.entao.yson.YsonArray
 import dev.entao.yson.YsonObject
 import yet.ext.defaultValueOfProperty

@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package dev.entao.ybase
+package dev.entao.base
 
 import kotlin.reflect.KClass
 import kotlin.reflect.KFunction

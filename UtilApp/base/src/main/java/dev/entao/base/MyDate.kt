@@ -1,6 +1,6 @@
 @file:Suppress("unused", "MemberVisibilityCanBePrivate")
 
-package dev.entao.ybase
+package dev.entao.base
 
 import java.text.SimpleDateFormat
 import java.util.*

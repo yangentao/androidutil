@@ -2,9 +2,9 @@
 
 package dev.entao.sql
 
-import dev.entao.ybase.fullNameProp
-import dev.entao.ybase.nameClass
-import dev.entao.ybase.nameProp
+import dev.entao.base.fullNameProp
+import dev.entao.base.nameClass
+import dev.entao.base.nameProp
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
 

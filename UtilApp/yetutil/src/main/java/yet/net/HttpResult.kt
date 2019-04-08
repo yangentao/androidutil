@@ -1,12 +1,12 @@
 package yet.net
 
+import dev.entao.base.closeSafe
 import dev.entao.yog.loge
 import dev.entao.yson.YsonArray
 import dev.entao.yson.YsonObject
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
-import yet.ext.closeSafe
 import yet.ext.notEmpty
 import java.io.File
 import java.io.FileOutputStream

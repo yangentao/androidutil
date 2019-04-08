@@ -1,9 +1,8 @@
 @file:Suppress("unused")
 
 package dev.entao.sql
-import dev.entao.sql.CacheMap
-import dev.entao.ybase.isPublic
-import dev.entao.ybase.nameProp
+import dev.entao.base.isPublic
+import dev.entao.base.nameProp
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty
 import kotlin.reflect.full.memberProperties

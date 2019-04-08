@@ -1,9 +1,9 @@
 package yet.ui.page.input
 
 import android.view.ViewGroup
-import dev.entao.ybase.getValue
-import dev.entao.ybase.labelProp_
-import dev.entao.ybase.nameProp
+import dev.entao.base.getValue
+import dev.entao.base.labelProp_
+import dev.entao.base.nameProp
 import kotlin.reflect.KProperty
 import kotlin.reflect.KProperty0
 

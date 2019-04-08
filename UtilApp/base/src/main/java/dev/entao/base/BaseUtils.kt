@@ -1,4 +1,4 @@
-package dev.entao.ybase
+package dev.entao.base
 
 import java.io.Closeable
 

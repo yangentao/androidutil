@@ -1,7 +1,7 @@
 @file:Suppress("unused", "MemberVisibilityCanBePrivate")
 package dev.entao.yson
 
-import dev.entao.ybase.MyDate
+import dev.entao.base.MyDate
 import java.math.BigDecimal
 import java.math.BigInteger
 

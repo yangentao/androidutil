@@ -1,10 +1,12 @@
 package dev.entao.sql
 
-import dev.entao.ybase.nameClass
-import dev.entao.ybase.nameProp
+import dev.entao.base.getValue
+import dev.entao.base.nameClass
+import dev.entao.base.nameProp
 import kotlin.reflect.KAnnotatedElement
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
+import kotlin.reflect.KProperty0
 import kotlin.reflect.full.findAnnotation
 import kotlin.reflect.jvm.javaField
 
@@ -41,6 +43,14 @@ val KProperty<*>.isPrimaryKey: Boolean
 
 inline fun <reified T : Annotation> KAnnotatedElement.hasAnnotation(): Boolean = null != this.findAnnotation<T>()
 
+
+
+val KProperty0<*>.selectLabel: String
+    get() {
+        val map = this.selectOptionsStatic
+        val v = this.getValue()?.toString() ?: ""
+        return map[v] ?: ""
+    }
 
 val KProperty<*>.selectOptionsStatic: Map<String, String>
     get() {

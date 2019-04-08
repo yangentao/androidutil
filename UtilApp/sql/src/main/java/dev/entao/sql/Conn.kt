@@ -4,9 +4,10 @@ package dev.entao.sql
 
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
-import dev.entao.ybase.*
+import dev.entao.base.*
 import dev.entao.yson.YsonNum
 import dev.entao.yson.YsonObject
+import dev.entao.yson.createYsonModel
 import java.io.Closeable
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty

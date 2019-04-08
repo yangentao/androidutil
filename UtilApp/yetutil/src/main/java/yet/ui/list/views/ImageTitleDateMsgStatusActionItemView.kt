@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import dev.entao.ybase.MyDate
+import dev.entao.base.MyDate
 import yet.ext.RGB
 import yet.theme.Colors
 import yet.theme.IconSize

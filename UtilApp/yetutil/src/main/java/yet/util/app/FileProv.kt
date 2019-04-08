@@ -12,7 +12,7 @@ import android.net.Uri
 import android.os.ParcelFileDescriptor
 import android.provider.OpenableColumns
 import android.webkit.MimeTypeMap
-import yet.sql.MapTable
+import dev.entao.sql.MapTable
 import java.io.File
 import java.io.FileNotFoundException
 

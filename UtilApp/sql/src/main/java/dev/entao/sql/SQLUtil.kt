@@ -3,7 +3,6 @@
 package dev.entao.sql
 
 import dev.entao.yson.*
-import kotlin.reflect.KClass
 
 /**
  * Created by entaoyang@163.com on 2018-07-19.
@@ -36,9 +35,3 @@ fun ysonToMap(yo: YsonObject, map: MutableMap<String, Any?>) {
 
 
 
-@Suppress("UNCHECKED_CAST")
-fun <T> KClass<*>.createYsonModel(argValue: YsonObject): T {
-	val c =
-		this.constructors.first { it.parameters.size == 1 && it.parameters.first().type.classifier == YsonObject::class }
-	return c.call(argValue) as T
-}

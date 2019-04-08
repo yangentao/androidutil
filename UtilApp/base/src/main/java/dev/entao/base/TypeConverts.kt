@@ -1,8 +1,8 @@
 package yet.ext
 
-import dev.entao.ybase.MyDate
-import dev.entao.ybase.fullNameProp
-import dev.entao.ybase.isTypeString
+import dev.entao.base.MyDate
+import dev.entao.base.fullNameProp
+import dev.entao.base.isTypeString
 import kotlin.reflect.KClassifier
 import kotlin.reflect.KProperty
 

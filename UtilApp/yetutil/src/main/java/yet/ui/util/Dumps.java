@@ -3,7 +3,7 @@ package yet.ui.util;
 import android.os.Build;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
-import dev.entao.ybase.MyDate;
+import dev.entao.base.MyDate;
 import dev.entao.yog.Yog;
 
 import java.lang.reflect.Method;

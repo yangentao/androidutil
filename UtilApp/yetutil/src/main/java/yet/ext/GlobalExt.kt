@@ -1,6 +1,6 @@
 package yet.ext
 
-import dev.entao.ybase.closeSafe
+import dev.entao.base.closeSafe
 import java.io.Closeable
 import java.text.Collator
 import java.util.*

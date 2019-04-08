@@ -3,7 +3,7 @@ package yet.ui.res
 import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
 import dev.entao.yapp.App
-import yet.ext.closeSafe
+import dev.entao.base.closeSafe
 import yet.ui.ext.dp
 import java.io.File
 import java.io.FileOutputStream

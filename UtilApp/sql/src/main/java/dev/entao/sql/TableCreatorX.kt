@@ -3,7 +3,7 @@
 package dev.entao.sql
 
 import android.database.sqlite.SQLiteDatabase
-import dev.entao.ybase.*
+import dev.entao.base.*
 import org.jetbrains.annotations.NotNull
 import java.util.*
 import kotlin.reflect.KClass

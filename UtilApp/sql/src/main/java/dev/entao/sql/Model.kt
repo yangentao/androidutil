@@ -4,8 +4,8 @@ package dev.entao.sql
 
 import android.content.ContentValues
 import android.support.annotation.Keep
-import dev.entao.ybase.getValue
-import dev.entao.ybase.nameProp
+import dev.entao.base.getValue
+import dev.entao.base.nameProp
 import dev.entao.yson.Yson
 import dev.entao.yson.YsonObject
 import kotlin.reflect.KMutableProperty

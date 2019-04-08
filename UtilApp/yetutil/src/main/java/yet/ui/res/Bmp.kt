@@ -9,7 +9,7 @@ import android.net.Uri
 import android.support.annotation.DrawableRes
 import android.util.DisplayMetrics
 import dev.entao.yapp.App
-import yet.ext.closeSafe
+import dev.entao.base.closeSafe
 import yet.theme.Colors
 import yet.util.MySize
 import java.io.File

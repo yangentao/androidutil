@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import dev.entao.ybase.MyDate
+import dev.entao.base.MyDate
 import yet.ext.RGB
 import yet.theme.IconSize
 import yet.ui.ext.*

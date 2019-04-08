@@ -3,7 +3,7 @@ package yet.ui.list.views
 import android.content.Context
 import android.widget.LinearLayout
 import android.widget.TextView
-import dev.entao.ybase.MyDate
+import dev.entao.base.MyDate
 import yet.ext.RGB
 import yet.ui.ext.*
 import yet.ui.res.Shapes

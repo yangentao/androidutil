@@ -3,7 +3,7 @@
 package dev.entao.sql
 
 import dev.entao.yapp.App
-import dev.entao.ybase.closeSafe
+import dev.entao.base.closeSafe
 import java.util.*
 
 

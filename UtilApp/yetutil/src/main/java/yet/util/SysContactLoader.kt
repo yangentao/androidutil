@@ -1,9 +1,9 @@
 package yet.util
 
 import android.provider.ContactsContract
+import dev.entao.sql.EQ
+import dev.entao.sql.UriQuery
 import yet.ext.notEmpty
-import yet.sql.EQ
-import yet.sql.UriQuery
 import java.util.*
 
 /**

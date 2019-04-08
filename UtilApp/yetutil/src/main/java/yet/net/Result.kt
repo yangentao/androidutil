@@ -2,7 +2,7 @@ package yet.net
 
 import dev.entao.yson.YsonArray
 import dev.entao.yson.YsonObject
-import yet.ext.createYsonModel
+import dev.entao.yson.createYsonModel
 import kotlin.reflect.KClass
 
 /**

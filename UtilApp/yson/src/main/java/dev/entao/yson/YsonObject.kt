@@ -1,8 +1,8 @@
 @file:Suppress("unused", "MemberVisibilityCanBePrivate")
 package dev.entao.yson
 
-import dev.entao.ybase.defaultValue
-import dev.entao.ybase.nameProp
+import dev.entao.base.defaultValue
+import dev.entao.base.nameProp
 import yet.ext.TextConverts
 import yet.ext.defaultValueOfProperty
 import yet.ext.strToV

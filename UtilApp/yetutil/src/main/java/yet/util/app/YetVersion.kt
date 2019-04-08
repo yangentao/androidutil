@@ -1,10 +1,10 @@
 package yet.util.app
 
 import android.app.Activity
+import dev.entao.sql.MapTable
 import dev.entao.yapp.App
 import dev.entao.yson.YsonObject
 import yet.net.Http
-import yet.sql.MapTable
 import yet.ui.dialogs.DialogX
 import yet.ui.ext.openActivity
 import yet.ui.page.BaseFragment
