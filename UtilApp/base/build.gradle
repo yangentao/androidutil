@@ -45,7 +45,7 @@ uploadArchives {
             repository(url: 'http://app800.cn/maven/repository/releases/') {
                 authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
             }
-            pom.artifactId = "ybase"
+            pom.artifactId = "base"
             pom.groupId = project.group //'dev.entao'
             pom.version = android.defaultConfig.versionName
             pom.packaging = 'aar'

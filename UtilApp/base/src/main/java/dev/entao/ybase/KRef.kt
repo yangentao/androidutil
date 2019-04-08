@@ -157,3 +157,7 @@ val KProperty<*>.isPublic: Boolean get() = this.visibility == KVisibility.PUBLIC
 
 
 
+inline fun <reified T : Any> KClass<T>.createInstance(argCls: KClass<*>, argValue: Any): T {
+    val c = this.constructors.first { it.parameters.size == 1 && it.parameters.first().type.classifier == argCls }
+    return c.call(argValue)
+}
