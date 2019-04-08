@@ -1,7 +1,6 @@
-package yet.util
+package dev.entao.appbase
 
 import android.content.SharedPreferences
-import dev.entao.appbase.App
 
 /**
  *

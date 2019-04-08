@@ -1,5 +1,6 @@
 package yet.util
 
+import dev.entao.pinyin.Spell
 import yet.ext.empty
 
 /**

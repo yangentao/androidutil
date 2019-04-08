@@ -3,6 +3,7 @@ package yet.util
 import android.os.Handler
 import android.os.Looper
 import dev.entao.appbase.App
+import dev.entao.appbase.Prefer
 import dev.entao.base.BlockUnit
 import dev.entao.log.Yog
 import dev.entao.log.loge

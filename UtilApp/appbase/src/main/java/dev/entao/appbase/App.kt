@@ -143,6 +143,8 @@ object App {
             return inst.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         }
 
+    val prefer: Prefer by lazy { Prefer("app_global_prefer") }
+
 
     fun drawable(@DrawableRes resId: Int): Drawable {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

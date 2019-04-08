@@ -35,4 +35,5 @@ dependencies {
     implementation project(':log')
     implementation project(':qr')
     implementation project(':sql')
+    implementation project(':pinyin')
 }

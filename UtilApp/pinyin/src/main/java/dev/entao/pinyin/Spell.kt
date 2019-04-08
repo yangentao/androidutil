@@ -1,4 +1,4 @@
-package yet.util
+package dev.entao.pinyin
 
 /**
  * Created by entaoyang@163.com on 2016-08-06.
