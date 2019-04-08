@@ -1,7 +1,7 @@
 package yet.util.app
 
 import android.content.Intent
-import dev.entao.yog.Yog
+import dev.entao.log.Yog
 import yet.util.Task
 import java.util.*
 

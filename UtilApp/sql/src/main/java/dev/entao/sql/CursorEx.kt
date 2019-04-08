@@ -3,7 +3,7 @@
 package dev.entao.sql
 
 import android.database.Cursor
-import dev.entao.yson.*
+import dev.entao.json.*
 
 //带下划线表示关闭Cursor
 val Cursor.listObject_: List<YsonObject>

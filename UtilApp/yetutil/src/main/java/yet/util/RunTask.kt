@@ -1,6 +1,6 @@
 package yet.util
 
-import dev.entao.yog.Yog
+import dev.entao.log.Yog
 import java.util.*
 
 

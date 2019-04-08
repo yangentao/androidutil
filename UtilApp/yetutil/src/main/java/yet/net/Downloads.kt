@@ -1,7 +1,8 @@
 package yet.net
 
+import dev.entao.base.Progress
+import dev.entao.http.Http
 import yet.util.Msg
-import yet.util.Progress
 import yet.util.TaskQueue
 import java.io.File
 import java.util.*

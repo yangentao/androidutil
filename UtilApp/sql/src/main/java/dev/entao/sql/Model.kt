@@ -6,8 +6,8 @@ import android.content.ContentValues
 import android.support.annotation.Keep
 import dev.entao.base.getValue
 import dev.entao.base.nameProp
-import dev.entao.yson.Yson
-import dev.entao.yson.YsonObject
+import dev.entao.json.Yson
+import dev.entao.json.YsonObject
 import kotlin.reflect.KMutableProperty
 import kotlin.reflect.KProperty
 

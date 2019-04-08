@@ -8,7 +8,7 @@ import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.StateListDrawable
 import android.os.Build
 import android.support.annotation.DrawableRes
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 import net.yet.R
 import yet.ext.RGB
 import yet.theme.Colors

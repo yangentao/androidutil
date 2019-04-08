@@ -1,10 +1,10 @@
 package yet.util
 
 import android.net.Uri
-import dev.entao.base.closeSafe
-import dev.entao.yapp.App
-import dev.entao.yog.loge
-import java.io.*
+import dev.entao.appbase.App
+import dev.entao.log.loge
+import java.io.Closeable
+import java.io.File
 import java.security.MessageDigest
 import java.util.*
 import kotlin.Comparator
@@ -14,9 +14,9 @@ import kotlin.Comparator
  * entaoyang@163.com
  */
 
-typealias BlockUnit = ()->Unit
 
-private val PROGRESS_DELAY = 50
+
+
 
 val debug: Boolean by lazy { App.debug }
 
@@ -85,55 +85,9 @@ fun AND(vararg objs: Any?): Boolean {
 }
 
 
-@Throws(IOException::class)
-fun copyStream(input: InputStream, closeIs: Boolean, os: OutputStream, closeOs: Boolean, total: Int, progress: Progress?) {
-	try {
-		progress?.onProgressStart(total)
 
-		val buf = ByteArray(4096)
-		var pre = System.currentTimeMillis()
-		var recv = 0
 
-		var n = input.read(buf)
-		while (n != -1) {
-			os.write(buf, 0, n)
-			recv += n
-			if (progress != null) {
-				val curr = System.currentTimeMillis()
-				if (curr - pre > PROGRESS_DELAY) {
-					pre = curr
-					progress.onProgress(recv, total, if (total > 0) recv * 100 / total else 0)
-				}
-			}
-			n = input.read(buf)
-		}
-		os.flush()
-		progress?.onProgress(recv, total, if (total > 0) recv * 100 / total else 0)
-	} finally {
-		if (closeIs) {
-			input.closeSafe()
-		}
-		if (closeOs) {
-			os.closeSafe()
-		}
-		progress?.onProgressFinish()
-	}
-}
 
-class SizeStream : OutputStream() {
-	var size = 0
-		private set
-
-	@Throws(IOException::class)
-	override fun write(oneByte: Int) {
-		++size
-	}
-
-	fun incSize(size: Int) {
-		this.size += size
-	}
-
-}
 
 
 fun ByteArray?.prefix(vararg bs: Byte): Boolean {

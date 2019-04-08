@@ -12,7 +12,7 @@ import com.amap.api.services.geocoder.GeocodeSearch
 import com.amap.api.services.geocoder.RegeocodeAddress
 import com.amap.api.services.geocoder.RegeocodeQuery
 import com.amap.api.services.geocoder.RegeocodeResult
-import yet.sql.MapTable
+import dev.entao.sql.MapTable
 import yet.util.Task
 
 object GaoDe {

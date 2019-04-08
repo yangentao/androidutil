@@ -8,7 +8,7 @@ import android.graphics.drawable.StateListDrawable
 import android.net.Uri
 import android.support.annotation.DrawableRes
 import android.util.DisplayMetrics
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 import dev.entao.base.closeSafe
 import yet.theme.Colors
 import yet.util.MySize

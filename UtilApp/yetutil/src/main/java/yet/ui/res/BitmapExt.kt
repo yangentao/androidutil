@@ -2,7 +2,7 @@ package yet.ui.res
 
 import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 import dev.entao.base.closeSafe
 import yet.ui.ext.dp
 import java.io.File

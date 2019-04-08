@@ -7,7 +7,7 @@ import android.net.Uri
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 import yet.ui.ext.leftImage
 import yet.ui.ext.rightImage
 import yet.ui.ext.topImage

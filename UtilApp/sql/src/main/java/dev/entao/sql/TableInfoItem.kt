@@ -2,7 +2,7 @@
 
 package dev.entao.sql
 
-import dev.entao.yson.Yson
+import dev.entao.json.Yson
 
 
 /**

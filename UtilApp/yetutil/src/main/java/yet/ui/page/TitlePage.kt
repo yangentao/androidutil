@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import dev.entao.base.Progress
 import yet.theme.Colors
 import yet.ui.MyColor
 import yet.ui.activities.TabBarActivity
@@ -15,7 +16,6 @@ import yet.ui.viewcreator.createLinearVertical
 import yet.ui.widget.BottomBar
 import yet.ui.widget.TitleBar
 import yet.ui.widget.TopProgressBar
-import yet.util.Progress
 import yet.util.Task
 import yet.util.app.OS
 

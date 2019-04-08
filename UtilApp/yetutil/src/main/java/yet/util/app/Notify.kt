@@ -4,8 +4,8 @@ import android.app.*
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
-import dev.entao.yapp.App
-import dev.entao.yson.YsonObject
+import dev.entao.appbase.App
+import dev.entao.json.YsonObject
 import yet.ext.UriRes
 import yet.ui.res.Bmp
 

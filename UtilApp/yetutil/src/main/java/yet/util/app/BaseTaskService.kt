@@ -2,7 +2,7 @@ package yet.util.app
 
 import android.app.Service
 import android.content.Intent
-import dev.entao.yog.logd
+import dev.entao.log.logd
 import yet.util.IdGen
 import yet.util.RunTask
 import yet.util.TaskQueue

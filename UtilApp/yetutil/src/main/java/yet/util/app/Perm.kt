@@ -3,7 +3,7 @@ package yet.util.app
 import android.app.Activity
 import android.app.Fragment
 import android.os.Build
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 import yet.util.Task
 import java.util.*
 import kotlin.collections.HashMap

@@ -5,7 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.View;
-import dev.entao.yapp.App;
+import dev.entao.appbase.App;
 
 import java.util.ArrayList;
 import java.util.List;

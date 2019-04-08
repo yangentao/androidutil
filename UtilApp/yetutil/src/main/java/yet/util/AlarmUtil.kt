@@ -8,7 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 
 object AlarmUtil {
 

@@ -2,7 +2,7 @@ package yet.util
 
 import android.content.Context
 import android.widget.Toast
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 
 import yet.ui.res.Res
 

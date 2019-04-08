@@ -5,7 +5,7 @@ package dev.entao.sql
 import android.content.ContentUris
 import android.database.Cursor
 import android.net.Uri
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 import java.util.*
 
 /**

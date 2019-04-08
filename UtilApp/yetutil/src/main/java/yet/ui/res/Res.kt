@@ -2,7 +2,7 @@ package yet.ui.res
 
 import android.graphics.drawable.Drawable
 import android.os.Build
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 
 /**
  * Created by entaoyang@163.com on 2016-10-16.

@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
-import dev.entao.yog.Yog
+import dev.entao.log.Yog
 import yet.ext.ARGB
 import yet.ui.ext.*
 import yet.ui.res.Shapes

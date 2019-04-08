@@ -1,6 +1,6 @@
 package dev.entao.utilapp
 
-import dev.entao.yog.logd
+import dev.entao.log.logd
 import yet.ui.widget.TitleBar
 import yet.util.app.YetApp
 

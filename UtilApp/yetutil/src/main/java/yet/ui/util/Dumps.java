@@ -4,7 +4,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import dev.entao.base.MyDate;
-import dev.entao.yog.Yog;
+import dev.entao.log.Yog;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;

@@ -1,6 +1,6 @@
 package yet.ui.widget
 
-import yet.util.Progress
+import dev.entao.base.Progress
 
 /**
  * Created by entaoyang@163.com on 16/6/18.

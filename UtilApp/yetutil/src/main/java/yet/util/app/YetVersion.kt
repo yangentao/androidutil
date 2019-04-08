@@ -1,14 +1,14 @@
 package yet.util.app
 
 import android.app.Activity
+import dev.entao.appbase.App
+import dev.entao.base.Progress
+import dev.entao.http.Http
+import dev.entao.json.YsonObject
 import dev.entao.sql.MapTable
-import dev.entao.yapp.App
-import dev.entao.yson.YsonObject
-import yet.net.Http
 import yet.ui.dialogs.DialogX
 import yet.ui.ext.openActivity
 import yet.ui.page.BaseFragment
-import yet.util.Progress
 import yet.util.Task
 import yet.util.ToastUtil
 import java.io.File
@@ -30,7 +30,7 @@ class YetVersion(val jo: YsonObject) {
 
     val downloadUrl: String
         get() {
-            return Http(YetVersion.SERVER_DOWN).arg("id", resId).buildGetUrl()
+            return Http(SERVER_DOWN).arg("id", resId).buildGetUrl()
         }
 
     companion object {

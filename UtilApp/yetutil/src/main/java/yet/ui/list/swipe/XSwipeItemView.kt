@@ -5,7 +5,7 @@ import android.graphics.Color
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
-import dev.entao.yog.Yog
+import dev.entao.log.Yog
 import yet.theme.Colors
 import yet.ui.ext.*
 import yet.ui.list.views.HorItemView

@@ -8,8 +8,8 @@ import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import dev.entao.sql.MapTable
-import dev.entao.yapp.App
-import dev.entao.yog.logd
+import dev.entao.appbase.App
+import dev.entao.log.logd
 
 class ApkDownReceiver : BroadcastReceiver() {
 

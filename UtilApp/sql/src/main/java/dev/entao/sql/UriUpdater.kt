@@ -4,7 +4,7 @@ package dev.entao.sql
 
 import android.content.ContentValues
 import android.net.Uri
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 
 object UriUpdater {
 	const val _ID = "_id"

@@ -13,8 +13,8 @@ import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
-import dev.entao.yapp.App
-import dev.entao.yson.YsonObject
+import dev.entao.appbase.App
+import dev.entao.json.YsonObject
 import yet.theme.Colors
 import yet.ui.MyColor
 import yet.util.*

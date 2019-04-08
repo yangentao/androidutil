@@ -1,7 +1,7 @@
 package yet.util.imgloader
 
-import dev.entao.yapp.App
-import yet.net.Http
+import dev.entao.appbase.App
+import dev.entao.http.Http
 import yet.util.MultiHashMap
 import yet.util.Sleep
 import yet.util.Task

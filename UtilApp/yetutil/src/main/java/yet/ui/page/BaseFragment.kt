@@ -23,11 +23,11 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 import dev.entao.base.MyDate
 import dev.entao.base.getValue
-import dev.entao.yog.Yog
-import dev.entao.yog.loge
+import dev.entao.log.Yog
+import dev.entao.log.loge
 import yet.theme.Str
 import yet.ui.activities.AnimConf
 import yet.ui.activities.Pages

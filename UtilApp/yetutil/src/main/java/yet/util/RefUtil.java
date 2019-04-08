@@ -1,7 +1,7 @@
 package yet.util;
 
-import dev.entao.yapp.App;
-import dev.entao.yog.Yog;
+import dev.entao.appbase.App;
+import dev.entao.log.Yog;
 
 import java.lang.reflect.*;
 import java.util.Arrays;

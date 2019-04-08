@@ -28,8 +28,11 @@ dependencies {
 //    implementation 'dev.entao:qrlib:1.0.4.2711'
 //    implementation 'dev.entao:gaode:1.0.4.2711'
     implementation project(':yetutil')
-    implementation project(':qrlib')
+    implementation project(':appbase')
+    implementation project(':base')
     implementation project(':gaode')
-    implementation project(':yog')
+    implementation project(':json')
+    implementation project(':log')
+    implementation project(':qr')
     implementation project(':sql')
 }

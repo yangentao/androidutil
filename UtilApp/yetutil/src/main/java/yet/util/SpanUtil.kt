@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.*
-import dev.entao.yapp.App
+import dev.entao.appbase.App
 import yet.ui.util.RoundBackgroundSpan
 
 class SpanUtil(s: String) {

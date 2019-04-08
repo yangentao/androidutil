@@ -5,7 +5,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.text.style.ReplacementSpan;
-import dev.entao.yapp.App;
+import dev.entao.appbase.App;
 
 public class RoundBackgroundSpan extends ReplacementSpan {
 	private int backColor = Color.GRAY;

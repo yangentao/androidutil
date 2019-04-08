@@ -5,7 +5,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
-import dev.entao.yog.Yog
+import dev.entao.log.Yog
 import yet.ext.extraBool
 import yet.ext.extraInt
 import yet.ext.hasBits

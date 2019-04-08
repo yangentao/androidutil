@@ -28,8 +28,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
     implementation project(':base')
-    implementation project(':yapp')
-    implementation project(':yson')
+    implementation project(':appbase')
+    implementation project(':json')
 }
 
 

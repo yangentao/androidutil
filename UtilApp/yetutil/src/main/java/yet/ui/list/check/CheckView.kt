@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.View
 import android.widget.Checkable
 import android.widget.CheckedTextView
-import dev.entao.yog.fatalIf
+import dev.entao.log.fatalIf
 import yet.ui.ext.*
 import yet.ui.list.views.HorItemView
 import yet.ui.res.D

@@ -8,8 +8,8 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteDatabase.CursorFactory
 import android.database.sqlite.SQLiteOpenHelper
 import android.text.TextUtils
-import dev.entao.yson.YsonArray
-import dev.entao.yson.YsonObject
+import dev.entao.json.YsonArray
+import dev.entao.json.YsonObject
 import java.util.concurrent.Callable
 
 class SQLiteHelper(context: Context, name: String, factory: CursorFactory, version: Int) : SQLiteOpenHelper(context, name, factory, version) {

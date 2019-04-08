@@ -41,12 +41,13 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
 //    implementation 'dev.entao:yapp:1.0.0.2711'
-    implementation project(':yapp')
 //    implementation 'dev.entao:yog:1.1.0.2711'
-    implementation project(':yog')
-    implementation project(':yson')
+    implementation project(':log')
     implementation project(':base')
+    implementation project(':appbase')
+    implementation project(':json')
     implementation project(':sql')
+    implementation project(':http')
 }
 
 task androidSourcesJar(type: Jar) {

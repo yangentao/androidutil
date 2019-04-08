@@ -2,7 +2,7 @@ package yet.ui.util
 
 import android.app.Fragment
 import android.app.FragmentManager
-import dev.entao.yog.Yog
+import dev.entao.log.Yog
 import yet.ui.page.BaseFragment
 
 /**

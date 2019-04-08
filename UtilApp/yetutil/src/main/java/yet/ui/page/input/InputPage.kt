@@ -7,7 +7,7 @@ import dev.entao.base.*
 import dev.entao.sql.Required
 import dev.entao.sql.hasAnnotation
 import dev.entao.sql.selectOptionsStatic
-import dev.entao.yog.logd
+import dev.entao.log.logd
 import yet.ext.*
 import yet.theme.Colors
 import yet.theme.ViewSize
