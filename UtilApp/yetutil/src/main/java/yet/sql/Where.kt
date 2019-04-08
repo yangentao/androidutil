@@ -1,6 +1,6 @@
 package yet.sql
 
-import yet.anno.nameProp
+import dev.entao.ybase.nameProp
 import java.util.*
 import kotlin.reflect.KProperty
 

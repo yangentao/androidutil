@@ -2,10 +2,10 @@ package yet.sql
 
 import android.content.ContentValues
 import android.support.annotation.Keep
-import yet.anno.nameProp
-import yet.ext.getValue
-import yet.yson.Yson
-import yet.yson.YsonObject
+import dev.entao.ybase.getValue
+import dev.entao.ybase.nameProp
+import dev.entao.yson.Yson
+import dev.entao.yson.YsonObject
 import kotlin.reflect.KMutableProperty
 import kotlin.reflect.KProperty
 

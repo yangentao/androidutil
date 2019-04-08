@@ -5,9 +5,9 @@ import android.graphics.Color
 import android.support.annotation.DrawableRes
 import android.widget.Button
 import android.widget.LinearLayout
-import yet.anno.labelProp_
-import yet.anno.nameProp
-import yet.ext.getValue
+import dev.entao.ybase.getValue
+import dev.entao.ybase.labelProp_
+import dev.entao.ybase.nameProp
 import yet.theme.Colors
 import yet.ui.ext.*
 import yet.ui.list.views.TextDetailView

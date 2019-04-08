@@ -1,8 +1,8 @@
 package yet.net
 
+import dev.entao.yson.YsonArray
+import dev.entao.yson.YsonObject
 import yet.ext.createYsonModel
-import yet.yson.YsonArray
-import yet.yson.YsonObject
 import kotlin.reflect.KClass
 
 /**

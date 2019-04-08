@@ -1,9 +1,9 @@
 package yet.sql
 
-import yet.anno.nameProp
+import dev.entao.ybase.isPublic
+import dev.entao.ybase.nameProp
 import yet.ext.isExcluded
 import yet.ext.isPrimaryKey
-import yet.ext.isPublic
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty
 import kotlin.reflect.full.memberProperties

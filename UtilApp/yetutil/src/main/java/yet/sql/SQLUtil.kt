@@ -1,6 +1,6 @@
 package yet.sql
 
-import yet.yson.*
+import dev.entao.yson.*
 
 /**
  * Created by entaoyang@163.com on 2018-07-19.

@@ -7,8 +7,8 @@ import android.widget.EditText
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
-import yet.anno.labelProp_
-import yet.ext.getValue
+import dev.entao.ybase.getValue
+import dev.entao.ybase.labelProp_
 import yet.theme.Colors
 import yet.theme.ViewSize
 import yet.ui.dialogs.DialogX

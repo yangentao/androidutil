@@ -1,8 +1,9 @@
 package yet.sql
 
 import android.database.sqlite.SQLiteDatabase
+import dev.entao.ybase.*
 import yet.anno.*
-import yet.ext.*
+import yet.ext.isPrimaryKey
 import java.util.*
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty

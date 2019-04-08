@@ -1,6 +1,6 @@
 package yet.sql
 
-import yet.yson.Yson
+import dev.entao.yson.Yson
 
 
 /**

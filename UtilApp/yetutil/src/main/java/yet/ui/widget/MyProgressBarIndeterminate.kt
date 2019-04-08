@@ -66,7 +66,7 @@ class MyProgressBarIndeterminate(context: Context) : View(context) {
 			if (inc < 1) {
 				inc = 1
 			}
-			var left = 0
+			var left:Int
 			if (indeterTime >= 0) {
 				left = indeterTime * inc
 				if (left + w > width) {

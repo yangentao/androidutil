@@ -4,17 +4,6 @@ package yet.anno
  * Created by entaoyang@163.com on 2017-03-07.
  */
 
-@Target(AnnotationTarget.FIELD, AnnotationTarget.PROPERTY, AnnotationTarget.FUNCTION, AnnotationTarget.CLASS)
-@Retention(AnnotationRetention.RUNTIME)
-annotation class Label(val value: String)
-
-@Target(AnnotationTarget.FIELD, AnnotationTarget.PROPERTY)
-@Retention(AnnotationRetention.RUNTIME)
-annotation class DefaultValue(val value: String)
-
-@Target(AnnotationTarget.FIELD, AnnotationTarget.PROPERTY, AnnotationTarget.CLASS)
-@Retention(AnnotationRetention.RUNTIME)
-annotation class Name(val value: String, val forDB: String = "", val forJson: String = "")
 
 //字段长度--字符串
 @Target(AnnotationTarget.PROPERTY, AnnotationTarget.FIELD)

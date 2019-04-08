@@ -2,13 +2,12 @@ package yet.sql
 
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
+import dev.entao.ybase.*
+import dev.entao.yson.YsonNum
+import dev.entao.yson.YsonObject
 import yet.anno.AutoInc
 import yet.anno.hasAnnotation
-import yet.anno.nameClass
-import yet.anno.nameProp
-import yet.ext.*
-import yet.yson.YsonNum
-import yet.yson.YsonObject
+import yet.ext.createYsonModel
 import java.io.Closeable
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty

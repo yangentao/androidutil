@@ -44,6 +44,8 @@ dependencies {
     implementation project(':yapp')
 //    implementation 'dev.entao:yog:1.1.0.2711'
     implementation project(':yog')
+    implementation project(':yson')
+    implementation project(':ybase')
 }
 
 task androidSourcesJar(type: Jar) {

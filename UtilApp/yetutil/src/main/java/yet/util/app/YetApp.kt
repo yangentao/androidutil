@@ -5,8 +5,8 @@ import android.content.Context
 import android.support.multidex.MultiDex
 import dev.entao.yapp.App
 import dev.entao.yog.logd
+import dev.entao.yson.YsonObject
 import yet.ui.activities.AppVisibleListener
-import yet.yson.YsonObject
 
 /**
  * Created by yet on 2015/10/10.

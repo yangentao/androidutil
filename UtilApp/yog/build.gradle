@@ -8,8 +8,6 @@ group = 'dev.entao'
 android {
     compileSdkVersion 27
 
-    resourcePrefix "yog"
-
 
     defaultConfig {
         minSdkVersion 16

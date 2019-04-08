@@ -1,8 +1,8 @@
 package yet.sql
 
-import yet.anno.fullNameProp
-import yet.anno.nameClass
-import yet.anno.nameProp
+import dev.entao.ybase.fullNameProp
+import dev.entao.ybase.nameClass
+import dev.entao.ybase.nameProp
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
 
