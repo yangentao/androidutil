@@ -4,7 +4,9 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import android.os.Build
-import android.text.*
+import android.text.Html
+import android.text.InputType
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.util.Linkify
 import android.util.TypedValue
@@ -14,7 +16,9 @@ import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import yet.ext.ColorListLight
-import yet.theme.*
+import yet.theme.Colors
+import yet.theme.Space
+import yet.theme.TextSize
 import yet.ui.res.D
 import yet.ui.res.sized
 import yet.ui.util.XTextWatcher

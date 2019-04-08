@@ -3,7 +3,7 @@ package yet.ui.list.swipe
 import android.content.Context
 import android.view.View
 import android.widget.LinearLayout
-import yet.log.Yog
+import dev.entao.yog.Yog
 import yet.ui.list.ListPage
 import yet.ui.widget.Action
 

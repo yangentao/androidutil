@@ -7,8 +7,8 @@ import android.provider.Settings
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import dev.entao.yog.loge
 import yet.ext.keepDot
-import yet.log.loge
 import yet.ui.activities.TitledActivity
 import yet.ui.ext.*
 import yet.ui.viewcreator.buttonGreenRound

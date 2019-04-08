@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.view.ViewGroup
 import android.widget.TextView
-import net.yet.R
 import yet.ui.ext.*
 import yet.ui.res.D
 import yet.ui.res.Res

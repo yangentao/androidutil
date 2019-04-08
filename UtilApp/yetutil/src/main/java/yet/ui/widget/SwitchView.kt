@@ -2,19 +2,7 @@ package yet.ui.widget
 
 import android.content.Context
 import android.widget.LinearLayout
-import yet.ui.ext.Divider
-import yet.ui.ext.addViewParam
-import yet.ui.ext.backColorWhite
-import yet.ui.ext.divider
-import yet.ui.ext.heightFill
-import yet.ui.ext.heightWrap
-import yet.ui.ext.horizontal
-import yet.ui.ext.margins
-import yet.ui.ext.onClick
-import yet.ui.ext.setLinearParam
-import yet.ui.ext.weight
-import yet.ui.ext.width
-import yet.ui.ext.widthFill
+import yet.ui.ext.*
 import yet.util.Task
 import java.util.*
 

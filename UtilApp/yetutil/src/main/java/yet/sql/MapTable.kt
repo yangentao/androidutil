@@ -1,10 +1,10 @@
 package yet.sql
 
+import dev.entao.yog.logd
 import yet.anno.nameProp
 import yet.ext.defaultValue
 import yet.ext.defaultValueOfProperty
 import yet.ext.strToV
-import yet.log.logd
 import yet.util.Task
 import yet.util.app.App
 import yet.yson.YsonArray

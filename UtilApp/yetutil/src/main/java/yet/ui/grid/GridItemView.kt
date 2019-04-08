@@ -3,10 +3,15 @@ package yet.ui.grid
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.support.annotation.DrawableRes
-import android.widget.*
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.RelativeLayout
+import android.widget.TextView
 import yet.theme.IconSize
 import yet.ui.ext.*
-import yet.ui.viewcreator.*
+import yet.ui.viewcreator.imageView
+import yet.ui.viewcreator.linearVer
+import yet.ui.viewcreator.textView
 
 /**
  * Created by entaoyang@163.com on 2016-08-24.

@@ -5,7 +5,9 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import yet.ui.ext.*
+import yet.ui.ext.genId
+import yet.ui.ext.horizontal
+import yet.ui.ext.vertical
 
 /**
  * Created by entaoyang@163.com on 2018-03-14.

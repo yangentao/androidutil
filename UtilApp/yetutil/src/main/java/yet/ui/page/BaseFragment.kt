@@ -23,9 +23,9 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
+import dev.entao.yog.Yog
+import dev.entao.yog.loge
 import yet.ext.getValue
-import yet.log.Yog
-import yet.log.loge
 import yet.theme.Str
 import yet.ui.activities.AnimConf
 import yet.ui.activities.Pages

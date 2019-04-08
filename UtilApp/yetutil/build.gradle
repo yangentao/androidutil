@@ -51,6 +51,9 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+//    implementation 'dev.entao:yog:1.1.0.2711'
+    implementation project(':yog')
 }
 
 task androidSourcesJar(type: Jar) {

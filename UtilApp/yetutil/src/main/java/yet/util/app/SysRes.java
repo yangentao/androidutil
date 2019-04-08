@@ -1,7 +1,6 @@
 package yet.util.app;
 
 import android.content.res.Resources;
-
 import yet.util.RefUtil;
 
 /**

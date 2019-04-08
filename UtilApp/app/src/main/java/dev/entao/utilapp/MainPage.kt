@@ -2,7 +2,7 @@ package dev.entao.utilapp
 
 import android.content.Context
 import android.widget.LinearLayout
-import yet.log.logd
+import dev.entao.yog.logd
 import yet.ui.dialogs.alert
 import yet.ui.dialogs.showInput
 import yet.ui.page.TitlePage

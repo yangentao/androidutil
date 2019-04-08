@@ -10,7 +10,6 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import yet.ext.AGRAY
 import yet.ext.GRAY
-import yet.log.logd
 import yet.ui.ext.*
 import yet.ui.res.D
 import yet.ui.res.Shapes
@@ -95,7 +94,6 @@ class IndicatorPager(context: Context) : RelativeLayout(context) {
     }
 
     fun onUserTouch() {
-        logd("用户按下")
         timer.paused = true
         tm.cancel()
         tm.schedule(20000)

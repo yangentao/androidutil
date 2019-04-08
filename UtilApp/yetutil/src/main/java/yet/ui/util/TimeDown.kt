@@ -1,8 +1,8 @@
 package yet.ui.util
 
 import android.widget.TextView
+import dev.entao.yog.logd
 import net.yet.R
-import yet.log.logd
 import yet.ui.res.Res
 import yet.util.Task
 import java.util.*

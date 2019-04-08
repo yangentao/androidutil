@@ -5,11 +5,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.View;
+import yet.util.app.App;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import yet.util.app.App;
 
 /**
  * Created by yangentao on 2015/11/22.

@@ -5,11 +5,11 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import dev.entao.yog.Yog
 import yet.ext.extraBool
 import yet.ext.extraInt
 import yet.ext.hasBits
 import yet.ext.removeBits
-import yet.log.Yog
 import yet.ui.page.BaseFragment
 import yet.util.InMainThread
 import yet.util.Msg

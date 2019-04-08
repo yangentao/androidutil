@@ -1,10 +1,6 @@
 package yet.anno
 
-import kotlin.reflect.KAnnotatedElement
-import kotlin.reflect.KClass
-import kotlin.reflect.KFunction
-import kotlin.reflect.KParameter
-import kotlin.reflect.KProperty
+import kotlin.reflect.*
 import kotlin.reflect.full.findAnnotation
 import kotlin.reflect.jvm.javaField
 

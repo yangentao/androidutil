@@ -6,11 +6,7 @@ import yet.anno.AutoInc
 import yet.anno.hasAnnotation
 import yet.anno.nameClass
 import yet.anno.nameProp
-import yet.ext.createYsonModel
-import yet.ext.getValue
-import yet.ext.isTypeInt
-import yet.ext.isTypeLong
-import yet.ext.setValue
+import yet.ext.*
 import yet.yson.YsonNum
 import yet.yson.YsonObject
 import java.io.Closeable

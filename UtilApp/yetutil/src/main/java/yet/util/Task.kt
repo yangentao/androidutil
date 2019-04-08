@@ -2,8 +2,8 @@ package yet.util
 
 import android.os.Handler
 import android.os.Looper
-import yet.log.Yog
-import yet.log.loge
+import dev.entao.yog.Yog
+import dev.entao.yog.loge
 import yet.util.app.App
 import java.util.*
 import java.util.concurrent.Executors

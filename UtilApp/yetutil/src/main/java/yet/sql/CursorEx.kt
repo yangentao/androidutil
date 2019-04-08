@@ -1,12 +1,7 @@
 package yet.sql
 
 import android.database.Cursor
-import yet.yson.YsonBlob
-import yet.yson.YsonNull
-import yet.yson.YsonNum
-import yet.yson.YsonObject
-import yet.yson.YsonString
-import yet.yson.YsonValue
+import yet.yson.*
 
 //带下划线表示关闭Cursor
 val Cursor.listObject_: List<YsonObject>

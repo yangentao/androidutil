@@ -4,21 +4,8 @@ import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.text.SpannableString
 import android.text.Spanned
-import android.text.style.AbsoluteSizeSpan
-import android.text.style.BackgroundColorSpan
-import android.text.style.ClickableSpan
-import android.text.style.ForegroundColorSpan
-import android.text.style.ImageSpan
-import android.text.style.ScaleXSpan
-import android.text.style.StrikethroughSpan
-import android.text.style.StyleSpan
-import android.text.style.SubscriptSpan
-import android.text.style.SuperscriptSpan
-import android.text.style.TypefaceSpan
-import android.text.style.URLSpan
-import android.text.style.UnderlineSpan
+import android.text.style.*
 import android.view.View
-
 import yet.ui.util.RoundBackgroundSpan
 import yet.util.app.App
 

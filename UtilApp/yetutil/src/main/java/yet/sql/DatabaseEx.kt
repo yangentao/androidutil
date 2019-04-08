@@ -3,7 +3,7 @@ package yet.sql
 import android.content.ContentValues
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
-import yet.log.logd
+import dev.entao.yog.logd
 import java.util.*
 
 

@@ -1,7 +1,6 @@
 package yet.util.app;
 
 import android.os.IBinder;
-
 import yet.util.RefUtil;
 
 public class ServiceManager {

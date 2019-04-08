@@ -1,10 +1,6 @@
 package yet.util;
 
-import java.io.ByteArrayOutputStream;
-import java.io.Closeable;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 /**
  * Created by entaoyang@163.com on 16/7/20.

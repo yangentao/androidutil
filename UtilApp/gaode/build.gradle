@@ -39,8 +39,8 @@ dependencies {
     implementation 'com.amap.api:map2d:5.2.0'
     implementation 'com.amap.api:search:5.7.0'
     implementation 'com.amap.api:location:3.8.0'
-    implementation 'dev.entao:yetutil:1.0.9.2711'
-//    implementation project(':yetutil')
+//    implementation 'dev.entao:yetutil:1.0.9.2711'
+    implementation project(':yetutil')
 }
 
 

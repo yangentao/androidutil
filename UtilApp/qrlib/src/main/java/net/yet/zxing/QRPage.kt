@@ -4,29 +4,15 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.annotation.DrawableRes
+import android.util.Log
 import android.view.KeyEvent
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.journeyapps.barcodescanner.BarcodeResult
 import com.journeyapps.barcodescanner.CaptureManager
 import com.journeyapps.barcodescanner.DecoratedBarcodeView
-import yet.log.logd
 import yet.ui.dialogs.showInput
-import yet.ui.ext.HeightFlex
-import yet.ui.ext.HeightWrap
-import yet.ui.ext.WidthFill
-import yet.ui.ext.WidthFlex
-import yet.ui.ext.addView
-import yet.ui.ext.addViewParam
-import yet.ui.ext.backColor
-import yet.ui.ext.clickable
-import yet.ui.ext.gravityCenter
-import yet.ui.ext.heightWrap
-import yet.ui.ext.onClick
-import yet.ui.ext.padding
-import yet.ui.ext.textColorWhite
-import yet.ui.ext.topImage
-import yet.ui.ext.widthFill
+import yet.ui.ext.*
 import yet.ui.page.PageClass
 import yet.ui.page.TitlePage
 import yet.ui.res.ImageStated
@@ -131,7 +117,7 @@ class QRPage : TitlePage() {
 
 	fun onScanResult(result: BarcodeResult) {
 		val text = result.text
-		logd("ScanResult:", result.text)
+		Log.d("ScanResult:", result.text)
 		onScanText(text)
 	}
 

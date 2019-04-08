@@ -1,7 +1,7 @@
 package yet.ui.res
 
 import android.content.res.ColorStateList
-import yet.log.Yog
+import dev.entao.yog.Yog
 
 /**
  * Created by entaoyang@163.com on 2016-10-31.

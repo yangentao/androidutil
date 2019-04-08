@@ -5,7 +5,7 @@ package yet.util
 import android.annotation.TargetApi
 import android.os.Build
 import android.os.Environment
-import yet.log.logd
+import dev.entao.yog.logd
 import yet.util.app.App
 import java.io.File
 import java.io.IOException

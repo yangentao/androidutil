@@ -1,8 +1,8 @@
 package yet.util.imgloader
 
-import yet.util.MyFiles
 import yet.net.Http
 import yet.util.MultiHashMap
+import yet.util.MyFiles
 import yet.util.Sleep
 import yet.util.Task
 import java.io.File

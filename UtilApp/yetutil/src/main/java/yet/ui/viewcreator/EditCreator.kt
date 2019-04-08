@@ -6,15 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import yet.ext.color
-import yet.ui.ext.backDrawable
-import yet.ui.ext.genId
-import yet.ui.ext.gravityLeftCenter
-import yet.ui.ext.gravityTopLeft
-import yet.ui.ext.multiLine
-import yet.ui.ext.padding
-import yet.ui.ext.singleLine
-import yet.ui.ext.textColorMajor
-import yet.ui.ext.textSizeB
+import yet.ui.ext.*
 import yet.ui.res.D
 import yet.ui.widget.EditTextX
 

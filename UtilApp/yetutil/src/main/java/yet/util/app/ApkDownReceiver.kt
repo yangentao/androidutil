@@ -7,7 +7,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
-import yet.log.logd
+import dev.entao.yog.logd
 import yet.sql.MapTable
 
 class ApkDownReceiver : BroadcastReceiver() {

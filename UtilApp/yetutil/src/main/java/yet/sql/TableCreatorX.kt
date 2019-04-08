@@ -1,25 +1,8 @@
 package yet.sql
 
 import android.database.sqlite.SQLiteDatabase
-import yet.anno.AutoInc
-import yet.anno.Index
-import yet.anno.Length
-import yet.anno.NotNull
-import yet.anno.Unique
-import yet.anno.Uniques
-import yet.anno.autoAlterTable
-import yet.anno.hasAnnotation
-import yet.anno.nameClass
-import yet.anno.nameProp
-import yet.ext.isPrimaryKey
-import yet.ext.isTypeBoolean
-import yet.ext.isTypeByte
-import yet.ext.isTypeByteArray
-import yet.ext.isTypeDouble
-import yet.ext.isTypeFloat
-import yet.ext.isTypeInt
-import yet.ext.isTypeLong
-import yet.ext.isTypeShort
+import yet.anno.*
+import yet.ext.*
 import java.util.*
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty

@@ -1,7 +1,7 @@
 package yet.util
 
 import android.media.MediaRecorder
-import yet.log.loge
+import dev.entao.yog.loge
 import java.io.File
 import java.util.*
 

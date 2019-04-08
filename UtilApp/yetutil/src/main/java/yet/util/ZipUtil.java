@@ -1,18 +1,9 @@
 package yet.util;
 
-import java.io.Closeable;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.zip.GZIPInputStream;
-import java.util.zip.GZIPOutputStream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
-import java.util.zip.ZipOutputStream;
-
 import yet.ui.res.Asset;
+
+import java.io.*;
+import java.util.zip.*;
 
 public class ZipUtil {
 	/**

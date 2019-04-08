@@ -8,7 +8,10 @@ import android.widget.TextView
 import yet.ext.RGB
 import yet.theme.Colors
 import yet.ui.ext.*
-import yet.ui.res.*
+import yet.ui.res.D
+import yet.ui.res.Res
+import yet.ui.res.sized
+import yet.ui.res.tinted
 import yet.ui.viewcreator.textView
 
 /**

@@ -2,10 +2,9 @@ package yet.ui.util;
 
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
+import yet.util.app.App;
 
 import java.util.ArrayList;
-
-import yet.util.app.App;
 
 public class LayerUtil {
 	private static class TempDrawable {

@@ -4,8 +4,8 @@ import android.content.Context
 import android.os.Environment
 import android.view.View
 import android.widget.LinearLayout
+import dev.entao.yog.Yog
 import net.yet.R
-import yet.log.Yog
 import yet.ui.activities.Pages
 import yet.ui.list.ListPage
 import yet.ui.list.views.TextDetailView

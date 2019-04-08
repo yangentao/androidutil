@@ -2,7 +2,7 @@ package yet.util
 
 import android.content.Context
 import android.media.MediaRecorder
-import yet.log.Yog
+import dev.entao.yog.Yog
 import java.io.File
 
 @Suppress("DEPRECATION")

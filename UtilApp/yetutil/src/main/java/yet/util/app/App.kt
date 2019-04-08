@@ -18,9 +18,9 @@ import android.text.ClipboardManager
 import android.text.TextUtils
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import yet.log.Yog
-import yet.log.logd
-import yet.log.loge
+import dev.entao.yog.Yog
+import dev.entao.yog.logd
+import dev.entao.yog.loge
 import yet.theme.TextSize
 import yet.ui.activities.AnimConf
 import yet.ui.ext.displayMetrics

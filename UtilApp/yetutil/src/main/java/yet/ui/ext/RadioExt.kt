@@ -4,7 +4,9 @@ import android.graphics.drawable.Drawable
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import net.yet.R
-import yet.ui.res.*
+import yet.ui.res.D
+import yet.ui.res.ImageStated
+import yet.ui.res.sized
 import yet.ui.viewcreator.createRadioButton
 
 /**

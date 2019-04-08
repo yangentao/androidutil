@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
-import yet.log.loge
+import dev.entao.yog.loge
 import java.io.File
 import java.io.IOException
 

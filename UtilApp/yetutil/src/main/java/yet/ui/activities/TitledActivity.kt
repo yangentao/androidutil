@@ -3,8 +3,9 @@ package yet.ui.activities
 import android.os.Bundle
 import android.widget.LinearLayout
 import yet.ui.ext.LParam
-import yet.ui.ext.*
+import yet.ui.ext.WidthFill
 import yet.ui.ext.backColorWhite
+import yet.ui.ext.height
 import yet.ui.viewcreator.createLinearVertical
 import yet.ui.widget.TitleBar
 

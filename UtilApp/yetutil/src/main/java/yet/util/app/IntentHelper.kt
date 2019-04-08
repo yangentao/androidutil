@@ -7,8 +7,8 @@ import android.content.BroadcastReceiver
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import dev.entao.yog.Yog
 import yet.ext.extraString
-import yet.log.Yog
 import yet.yson.YsonObject
 
 /**

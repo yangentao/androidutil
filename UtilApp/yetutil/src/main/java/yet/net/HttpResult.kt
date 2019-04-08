@@ -1,11 +1,11 @@
 package yet.net
 
+import dev.entao.yog.loge
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import yet.ext.closeSafe
 import yet.ext.notEmpty
-import yet.log.loge
 import yet.yson.YsonArray
 import yet.yson.YsonObject
 import java.io.File

@@ -13,13 +13,7 @@ import yet.theme.Colors
 import yet.theme.ViewSize
 import yet.ui.dialogs.DialogX
 import yet.ui.res.D
-import yet.ui.viewcreator.createEditX
-import yet.ui.viewcreator.createTextViewB
-import yet.ui.viewcreator.edit
-import yet.ui.viewcreator.editX
-import yet.ui.viewcreator.table
-import yet.ui.viewcreator.tableRow
-import yet.ui.viewcreator.textView
+import yet.ui.viewcreator.*
 import kotlin.reflect.KProperty0
 
 /**

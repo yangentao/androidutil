@@ -7,9 +7,9 @@ import android.widget.TextView
 import yet.ext.color
 import yet.theme.Colors
 import yet.ui.ext.*
+import yet.ui.list.views.TextDetailView
 import yet.ui.viewcreator.createTextView
 import yet.ui.viewcreator.textView
-import yet.ui.list.views.TextDetailView
 
 /**
  * Created by entaoyang@163.com on 2017-05-20.

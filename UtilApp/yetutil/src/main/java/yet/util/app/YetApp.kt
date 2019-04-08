@@ -3,7 +3,7 @@ package yet.util.app
 import android.app.Application
 import android.content.Context
 import android.support.multidex.MultiDex
-import yet.log.logd
+import dev.entao.yog.logd
 import yet.ui.activities.AppVisibleListener
 import yet.yson.YsonObject
 

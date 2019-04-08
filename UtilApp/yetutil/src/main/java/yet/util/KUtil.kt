@@ -1,8 +1,8 @@
 package yet.util
 
 import android.net.Uri
+import dev.entao.yog.loge
 import yet.ext.closeSafe
-import yet.log.loge
 import yet.util.app.App
 import java.io.*
 import java.security.MessageDigest

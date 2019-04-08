@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.ListView
 import yet.theme.Colors
 import yet.ui.ext.genId
-import yet.ui.res.D
 import yet.ui.list.SimpleListView
+import yet.ui.res.D
 
 /**
  * Created by entaoyang@163.com on 2018-03-14.

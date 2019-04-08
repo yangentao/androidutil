@@ -3,10 +3,16 @@ package yet.ui.page
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Bitmap
-import android.webkit.*
+import android.webkit.JsResult
+import android.webkit.WebChromeClient
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.LinearLayout
 import yet.ui.activities.Pages
-import yet.ui.ext.*
+import yet.ui.ext.HeightFlex
+import yet.ui.ext.LParam
+import yet.ui.ext.WidthFill
+import yet.ui.ext.genId
 
 open class WebPage : TitlePage() {
 

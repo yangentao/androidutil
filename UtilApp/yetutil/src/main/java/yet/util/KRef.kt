@@ -1,6 +1,6 @@
 package yet.util
 
-import yet.log.logd
+import dev.entao.yog.logd
 import kotlin.reflect.KCallable
 import kotlin.reflect.KClass
 import kotlin.reflect.KParameter
