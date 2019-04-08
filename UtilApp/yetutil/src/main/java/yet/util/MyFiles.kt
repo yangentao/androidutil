@@ -5,8 +5,8 @@ package yet.util
 import android.annotation.TargetApi
 import android.os.Build
 import android.os.Environment
+import dev.entao.yapp.App
 import dev.entao.yog.logd
-import yet.util.app.App
 import java.io.File
 import java.io.IOException
 
@@ -28,9 +28,9 @@ object MyFiles {
     }
 
     object app {
-        val filesDir: File = App.app.filesDir
+        val filesDir: File = App.inst.filesDir
 
-        val cacheDir: File = App.app.cacheDir
+        val cacheDir: File = App.inst.cacheDir
 
         fun cacheFile(fileName: String): File {
             return ensureDir(cacheDir, fileName)
@@ -96,8 +96,8 @@ object MyFiles {
 
 
     object ex {
-        val filesDir: File = App.app.getExternalFilesDir(null)
-        val cacheDir: File = App.app.externalCacheDir
+        val filesDir: File = App.inst.getExternalFilesDir(null)
+        val cacheDir: File = App.inst.externalCacheDir
 
         fun cacheFile(fileName: String): File {
             return ensureDir(cacheDir, fileName)

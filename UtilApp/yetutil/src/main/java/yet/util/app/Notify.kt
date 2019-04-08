@@ -4,6 +4,7 @@ import android.app.*
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
+import dev.entao.yapp.App
 import yet.ext.UriRes
 import yet.ui.res.Bmp
 import yet.yson.YsonObject
@@ -18,7 +19,7 @@ import yet.yson.YsonObject
  */
 class Notify(val id: Int) {
 	@Suppress("DEPRECATION")
-	private var builder = Notification.Builder(App.app)
+	private var builder = Notification.Builder(App.inst)
 
 	val mgr: NotificationManager by lazy { App.notificationManager }
 	var defaults: Int = 0
@@ -29,12 +30,12 @@ class Notify(val id: Int) {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 			val ch = NotificationChannel(App.packageName + "$id", "yet$id", NotificationManager.IMPORTANCE_DEFAULT)
 			channel = ch
-			builder = Notification.Builder(App.app, App.packageName + "$id")
+			builder = Notification.Builder(App.inst, App.packageName + "$id")
 		}
 		autoCancel(true)
-		title(App.app_name)
-		iconSmall(if (smallIcon == 0) App.ic_launcher else smallIcon)
-		iconLarge(if (largeIcon == 0) App.ic_launcher else largeIcon)
+		title(App.appName)
+		iconSmall(if (smallIcon == 0) App.iconLauncher else smallIcon)
+		iconLarge(if (largeIcon == 0) App.iconLauncher else largeIcon)
 	}
 
 	fun cancel() {

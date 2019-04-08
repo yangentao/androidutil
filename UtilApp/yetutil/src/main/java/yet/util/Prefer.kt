@@ -1,14 +1,14 @@
 package yet.util
 
 import android.content.SharedPreferences
-import yet.util.app.App
+import dev.entao.yapp.App
 
 /**
  *
  */
 class Prefer(name: String) {
 
-	private var sp: SharedPreferences = App.app.getSharedPreferences(name, 0)
+	private var sp: SharedPreferences = App.inst.getSharedPreferences(name, 0)
 
 	fun edit(block: SharedPreferences.Editor.() -> Unit): Boolean {
 		val a = sp.edit()

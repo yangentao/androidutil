@@ -3,6 +3,7 @@ package yet.util.app
 import android.app.Application
 import android.content.Context
 import android.support.multidex.MultiDex
+import dev.entao.yapp.App
 import dev.entao.yog.logd
 import yet.ui.activities.AppVisibleListener
 import yet.yson.YsonObject
@@ -19,7 +20,7 @@ open class YetApp : Application(), AppVisibleListener {
 
 	override fun onCreate() {
 		super.onCreate()
-		App.setInstance(this)
+		App.init(this)
 	}
 
 	override fun onEnterForeground() {

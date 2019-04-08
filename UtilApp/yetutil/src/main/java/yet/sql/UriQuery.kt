@@ -2,8 +2,8 @@ package yet.sql
 
 import android.database.Cursor
 import android.net.Uri
+import dev.entao.yapp.App
 import yet.ext.appendId
-import yet.util.app.App
 import java.util.*
 
 /**

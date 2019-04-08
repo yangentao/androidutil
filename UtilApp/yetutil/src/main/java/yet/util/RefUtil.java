@@ -1,7 +1,7 @@
 package yet.util;
 
+import dev.entao.yapp.App;
 import dev.entao.yog.Yog;
-import yet.util.app.App;
 
 import java.lang.reflect.*;
 import java.util.Arrays;
@@ -56,7 +56,7 @@ public class RefUtil {
 
 	public static void dumpService(String name) {
 		Yog.INSTANCE.d("Dump Service ", name);
-		Object obj = App.INSTANCE.getApp().getSystemService(name);
+		Object obj = App.INSTANCE.getContext().getSystemService(name);
 		dumpObject(obj);
 	}
 
@@ -331,7 +331,7 @@ public class RefUtil {
 	}
 
 	public static Object invokeServiceE(String service, String name, Class<?>[] argTypes, Object... args) throws Exception {
-		Object obj = App.INSTANCE.getApp().getSystemService(service);
+		Object obj = App.INSTANCE.getContext().getSystemService(service);
 		return invokeObjectE(obj, name, argTypes, args);
 	}
 
@@ -340,7 +340,7 @@ public class RefUtil {
 	}
 
 	public static Object invokeService(String service, String name, Class<?>[] argTypes, Object... args) {
-		Object obj = App.INSTANCE.getApp().getSystemService(service);
+		Object obj = App.INSTANCE.getContext().getSystemService(service);
 		if (obj != null) {
 			return invokeObject(obj, name, argTypes, args);
 		}

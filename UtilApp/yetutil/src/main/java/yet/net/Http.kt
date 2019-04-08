@@ -4,13 +4,13 @@ package yet.net
 import android.net.Uri
 import android.os.NetworkOnMainThreadException
 import android.util.Base64
+import dev.entao.yapp.App
 import dev.entao.yog.log
 import dev.entao.yog.logd
 import dev.entao.yog.loge
 import yet.ext.closeSafe
 import yet.ext.head
 import yet.util.*
-import yet.util.app.App
 import yet.yson.YsonObject
 import java.io.*
 import java.net.*

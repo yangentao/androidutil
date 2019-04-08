@@ -5,11 +5,11 @@ import android.content.Context
 import android.os.Environment
 import android.view.View
 import android.widget.LinearLayout
+import dev.entao.yapp.App
 import dev.entao.yog.Yog
 import yet.ui.activities.Pages
 import yet.ui.list.ListPage
 import yet.ui.list.views.TextDetailView
-import yet.util.app.App
 import yet.util.app.needPerm
 import java.io.File
 

@@ -1,8 +1,8 @@
 package yet.sql
 
+import dev.entao.yapp.App
 import yet.ext.closeSafe
 import yet.util.Hex
-import yet.util.app.App
 import java.util.*
 
 

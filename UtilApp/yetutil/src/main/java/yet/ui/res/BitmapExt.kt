@@ -2,9 +2,9 @@ package yet.ui.res
 
 import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
+import dev.entao.yapp.App
 import yet.ext.closeSafe
 import yet.ui.ext.dp
-import yet.util.app.App
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream

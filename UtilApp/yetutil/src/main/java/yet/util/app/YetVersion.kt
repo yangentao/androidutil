@@ -1,6 +1,7 @@
 package yet.util.app
 
 import android.app.Activity
+import dev.entao.yapp.App
 import yet.net.Http
 import yet.sql.MapTable
 import yet.ui.dialogs.DialogX
@@ -116,7 +117,7 @@ class YetVersion(val jo: YsonObject) {
 
         fun download(resId: Int, progress: Progress?): File? {
             val url = Http(YetVersion.SERVER_DOWN).arg("id", resId).buildGetUrl()
-            val f = MyFiles.ex.temp(App.app_name + ".apk")
+            val f = MyFiles.ex.temp(App.appName + ".apk")
             val r = Http(url).download(f, progress)
             if (r.OK) {
                 return f

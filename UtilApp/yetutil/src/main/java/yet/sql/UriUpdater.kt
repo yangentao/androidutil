@@ -2,7 +2,7 @@ package yet.sql
 
 import android.content.ContentValues
 import android.net.Uri
-import yet.util.app.App
+import dev.entao.yapp.App
 
 object UriUpdater {
 	const val _ID = "_id"

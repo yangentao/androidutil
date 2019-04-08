@@ -12,12 +12,14 @@ import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.database.sqlite.SQLiteDatabase
+import android.graphics.drawable.Drawable
 import android.net.ConnectivityManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.os.PowerManager
+import android.support.annotation.DrawableRes
 import android.telephony.TelephonyManager
 import android.text.ClipboardManager
 import android.text.TextUtils
@@ -139,6 +141,14 @@ object App {
             return inst.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         }
 
+
+    fun drawable(@DrawableRes resId: Int): Drawable {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            resource.getDrawable(resId, inst.theme)
+        } else {
+            resource.getDrawable(resId)
+        }
+    }
 
     fun openOrCreateDatabase(name: String): SQLiteDatabase {
         return inst.openOrCreateDatabase(name, 0, null)

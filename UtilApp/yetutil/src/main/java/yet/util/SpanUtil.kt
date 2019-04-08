@@ -5,9 +5,8 @@ import android.graphics.drawable.Drawable
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.*
-import android.view.View
+import dev.entao.yapp.App
 import yet.ui.util.RoundBackgroundSpan
-import yet.util.app.App
 
 class SpanUtil(s: String) {
 	var ss: SpannableString = SpannableString(s)
@@ -112,16 +111,16 @@ class SpanUtil(s: String) {
 		return this
 	}
 
-	//url
-	fun clickable(url: String, start: Int, end: Int,
-	              clickListener: View.OnClickListener?): SpanUtil {
-		val sp = object : ClickableSpan() {
-
-			override fun onClick(widget: View) {
-				clickListener?.onClick(widget)
-			}
-		}
-		ss.setSpan(sp, start, end, Spanned.SPAN_INCLUSIVE_EXCLUSIVE)
-		return this
-	}
+//	//url
+//	fun clickable(url: String, start: Int, end: Int,
+//	              clickListener: View.OnClickListener?): SpanUtil {
+//		val sp = object : ClickableSpan() {
+//
+//			override fun onClick(widget: View) {
+//				clickListener?.onClick(widget)
+//			}
+//		}
+//		ss.setSpan(sp, start, end, Spanned.SPAN_INCLUSIVE_EXCLUSIVE)
+//		return this
+//	}
 }

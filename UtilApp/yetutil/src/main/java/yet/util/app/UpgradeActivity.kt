@@ -7,6 +7,7 @@ import android.provider.Settings
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import dev.entao.yapp.App
 import dev.entao.yog.loge
 import yet.ext.keepDot
 import yet.ui.activities.TitledActivity

@@ -2,7 +2,7 @@ package yet.ui.util;
 
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
-import yet.util.app.App;
+import dev.entao.yapp.App;
 
 import java.util.ArrayList;
 

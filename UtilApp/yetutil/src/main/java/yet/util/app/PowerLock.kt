@@ -1,6 +1,7 @@
 package yet.util.app
 
 import android.os.PowerManager
+import dev.entao.yapp.App
 
 class PowerLock {
 	val lock = App.powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "PowerLock")

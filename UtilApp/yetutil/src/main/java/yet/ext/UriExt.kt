@@ -3,7 +3,7 @@ package yet.ext
 import android.content.ContentUris
 import android.net.Uri
 import android.webkit.MimeTypeMap
-import yet.util.app.App
+import dev.entao.yapp.App
 import yet.util.app.MediaInfo
 import java.io.File
 import java.io.FileInputStream

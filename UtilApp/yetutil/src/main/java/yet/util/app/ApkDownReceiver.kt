@@ -7,6 +7,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
+import dev.entao.yapp.App
 import dev.entao.yog.logd
 import yet.sql.MapTable
 
@@ -46,7 +47,7 @@ class ApkDownReceiver : BroadcastReceiver() {
             req.setAllowedOverRoaming(true)
             req.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI or DownloadManager.Request.NETWORK_MOBILE)
             req.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
-            req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "${App.app_name}.apk")
+            req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "${App.appName}.apk")
 
 
             val downId = App.downloadManager.enqueue(req)

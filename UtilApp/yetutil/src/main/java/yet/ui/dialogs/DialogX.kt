@@ -14,6 +14,7 @@ import android.view.WindowManager
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
+import dev.entao.yapp.App
 import yet.theme.Colors
 import yet.theme.ViewSize
 import yet.ui.ext.*
@@ -23,7 +24,6 @@ import yet.ui.list.SimpleListView
 import yet.ui.viewcreator.*
 import yet.ui.widget.TitleBar
 import yet.util.Task
-import yet.util.app.App
 
 class DialogX(val context: Context) {
     private var titleHeight = 45

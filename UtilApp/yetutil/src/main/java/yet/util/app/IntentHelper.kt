@@ -7,6 +7,7 @@ import android.content.BroadcastReceiver
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import dev.entao.yapp.App
 import dev.entao.yog.Yog
 import yet.ext.extraString
 import yet.yson.YsonObject
@@ -30,29 +31,29 @@ object IntentHelper {
 	const val ARG_NAME = "intent_arg"
 
 	fun pendingActivity(cls: Class<out Activity>, flag: Int, yo: YsonObject): PendingIntent {
-		val it = Intent(App.app, cls).yson(yo)
-		return PendingIntent.getActivity(App.app, 0, it, flag)
+		val it = Intent(App.inst, cls).yson(yo)
+		return PendingIntent.getActivity(App.inst, 0, it, flag)
 	}
 
 	fun pendingService(cls: Class<out Service>, flag: Int, yo: YsonObject): PendingIntent {
-		val it = Intent(App.app, cls).yson(yo)
-		return PendingIntent.getService(App.app, 0, it, flag)
+		val it = Intent(App.inst, cls).yson(yo)
+		return PendingIntent.getService(App.inst, 0, it, flag)
 	}
 
 	fun pendingBroadcastApp(action: String, flag: Int, yo: YsonObject): PendingIntent {
 		val it = Intent(action).yson(yo)
 		it.setPackage(App.packageName)
-		return PendingIntent.getBroadcast(App.app, 0, it, flag)
+		return PendingIntent.getBroadcast(App.inst, 0, it, flag)
 	}
 
 	fun pendingBroadcastSys(action: String, flag: Int, yo: YsonObject): PendingIntent {
 		val it = Intent(action).yson(yo)
-		return PendingIntent.getBroadcast(App.app, 0, it, flag)
+		return PendingIntent.getBroadcast(App.inst, 0, it, flag)
 	}
 
 	fun pendingBroadcast(cls: Class<out BroadcastReceiver>, yo: YsonObject): PendingIntent {
-		val it = Intent(App.app, cls).yson(yo)
-		return PendingIntent.getBroadcast(App.app, 0, it, PendingIntent.FLAG_UPDATE_CURRENT)
+		val it = Intent(App.inst, cls).yson(yo)
+		return PendingIntent.getBroadcast(App.inst, 0, it, PendingIntent.FLAG_UPDATE_CURRENT)
 	}
 
 	fun startService(cls: Class<out Service>, action: String, yo: YsonObject) {
@@ -64,13 +65,13 @@ object IntentHelper {
 	}
 
 	fun startService(cls: Class<out Service>, action: String?, uri: Uri?, yo: YsonObject) {
-		val it = Intent(action, uri, App.app, cls).yson(yo)
-		App.app.startService(it)
+		val it = Intent(action, uri, App.inst, cls).yson(yo)
+		App.inst.startService(it)
 	}
 
 	fun startService(cls: Class<out Service>, yo: YsonObject) {
-		val it = Intent(App.app, cls).yson(yo)
-		App.app.startService(it)
+		val it = Intent(App.inst, cls).yson(yo)
+		App.inst.startService(it)
 	}
 
 
@@ -81,13 +82,13 @@ object IntentHelper {
 	fun broadcast(action: String, uri: Uri?, yo: YsonObject) {
 		val it = Intent(action, uri).yson(yo)
 		it.setPackage(App.packageName)
-		App.app.sendBroadcast(it)
+		App.inst.sendBroadcast(it)
 	}
 
 
 	fun broadcastSys(action: String, uri: Uri?, yo: YsonObject) {
 		val it = Intent(action, uri).yson(yo)
-		App.app.sendBroadcast(it)
+		App.inst.sendBroadcast(it)
 	}
 
 

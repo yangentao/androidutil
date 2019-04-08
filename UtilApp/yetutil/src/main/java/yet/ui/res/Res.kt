@@ -2,7 +2,7 @@ package yet.ui.res
 
 import android.graphics.drawable.Drawable
 import android.os.Build
-import yet.util.app.App
+import dev.entao.yapp.App
 
 /**
  * Created by entaoyang@163.com on 2016-10-16.
@@ -36,7 +36,7 @@ object Res {
 	@Suppress("DEPRECATION")
 	fun color(resId: Int): Int {
 		return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-			App.resource.getColor(resId, App.app.theme)
+			App.resource.getColor(resId, App.inst.theme)
 		} else {
 			App.resource.getColor(resId)
 		}
@@ -46,7 +46,7 @@ object Res {
 	@Suppress("DEPRECATION")
 	fun drawable(resId: Int): Drawable {
 		return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-			App.resource.getDrawable(resId, App.app.theme)
+			App.resource.getDrawable(resId, App.inst.theme)
 		} else {
 			App.resource.getDrawable(resId)
 		}

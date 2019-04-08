@@ -3,6 +3,7 @@ package yet.util.app
 import android.app.Activity
 import android.app.Fragment
 import android.os.Build
+import dev.entao.yapp.App
 import yet.util.Task
 import java.util.*
 import kotlin.collections.HashMap
@@ -19,7 +20,7 @@ open class Perm(val perms: HashSet<String>) {
 
 	init {
 		perms.forEach {
-			resultMap[it] = App.app.hasPerm(it)
+			resultMap[it] = App.inst.hasPerm(it)
 		}
 	}
 
@@ -53,7 +54,7 @@ open class Perm(val perms: HashSet<String>) {
 
 	private fun callback() {
 		perms.forEach {
-			resultMap[it] = App.app.hasPerm(it)
+			resultMap[it] = App.inst.hasPerm(it)
 		}
 		Task.fore {
 			onResult(resultMap)

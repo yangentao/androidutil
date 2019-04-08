@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import dev.entao.yapp.App
 import yet.ui.ext.leftImage
 import yet.ui.ext.rightImage
 import yet.ui.ext.topImage
@@ -14,7 +15,6 @@ import yet.ui.res.Res
 import yet.ui.res.limited
 import yet.ui.res.roundSqure
 import yet.util.Task
-import yet.util.app.App
 import java.lang.ref.WeakReference
 
 

@@ -1,12 +1,12 @@
 package yet.sql
 
+import dev.entao.yapp.App
 import dev.entao.yog.logd
 import yet.anno.nameProp
 import yet.ext.defaultValue
 import yet.ext.defaultValueOfProperty
 import yet.ext.strToV
 import yet.util.Task
-import yet.util.app.App
 import yet.yson.YsonArray
 import yet.yson.YsonObject
 import java.util.*
@@ -151,7 +151,7 @@ class MapTable(val table: String) {
 		const val KEY = "key"
 		const val VAL = "value"
 
-		private var liteBase = App.app.openOrCreateDatabase("maptable.db", 0, null)
+		private var liteBase = App.openOrCreateDatabase("maptable.db")
 
 		val config = MapTable("global_config_map_table")
 	}

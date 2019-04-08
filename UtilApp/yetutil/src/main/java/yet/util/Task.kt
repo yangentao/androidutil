@@ -2,9 +2,9 @@ package yet.util
 
 import android.os.Handler
 import android.os.Looper
+import dev.entao.yapp.App
 import dev.entao.yog.Yog
 import dev.entao.yog.loge
-import yet.util.app.App
 import java.util.*
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService

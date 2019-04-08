@@ -6,11 +6,11 @@ import android.graphics.BitmapFactory
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.util.DisplayMetrics
+import dev.entao.yapp.App
 import dev.entao.yog.Yog
 import yet.ext.UTF8
 import yet.ext.closeSafe
 import yet.util.StreamUtil
-import yet.util.app.App
 import java.io.*
 import java.util.zip.ZipInputStream
 
@@ -19,7 +19,7 @@ import java.util.zip.ZipInputStream
  */
 
 object Asset {
-	val manager: AssetManager get() = App.app.assets
+	val manager: AssetManager get() = App.inst.assets
 
 	fun reader(name: String): BufferedReader {
 		return BufferedReader(InputStreamReader(stream(name)))

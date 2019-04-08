@@ -2,9 +2,9 @@ package yet.util
 
 import android.content.Context
 import android.widget.Toast
+import dev.entao.yapp.App
 
 import yet.ui.res.Res
-import yet.util.app.App
 
 object ToastUtil {
 	fun show(msg: String) {
@@ -16,11 +16,11 @@ object ToastUtil {
 	}
 
 	fun showLong(msg: String) {
-		show(App.app, msg, Toast.LENGTH_LONG)
+		show(App.inst, msg, Toast.LENGTH_LONG)
 	}
 
 	fun showLong(res: Int) {
-		show(App.app, res, Toast.LENGTH_LONG)
+		show(App.inst, res, Toast.LENGTH_LONG)
 	}
 
 	fun showLong(context: Context, msg: String) {
@@ -32,11 +32,11 @@ object ToastUtil {
 	}
 
 	fun showShort(msg: String) {
-		show(App.app, msg, Toast.LENGTH_SHORT)
+		show(App.inst, msg, Toast.LENGTH_SHORT)
 	}
 
 	fun showShort(res: Int) {
-		show(App.app, res, Toast.LENGTH_SHORT)
+		show(App.inst, res, Toast.LENGTH_SHORT)
 	}
 
 	fun showShort(context: Context, msg: String) {

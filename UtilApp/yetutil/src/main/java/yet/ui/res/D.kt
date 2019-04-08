@@ -8,6 +8,7 @@ import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.StateListDrawable
 import android.os.Build
 import android.support.annotation.DrawableRes
+import dev.entao.yapp.App
 import net.yet.R
 import yet.ext.RGB
 import yet.theme.Colors
@@ -15,7 +16,6 @@ import yet.theme.IconSize
 import yet.theme.ViewSize
 import yet.ui.ext.dp
 import yet.ui.widget.EditTextX
-import yet.util.app.App
 
 /**
  * Created by entaoyang@163.com on 2016-07-23.
@@ -82,7 +82,7 @@ object D {
 	@Suppress("DEPRECATION")
 	fun res(@DrawableRes resId: Int): Drawable {
 		return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-			App.resource.getDrawable(resId, App.app.theme)
+			App.resource.getDrawable(resId, App.inst.theme)
 		} else {
 			App.resource.getDrawable(resId)
 		}

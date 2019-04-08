@@ -13,10 +13,10 @@ import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
+import dev.entao.yapp.App
 import yet.theme.Colors
 import yet.ui.MyColor
 import yet.util.*
-import yet.util.app.App
 import yet.util.app.Perm
 import yet.util.app.yson
 import yet.yson.YsonObject
@@ -146,7 +146,7 @@ open class BaseActivity : Activity(), MsgListener {
 	override fun onStart() {
 		visiableActivityCount += 1
 		if (visiableActivityCount == 1) {
-			val app = App.app
+			val app = App.inst
 			if (app is AppVisibleListener) {
 				Task.fore {
 					app.onEnterForeground()
@@ -163,7 +163,7 @@ open class BaseActivity : Activity(), MsgListener {
 		visiableActivityCount -= 1
 		if (visiableActivityCount <= 0) {
 			_topActivity = null
-			val app = App.app
+			val app = App.inst
 			if (app is AppVisibleListener) {
 				Task.fore {
 					app.onEnterBackground()

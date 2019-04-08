@@ -23,6 +23,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
+import dev.entao.yapp.App
 import dev.entao.yog.Yog
 import dev.entao.yog.loge
 import yet.ext.getValue
@@ -39,7 +40,6 @@ import yet.ui.res.saveJpg
 import yet.ui.res.savePng
 import yet.ui.widget.TabBar
 import yet.util.*
-import yet.util.app.App
 import yet.util.app.Perm
 import java.io.File
 import kotlin.reflect.KProperty1
@@ -64,7 +64,7 @@ open class BaseFragment : Fragment(), MsgListener {
 
     var openFlag: Int = 0
 
-    var activityAnim: AnimConf? = App.animConfDefault
+    var activityAnim: AnimConf? = AnimConf.RightIn
 
 
     val watchMap = HashMap<Uri, ContentObserver>()
@@ -420,7 +420,7 @@ open class BaseFragment : Fragment(), MsgListener {
             if (activity != null) {
                 Toast.makeText(activity, s, Toast.LENGTH_LONG).show()
             } else {
-                Toast.makeText(App.app, s, Toast.LENGTH_LONG).show()
+                Toast.makeText(App.inst, s, Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -434,7 +434,7 @@ open class BaseFragment : Fragment(), MsgListener {
             if (activity != null) {
                 Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(App.app, text, Toast.LENGTH_SHORT).show()
+                Toast.makeText(App.inst, text, Toast.LENGTH_SHORT).show()
             }
         }
     }
