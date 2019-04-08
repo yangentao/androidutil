@@ -31,4 +31,5 @@ dependencies {
     implementation project(':qrlib')
     implementation project(':gaode')
     implementation project(':yog')
+    implementation project(':sql')
 }

@@ -49,6 +49,8 @@ object App {
         }
     val context: Context get() = inst
 
+    val hasInst: Boolean get() = _inst != null
+
     fun init(inst: Application) {
         this._inst = inst
         Thread.setDefaultUncaughtExceptionHandler { _, ex ->

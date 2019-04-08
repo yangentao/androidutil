@@ -21,6 +21,7 @@ object Yog {
         val ld = File(d, "xlog")
         if (!ld.exists()) {
             ld.mkdirs()
+            ld.mkdir()
         }
         setPrinter(YogTree(LogcatPrinter, YogDir(ld)))
     }
