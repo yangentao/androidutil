@@ -6,6 +6,7 @@ import dev.entao.base.nameProp
 import yet.ext.TextConverts
 import yet.ext.defaultValueOfProperty
 import yet.ext.strToV
+import kotlin.reflect.KMutableProperty
 import kotlin.reflect.KProperty
 
 class YsonObject(val data: LinkedHashMap<String, YsonValue> = LinkedHashMap(32)) : YsonValue(), MutableMap<String, YsonValue> by data {
@@ -42,8 +43,27 @@ class YsonObject(val data: LinkedHashMap<String, YsonValue> = LinkedHashMap(32))
 		return yson()
 	}
 
+	private val _changedProperties = ArrayList<KMutableProperty<*>>(8)
+	private var gather: Boolean = false
+
+	@Synchronized
+	fun gather(block: () -> Unit): ArrayList<KMutableProperty<*>> {
+		this.gather = true
+		this._changedProperties.clear()
+		block()
+		val ls = ArrayList<KMutableProperty<*>>(_changedProperties)
+		this.gather = false
+		return ls
+	}
 	operator fun <V> setValue(thisRef: Any?, property: KProperty<*>, value: V) {
-		this.put(property.nameProp, Yson.toYson(value))
+		this[property.nameProp] = Yson.toYson(value)
+		if (this.gather) {
+			if (property is KMutableProperty) {
+				if (property !in this._changedProperties) {
+					this._changedProperties.add(property)
+				}
+			}
+		}
 	}
 
 	@Suppress("UNCHECKED_CAST")

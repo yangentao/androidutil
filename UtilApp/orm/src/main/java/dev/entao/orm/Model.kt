@@ -60,7 +60,13 @@ open class Model(val model: YsonObject) {
 		return Pool.peek.update(this::class, map, w)
 
 	}
-
+	fun updateByKey(block: () -> Unit): Boolean {
+		val ls = this.model.gather(block)
+		if (ls.isNotEmpty()) {
+			return this.updateByKey(ls)
+		}
+		return false
+	}
 	fun updateByKey(ps: List<KMutableProperty<*>>): Boolean {
 		return Pool.peek.updateByKey(this, ps)
 

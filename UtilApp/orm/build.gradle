@@ -12,7 +12,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
-        versionName "1.1.5.2711"
+        versionName "1.1.6.2711"
         dependencies {
             implementation fileTree(dir: 'libs', include: ['*.jar'])
             testImplementation 'junit:junit:4.12'
@@ -21,8 +21,8 @@ android {
             implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
 //    implementation 'dev.entao:base:1.1.4.2711'
-//    implementation 'dev.entao:json:1.1.4.2711'
-            implementation 'dev.entao:appbase:1.1.5.2711'
+            implementation 'dev.entao:json:1.1.6.2711'
+            implementation 'dev.entao:appbase:1.1.6.2711'
         }
     }
 
