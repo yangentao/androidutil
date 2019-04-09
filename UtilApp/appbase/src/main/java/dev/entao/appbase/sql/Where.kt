@@ -53,6 +53,13 @@ fun IsNotNull(p: KProperty<*>): Where {
 	return IsNotNull(col)
 }
 
+fun EQS(a: Pair<KProperty<*>, Any?>, vararg ps: Pair<KProperty<*>, Any?>): Where {
+	var w: Where? = a.first.EQ(a.second)
+	for (p in ps) {
+		w = w AND p.first.EQ(p.second)
+	}
+	return w!!
+}
 
 infix fun KProperty<*>.EQ(value: Any?): Where {
 	return this.nameProp.EQ(value)
@@ -61,8 +68,8 @@ infix fun KProperty<*>.EQ(value: Any?): Where {
 infix fun String.EQ(value: Any?): Where {
 	return when (value) {
 		null -> IsNull(this)
-		is Number -> Where("$this=$value")
-		else -> Where("$this=?").addArg(value)
+		is Number -> Where("$this = $value")
+		else -> Where("$this = ?").addArg(value)
 	}
 }
 
@@ -74,8 +81,8 @@ infix fun String.NE(value: Any?): Where {
 	val s = this
 	return when (value) {
 		null -> IsNotNull(s)
-		is Number -> Where("$s<>$value")
-		else -> Where("$s<>?").addArg(value)
+		is Number -> Where("$s <> $value")
+		else -> Where("$s <> ?").addArg(value)
 	}
 }
 
@@ -86,7 +93,7 @@ infix fun KProperty<*>.GE(value: Any): Where {
 
 infix fun String.GE(value: Any): Where {
 	val s = this
-	return Where("$s>=?").addArg(value)
+	return Where("$s >= ?").addArg(value)
 }
 
 
@@ -96,7 +103,7 @@ infix fun KProperty<*>.GT(value: Any): Where {
 
 infix fun String.GT(value: Any): Where {
 	val s = this
-	return Where("$s>?").addArg(value)
+	return Where("$s > ?").addArg(value)
 }
 
 
@@ -106,7 +113,7 @@ infix fun KProperty<*>.LE(value: Any): Where {
 
 infix fun String.LE(value: Any): Where {
 	val s = this
-	return Where("$s<=?").addArg(value)
+	return Where("$s <= ?").addArg(value)
 }
 
 
@@ -116,7 +123,7 @@ infix fun KProperty<*>.LT(value: Any): Where {
 
 infix fun String.LT(value: Any): Where {
 	val s = this
-	return Where("$s<?").addArg(value)
+	return Where("$s < ?").addArg(value)
 }
 
 

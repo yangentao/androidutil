@@ -2,35 +2,53 @@
 
 package dev.entao.appbase.sql
 
-import dev.entao.base.fullNameProp
-import dev.entao.base.nameClass
-import dev.entao.base.nameProp
+import dev.entao.base.*
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
 
 /**
  * Created by entaoyang@163.com on 2018-07-19.
  */
+val Prop.s: String get() = this.nameProp
+val KClass<*>.sqlName: String
+    get() {
+        return "`" + this.nameClass + "`"
+    }
+
+
+
+operator fun StringBuilder.plusAssign(s: String) {
+    this.append(s)
+}
+
+operator fun StringBuilder.plusAssign(ch: Char) {
+    this.append(ch)
+}
+
+operator fun StringBuilder.plus(s: String): StringBuilder {
+    this.append(s)
+    return this
+}
+
+operator fun StringBuilder.plus(ch: Char): StringBuilder {
+    this.append(ch)
+    return this
+}
 
 class SQLQuery {
 
-    val ASC = "ASC"
-    val DESC = "DESC"
-
-    private val fromArr = arrayListOf<String>()
-    private var whereStr: String = ""
-    private var limitStr: String = ""
-    private val selectArr: ArrayList<String> = arrayListOf()
-    private val joinOnArr = arrayListOf<String>()
-    private val orderArr = arrayListOf<String>()
-
-    private var groupByStr: String = ""
-    private var havingStr: String = ""
     private var distinct = false
+    private val selectArr = arrayListOf<String>()
+    private val fromArr = arrayListOf<String>()
+    private var whereClause: String = ""
+    private var limitClause: String = ""
+    private var joinClause = ""
+    private var onClause = ""
+    private var orderClause = ""
+    private var groupByClause: String = ""
+    private var havingClause: String = ""
 
     val args: ArrayList<Any> = ArrayList()
-
-    val modelClassSet = HashSet<KClass<*>>()
 
     val sqlArgs: Array<String>
         get() {
@@ -38,20 +56,24 @@ class SQLQuery {
         }
 
     fun groupBy(s: String): SQLQuery {
-        groupByStr = s
+        groupByClause = "GROUP BY $s"
         return this
     }
 
-    fun groupBy(p: KProperty<*>): SQLQuery {
-        groupByStr = p.nameProp
-        return this
+    fun groupBy(p: Prop): SQLQuery {
+        return this.groupBy(p.s)
     }
 
     fun having(s: String): SQLQuery {
-        havingStr = s
+        havingClause = "HAVING $s"
         return this
     }
 
+    fun having(w: Where): SQLQuery {
+        this.having(w.value)
+        this.args.addAll(w.args)
+        return this
+    }
     fun distinct(): SQLQuery {
         this.distinct = true
         return this
@@ -73,25 +95,42 @@ class SQLQuery {
     }
 
     fun from(vararg clses: KClass<*>): SQLQuery {
-        modelClassSet.addAll(clses)
-        val ls = clses.map { it.nameClass }
-        for (a in ls) {
-            if (a !in fromArr) {
-                fromArr += a
-            }
-        }
+        clses.mapTo(fromArr) { it.nameClass }
         return this
     }
 
     fun from(vararg tables: String): SQLQuery {
-        fromArr.addAll(tables.map { "`$it`" })
+        fromArr.addAll(tables.map {
+            if (it.startsWith("`")) {
+                it
+            } else {
+                "`$it`"
+            }
+        })
+        return this
+    }
+    fun join(vararg tables: String): SQLQuery {
+        return this.join(tables.toList())
+    }
+
+    fun join(vararg modelClasses: KClass<*>): SQLQuery {
+        return join(modelClasses.map { it.sqlName })
+    }
+
+    fun join(tables: List<String>, joinType: String = "LEFT"): SQLQuery {
+        joinClause = "$joinType JOIN ( ${tables.joinToString(", ")} ) "
         return this
     }
 
-    fun joinOn(joinKClass: KClass<*>, cond: OnCond): SQLQuery {
-        modelClassSet.add(joinKClass)
-        joinOnArr.add("JOIN ${joinKClass.nameClass} ON ${cond.value}")
+    fun on(s: String): SQLQuery {
+        onClause = " ON ($s) "
         return this
+    }
+
+    fun on(block: OnBuilder.() -> String): SQLQuery {
+        val b = OnBuilder()
+        val s = b.block()
+        return on(s)
     }
 
     fun where(block: () -> Where): SQLQuery {
@@ -101,68 +140,50 @@ class SQLQuery {
 
     fun where(w: Where?): SQLQuery {
         if (w != null) {
-            whereStr = w.value
+            whereClause = "WHERE ${w.value}"
             args.addAll(w.args)
         }
         return this
     }
 
-    fun where(w: String, vararg params: Any) {
-        whereStr = w
+    fun where(w: String, vararg params: Any): SQLQuery {
+        whereClause = "WHERE $w"
         args.addAll(params)
-    }
-
-    fun orderBy(ob: OrderBy?): SQLQuery {
-        if (ob != null) {
-            orderArr.addAll(ob.orderArr)
-        }
         return this
     }
-
-    fun orderBy(block: OrderBy.() -> Unit): SQLQuery {
-        val ob = OrderBy()
-        ob.block()
-        return orderBy(ob)
-    }
-
-    fun orderBy(p: KProperty<*>, ascDesc: String): SQLQuery {
-        orderArr.add(p.nameProp + " $ascDesc")
-        return this
-    }
-
-    fun orderBy(col: String, ascDesc: String): SQLQuery {
-        orderArr.add("$col $ascDesc")
-        return this
-    }
-
     fun asc(col: String): SQLQuery {
-        orderArr.add("$col ASC")
+        if (orderClause.isEmpty()) {
+            orderClause = "ORDER BY $col ASC"
+        } else {
+            orderClause += ", $col ASC"
+        }
         return this
     }
 
     fun desc(col: String): SQLQuery {
-        orderArr.add("$col DESC")
-        return this
-    }
-
-    fun asc(p: KProperty<*>): SQLQuery {
-        return asc(p.nameProp)
-    }
-
-    fun desc(p: KProperty<*>): SQLQuery {
-        return desc(p.nameProp)
-    }
-
-    fun limit(limit: Int): SQLQuery {
-        if (limit > 0) {
-            limitStr = "$limit "
+        if (orderClause.isEmpty()) {
+            orderClause = "ORDER BY $col DESC"
+        } else {
+            orderClause += ", $col DESC"
         }
         return this
     }
 
-    fun limit(limit: Int, offset: Int): SQLQuery {
-        if (limit > 0 && offset >= 0) {
-            limitStr = "$limit OFFSET $offset "
+    fun asc(p: KProperty<*>): SQLQuery {
+        return asc(p.s)
+    }
+
+    fun desc(p: KProperty<*>): SQLQuery {
+        return desc(p.s)
+    }
+
+    fun limit(size: Int): SQLQuery {
+        return this.limit(size, 0)
+    }
+
+    fun limit(size: Int, offset: Int): SQLQuery {
+        if (size > 0 && offset >= 0) {
+            limitClause = "LIMIT $size OFFSET $offset "
         }
         return this
     }
@@ -183,49 +204,39 @@ class SQLQuery {
         }
         sb.append("FROM ").append(fromArr.joinToString(",")).append(" ")
 
-        if (joinOnArr.isNotEmpty()) {
-            sb.append(joinOnArr.joinToString(" ")).append(" ")
+        if (joinClause.isEmpty()) {
+            onClause = ""
         }
-
-        if (whereStr.isNotEmpty()) {
-            sb.append("WHERE ").append(whereStr).append(" ")
+        if (groupByClause.isEmpty()) {
+            havingClause = ""
         }
+        val ls = listOf(joinClause, onClause, whereClause, groupByClause, havingClause, orderClause, limitClause)
+        sb += ls.map { it.trim() }.filter { it.isNotEmpty() }.joinToString(" ")
         return sb.toString()
     }
 
     fun toSQL(): String {
-        val dist = if (distinct) {
-            " DISTINCT "
-        } else {
-            ""
-        }
         val sb = StringBuilder(256)
-        if (selectArr.isEmpty()) {
-            sb.append("SELECT  $dist * ").append(" ")
+        sb += "SELECT "
+        if (distinct) {
+            sb += "DISTINCT "
+        }
+
+        sb += if (selectArr.isEmpty()) {
+            "*"
         } else {
-            sb.append("SELECT  $dist " + selectArr.joinToString(",")).append(" ")
+            selectArr.joinToString(", ")
         }
-        sb.append("FROM ").append(fromArr.joinToString(",")).append(" ")
-        if (joinOnArr.isNotEmpty()) {
-            sb.append(joinOnArr.joinToString(" ")).append(" ")
+        sb.append(" FROM ").append(fromArr.joinToString(","))
+        sb += " "
+        if (joinClause.isEmpty()) {
+            onClause = ""
         }
-
-
-        if (whereStr.isNotEmpty()) {
-            sb.append("WHERE ").append(whereStr).append(" ")
+        if (groupByClause.isEmpty()) {
+            havingClause = ""
         }
-        if (groupByStr.isNotEmpty()) {
-            sb.append("GROUP BY ").append(groupByStr).append(" ")
-            if (havingStr.isNotEmpty()) {
-                sb.append("HAVING ").append(havingStr).append(" ")
-            }
-        }
-        if (orderArr.isNotEmpty()) {
-            sb.append("ORDER BY ").append(orderArr.joinToString(",")).append(" ")
-        }
-        if (limitStr.isNotEmpty()) {
-            sb.append("LIMIT ").append(limitStr).append(" ")
-        }
+        val ls = listOf(joinClause, onClause, whereClause, groupByClause, havingClause, orderClause, limitClause)
+        sb += ls.map { it.trim() }.filter { it.isNotEmpty() }.joinToString(" ")
         return sb.toString()
     }
 
@@ -276,5 +287,20 @@ class OrderBy {
     fun desc(col: String): OrderBy {
         orderArr.add("$col DESC")
         return this
+    }
+}
+
+class OnBuilder {
+
+    infix fun Prop1.EQ(s: Prop1): String {
+        return "${this.s} = ${s.s}"
+    }
+
+    infix fun String.EQ(s: String): String {
+        return "$this = $s"
+    }
+
+    infix fun String.AND(s: String): String {
+        return "$this AND $s"
     }
 }
