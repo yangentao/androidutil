@@ -1,1 +1,1 @@
-include ':app', ':yetutil', ':qr', ':gaode', ':log', ':appbase', ':json', ':base', ':sql', ':http', ':pinyin'
+include ':app', ':yui', ':qr', ':gaode', ':log', ':appbase', ':json', ':base', ':sql', ':http', ':pinyin'
