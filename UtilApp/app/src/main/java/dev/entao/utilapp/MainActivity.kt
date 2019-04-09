@@ -1,8 +1,8 @@
 package dev.entao.utilapp
 
 import android.os.Bundle
-import yet.ui.activities.PageActivity
-import yet.ui.page.BaseFragment
+import dev.entao.ui.activities.PageActivity
+import dev.entao.ui.page.BaseFragment
 
 class MainActivity : PageActivity() {
 

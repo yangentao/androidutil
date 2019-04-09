@@ -3,10 +3,10 @@
 package dev.entao.http
 
 
+import android.app.Application
 import android.net.Uri
 import android.os.NetworkOnMainThreadException
 import android.util.Base64
-import dev.entao.appbase.App
 import dev.entao.base.Progress
 import dev.entao.base.closeSafe
 import dev.entao.base.copyStream
@@ -133,7 +133,7 @@ class Http(val url: String) {
 
     fun headers(map: Map<String, String>): Http {
         headerMap.putAll(map)
-        return this;
+        return this
     }
 
     fun timeoutConnect(millSeconds: Int): Http {
@@ -310,6 +310,7 @@ class Http(val url: String) {
 
     @Throws(IOException::class)
     private fun sendMultipart(os: OutputStream) {
+
         if (argMap.size > 0) {
             for (e in argMap.entries) {
                 write(os, BOUNDARY_START)
@@ -320,6 +321,8 @@ class Http(val url: String) {
             }
         }
         if (fileList.size > 0) {
+            val appCtx = appContext
+                ?: throw IllegalArgumentException("You should set Http.appContext only once before use multipart method")
             for (fp in fileList) {
                 write(os, BOUNDARY_START)
                 write(os, "Content-Disposition:form-data;name=\"${fp.key}\";filename=\"${fp.filename}\"\r\n")
@@ -327,7 +330,7 @@ class Http(val url: String) {
                 write(os, "Content-Transfer-Encoding: binary\r\n")
                 write(os, "\r\n")
                 val progress = fp.progress
-                val fis = App.contentResolver.openInputStream(fp.file)
+                val fis = appCtx.contentResolver.openInputStream(fp.file)
                 val total = fis.available()
                 if (os is SizeStream) {
                     os.incSize(total)
@@ -426,7 +429,7 @@ class Http(val url: String) {
             when (method) {
                 HttpMethod.POST -> {
                     val s = buildArgs()
-                    if (s.length > 0) {
+                    if (s.isNotEmpty()) {
                         write(os, s)
                     }
                 }
@@ -476,10 +479,10 @@ class Http(val url: String) {
             for (fp in fileList) {
                 log("--file:", fp)
             }
-            if (method == HttpMethod.GET || method == HttpMethod.POST_RAW_DATA) {
-                connection = URL(buildGetUrl()).openConnection() as HttpURLConnection
+            connection = if (method == HttpMethod.GET || method == HttpMethod.POST_RAW_DATA) {
+                URL(buildGetUrl()).openConnection() as HttpURLConnection
             } else {
-                connection = URL(url).openConnection() as HttpURLConnection
+                URL(url).openConnection() as HttpURLConnection
             }
 
             preConnect(connection)
@@ -496,9 +499,7 @@ class Http(val url: String) {
             result.exception = ex
             return result
         } finally {
-            if (connection != null) {
-                connection.disconnect()
-            }
+            connection?.disconnect()
         }
     }
 
@@ -536,6 +537,10 @@ class Http(val url: String) {
 
     fun download(saveto: File, progress: Progress?): HttpResult {
         return saveTo(saveto).progress(progress).get()
+    }
+
+    companion object {
+        var appContext: Application? = null
     }
 
 }

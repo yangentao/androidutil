@@ -28,6 +28,7 @@ import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import dev.entao.appbase.ex.color
+import dev.entao.http.Http
 import dev.entao.log.Yog
 import java.io.File
 import java.io.FileNotFoundException
@@ -63,6 +64,7 @@ object App {
             Yog.e(ex)
             System.exit(-1)
         }
+        Http.appContext = inst
     }
 
     val debug: Boolean by lazy {

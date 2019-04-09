@@ -3,9 +3,8 @@ package dev.entao.utilapp
 import android.content.Context
 import android.widget.LinearLayout
 import dev.entao.log.logd
-import yet.ui.dialogs.alert
-import yet.ui.dialogs.showInput
-import yet.ui.page.TitlePage
+import dev.entao.ui.dialogs.showInput
+import dev.entao.ui.page.TitlePage
 
 class MainPage : TitlePage() {
 
@@ -14,14 +13,15 @@ class MainPage : TitlePage() {
         titleBar {
             title("Hello")
             rightText("Hello").onClick = {
-                alert("Messsage", "Title")
+                alert("Messsage")
 
             }
         }
     }
-    fun hello(){
+
+    fun hello() {
         showInput("Hello", "") {
-            logd(it )
+            logd(it)
         }
     }
 }

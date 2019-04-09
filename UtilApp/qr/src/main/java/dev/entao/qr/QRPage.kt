@@ -13,12 +13,13 @@ import com.journeyapps.barcodescanner.CaptureManager
 import com.journeyapps.barcodescanner.DecoratedBarcodeView
 import dev.entao.appbase.ex.ImageStated
 import dev.entao.appbase.ex.sized
-import yet.ui.dialogs.showInput
-import yet.ui.ext.*
-import yet.ui.page.PageClass
-import yet.ui.page.TitlePage
-import yet.ui.viewcreator.createLinearHorizontal
-import yet.ui.viewcreator.createTextViewC
+import dev.entao.ui.dialogs.showInput
+import dev.entao.ui.ext.*
+import dev.entao.ui.page.PageClass
+import dev.entao.ui.page.TitlePage
+import dev.entao.ui.viewcreator.createLinearHorizontal
+import dev.entao.ui.viewcreator.createTextViewC
+
 
 /**
  * Created by entaoyang@163.com on 2016-10-29.

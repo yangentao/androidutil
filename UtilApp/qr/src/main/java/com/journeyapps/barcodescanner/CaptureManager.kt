@@ -20,7 +20,7 @@ import com.google.zxing.client.android.BeepManager
 import com.google.zxing.client.android.InactivityTimer
 import dev.entao.qr.R
 import dev.entao.qr.ScanConfig
-import yet.util.Task
+import dev.entao.util.Task
 
 /**
  * Manages barcode scanning for a CaptureActivity. This class may be used to have a custom Activity

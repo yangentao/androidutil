@@ -8,15 +8,9 @@ import android.widget.TextView
 import com.google.zxing.ResultPoint
 import com.journeyapps.barcodescanner.camera.CameraSettings
 import dev.entao.qr.ScanConfig
-import yet.ui.ext.FParam
-import yet.ui.ext.GravityTopCenter
-import yet.ui.ext.Wrap
-import yet.ui.ext.backColor
-import yet.ui.ext.fill
-import yet.ui.ext.genId
-import yet.ui.ext.margins
-import yet.ui.ext.textColorWhite
-import yet.ui.viewcreator.createTextViewB
+import dev.entao.ui.ext.*
+import dev.entao.ui.viewcreator.createTextViewB
+
 
 /**
  * Encapsulates BarcodeView, ViewfinderView and status text.

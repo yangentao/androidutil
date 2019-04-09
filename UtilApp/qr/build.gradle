@@ -15,7 +15,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
-        versionName "1.1.2.2711"
+        versionName "1.1.5.2711"
     }
 
 }
@@ -25,7 +25,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'dev.entao:yetutil:1.1.2.2711'
+    implementation 'dev.entao:ui:1.1.5.2711'
 //    implementation project(':yetutil')
 //    implementation project(':appbase')
 //    implementation project(':base')
@@ -48,7 +48,7 @@ uploadArchives {
             repository(url: 'http://app800.cn/maven/repository/releases/') {
                 authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
             }
-            pom.artifactId = "qrlib"
+            pom.artifactId = "qr"
             pom.groupId = project.group //'dev.entao'
             pom.version = android.defaultConfig.versionName
             pom.packaging = 'aar'
