@@ -10,10 +10,11 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
+import dev.entao.appbase.ex.Shapes
 import dev.entao.appbase.ex.colorParse
+import dev.entao.appbase.ex.dp
 import dev.entao.base.BlockUnit
 import yet.ui.ext.*
-import yet.ui.res.Shapes
 import yet.ui.util.LayerUtil
 import yet.ui.viewcreator.textView
 import yet.util.Task

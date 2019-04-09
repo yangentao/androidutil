@@ -8,9 +8,10 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import dev.entao.appbase.ex.ARGB
 import dev.entao.appbase.ex.RGB
+import dev.entao.appbase.ex.Shapes
+import dev.entao.appbase.ex.dp
 import dev.entao.log.Yog
 import yet.ui.ext.*
-import yet.ui.res.Shapes
 import yet.ui.viewcreator.createLinearVertical
 import yet.ui.viewcreator.createTextViewC
 import yet.util.AmrRecord

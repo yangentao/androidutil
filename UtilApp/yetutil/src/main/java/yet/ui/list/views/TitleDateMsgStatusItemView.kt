@@ -4,9 +4,9 @@ import android.content.Context
 import android.widget.LinearLayout
 import android.widget.TextView
 import dev.entao.appbase.ex.RGB
+import dev.entao.appbase.ex.Shapes
 import dev.entao.base.MyDate
 import yet.ui.ext.*
-import yet.ui.res.Shapes
 import yet.ui.viewcreator.createLinearHorizontal
 import yet.ui.viewcreator.createLinearVertical
 import yet.ui.viewcreator.createTextViewB

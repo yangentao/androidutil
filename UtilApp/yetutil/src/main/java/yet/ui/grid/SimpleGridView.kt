@@ -6,11 +6,12 @@ import android.view.View
 import android.widget.AbsListView
 import android.widget.AdapterView
 import android.widget.TextView
+import dev.entao.appbase.ex.dp
+import dev.entao.appbase.ex.limited
+import dev.entao.appbase.ex.sized
 import yet.ui.ext.*
 import yet.ui.list.AnyAdapter
 import yet.ui.res.D
-import yet.ui.res.limited
-import yet.ui.res.sized
 import yet.util.Task
 
 /**

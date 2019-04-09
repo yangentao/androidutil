@@ -6,11 +6,11 @@ import android.widget.*
 import net.yet.R
 import dev.entao.appbase.ex.Colors
 import dev.entao.appbase.ex.ImageStated
+import dev.entao.appbase.ex.RectDraw
 import yet.theme.ViewSize
 import yet.ui.ext.*
 import yet.ui.page.BaseFragment
 import yet.ui.res.D
-import yet.ui.res.RectDraw
 import yet.ui.res.Res
 import yet.ui.util.TimeDown
 import yet.ui.viewcreator.*

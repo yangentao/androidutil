@@ -86,7 +86,7 @@ object Task {
 
     //进程内只执行一次
     fun onceProcess(key: String, block: BlockUnit) {
-        sync(onceProcessSet) {
+        synchronized(onceProcessSet) {
             if (key in onceProcessSet) {
                 return
             }

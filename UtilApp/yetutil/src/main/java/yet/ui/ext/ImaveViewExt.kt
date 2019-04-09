@@ -2,8 +2,8 @@ package yet.ui.ext
 
 import android.support.annotation.DrawableRes
 import android.widget.ImageView
+import dev.entao.appbase.ex.tintedWhite
 import yet.ui.res.Res
-import yet.ui.res.tintedWhite
 
 /**
  * Created by entaoyang@163.com on 16/3/13.

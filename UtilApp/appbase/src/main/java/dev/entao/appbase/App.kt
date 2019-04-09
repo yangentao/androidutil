@@ -28,6 +28,7 @@ import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import dev.entao.appbase.ex.color
+import dev.entao.log.Yog
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
@@ -56,9 +57,10 @@ object App {
 
     fun init(inst: Application) {
         this._inst = inst
+        Yog.init(inst)
         Thread.setDefaultUncaughtExceptionHandler { _, ex ->
             ex.printStackTrace()
-            Log.e("app", ex.localizedMessage)
+            Yog.e(ex)
             System.exit(-1)
         }
     }
@@ -158,6 +160,9 @@ object App {
             return inst.getExternalFilesDir(null)
         }
 
+    fun px2dp(px: Int): Int {
+        return (px / App.density + 0.5f).toInt()
+    }
 
     fun sp2px(spValue: Float): Int {
         return (spValue * scaledDensity + 0.5f).toInt()

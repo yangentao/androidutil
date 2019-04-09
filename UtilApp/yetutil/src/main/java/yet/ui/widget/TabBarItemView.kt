@@ -5,13 +5,10 @@ import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.widget.RelativeLayout
 import android.widget.TextView
-import dev.entao.appbase.ex.RGB
-import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.*
 import yet.ui.ext.*
 import yet.ui.res.D
 import yet.ui.res.Res
-import yet.ui.res.sized
-import yet.ui.res.tinted
 import yet.ui.viewcreator.textView
 
 /**

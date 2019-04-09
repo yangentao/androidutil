@@ -4,11 +4,11 @@ import android.content.Context
 import android.view.View
 import android.widget.Checkable
 import android.widget.CheckedTextView
+import dev.entao.appbase.ex.sized
 import dev.entao.log.fatalIf
 import yet.ui.ext.*
 import yet.ui.list.views.HorItemView
 import yet.ui.res.D
-import yet.ui.res.sized
 
 
 class CheckView(context: Context) : HorItemView(context), Checkable {

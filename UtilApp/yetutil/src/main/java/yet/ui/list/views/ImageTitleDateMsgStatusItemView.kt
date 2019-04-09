@@ -8,10 +8,11 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import dev.entao.appbase.ex.RGB
+import dev.entao.appbase.ex.Shapes
+import dev.entao.appbase.ex.dp
 import dev.entao.base.MyDate
 import yet.theme.IconSize
 import yet.ui.ext.*
-import yet.ui.res.Shapes
 import yet.ui.viewcreator.*
 
 /**

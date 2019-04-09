@@ -1,4 +1,4 @@
-package yet.util
+package dev.entao.appbase.ex
 
 import java.util.*
 

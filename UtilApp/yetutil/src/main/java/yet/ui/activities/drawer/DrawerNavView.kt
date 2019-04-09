@@ -11,10 +11,10 @@ import android.widget.CompoundButton
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.sized
 import yet.theme.IconSize
 import yet.theme.Space
 import yet.ui.ext.*
-import yet.ui.res.sized
 import yet.ui.viewcreator.createLinearHorizontal
 import yet.ui.viewcreator.createLinearVertical
 import yet.ui.viewcreator.createTextViewB

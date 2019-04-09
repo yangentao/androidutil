@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.support.annotation.DrawableRes
 import android.widget.TextView
+import dev.entao.appbase.ex.sized
 import yet.theme.IconSize
 import yet.theme.Space
 import yet.ui.ext.gravityLeftCenter
@@ -11,7 +12,6 @@ import yet.ui.ext.padding
 import yet.ui.ext.textColorMajor
 import yet.ui.ext.textSizeA
 import yet.ui.res.D
-import yet.ui.res.sized
 
 /**
  * Created by entaoyang@163.com on 16/3/13.

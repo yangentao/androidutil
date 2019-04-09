@@ -4,9 +4,7 @@ import android.content.Context
 import android.graphics.drawable.LayerDrawable
 import android.view.View
 import android.widget.CheckBox
-import dev.entao.appbase.ex.Colors
-import dev.entao.appbase.ex.ImageStated
-import yet.ui.res.Shapes
+import dev.entao.appbase.ex.*
 
 /**
  * Created by entaoyang@163.com on 16/6/4.

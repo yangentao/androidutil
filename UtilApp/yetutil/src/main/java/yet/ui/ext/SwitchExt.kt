@@ -3,7 +3,8 @@ package yet.ui.ext
 import android.widget.Switch
 import dev.entao.appbase.ex.Colors
 import dev.entao.appbase.ex.ImageStated
-import yet.ui.res.Shapes
+import dev.entao.appbase.ex.Shapes
+import dev.entao.appbase.ex.dp
 import yet.util.app.OS
 
 /**

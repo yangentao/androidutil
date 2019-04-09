@@ -7,7 +7,7 @@ import android.text.TextWatcher
 import android.view.MotionEvent
 import android.view.View
 import android.widget.EditText
-import yet.ui.ext.dp
+import dev.entao.appbase.ex.dp
 import yet.ui.ext.genId
 import yet.ui.ext.hideInputMethod
 import yet.ui.ext.padding

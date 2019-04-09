@@ -7,12 +7,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import dev.entao.appbase.ex.ColorDrawable
-import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.*
 import yet.theme.Space
 import yet.ui.res.D
-import yet.ui.res.RectDraw
-import yet.ui.res.Shapes
 import java.util.concurrent.atomic.AtomicInteger
 import kotlin.reflect.KClass
 /**

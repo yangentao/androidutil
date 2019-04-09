@@ -1,4 +1,4 @@
-package yet.ext
+package yet.util
 
 import android.net.Uri
 import android.webkit.MimeTypeMap

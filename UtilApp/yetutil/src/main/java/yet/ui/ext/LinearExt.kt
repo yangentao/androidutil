@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.LinearLayout
 import dev.entao.appbase.ex.Bmp
 import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.dp
 import dev.entao.appbase.ex.drawable
 
 /**

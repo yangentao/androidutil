@@ -1,4 +1,4 @@
-package yet.util
+package dev.entao.appbase.ex
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -10,7 +10,7 @@ import android.net.Uri
 import android.os.Bundle
 import dev.entao.appbase.App
 
-object AlarmUtil {
+object Alarms {
 
 	fun serviceAt(time: Long, wakeup: Boolean, action: String, cls: Class<out Service>, uri: Uri? = null, bundle: Bundle? = null) {
 		val it = Intent(action, uri, App.inst, cls)

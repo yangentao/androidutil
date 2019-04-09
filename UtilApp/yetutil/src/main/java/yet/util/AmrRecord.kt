@@ -1,7 +1,7 @@
 package yet.util
 
 import android.media.MediaRecorder
-import dev.entao.log.loge
+import dev.entao.base.ex.FixedQueue
 import java.io.File
 import java.util.*
 
@@ -59,7 +59,7 @@ class AmrRecord {
 			}
 			return true
 		} catch (e: Exception) {
-			loge(e)
+			e.printStackTrace()
 			release()
 		}
 

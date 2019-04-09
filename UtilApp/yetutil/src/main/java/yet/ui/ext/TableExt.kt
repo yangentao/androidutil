@@ -7,9 +7,10 @@ import android.widget.EditText
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
+import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.dp
 import dev.entao.base.getValue
 import dev.entao.base.labelProp_
-import dev.entao.appbase.ex.Colors
 import yet.theme.ViewSize
 import yet.ui.dialogs.DialogX
 import yet.ui.res.D

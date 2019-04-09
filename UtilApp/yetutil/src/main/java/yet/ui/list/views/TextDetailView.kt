@@ -4,10 +4,11 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.view.ViewGroup
 import android.widget.TextView
+import dev.entao.appbase.ex.dp
+import dev.entao.appbase.ex.sized
 import yet.ui.ext.*
 import yet.ui.res.D
 import yet.ui.res.Res
-import yet.ui.res.sized
 import yet.ui.viewcreator.textView
 
 /**

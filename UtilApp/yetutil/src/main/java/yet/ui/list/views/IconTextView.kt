@@ -8,6 +8,7 @@ import android.util.TypedValue
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import dev.entao.appbase.ex.dp
 import yet.theme.IconSize
 import yet.ui.ext.*
 import yet.ui.viewcreator.createImageView
@@ -50,10 +51,10 @@ class IconTextView(context: Context, iconSize: Int = IconSize.Big) : LinearLayou
 		return this
 	}
 
-	fun setIconSize(dp: Int): IconTextView {
+	fun setIconSize(n: Int): IconTextView {
 		val p = iconView.layoutParams as LinearLayout.LayoutParams
-		p.width = dp(dp)
-		p.height = dp(dp)
+		p.width = dp(n)
+		p.height = dp(n)
 		iconView.layoutParams = p
 		return this
 	}

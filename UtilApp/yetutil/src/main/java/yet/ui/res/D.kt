@@ -13,7 +13,6 @@ import dev.entao.appbase.ex.*
 import net.yet.R
 import yet.theme.IconSize
 import yet.theme.ViewSize
-import yet.ui.ext.dp
 import yet.ui.widget.EditTextX
 
 /**

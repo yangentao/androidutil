@@ -1,10 +1,10 @@
-package yet.ui.res
+package dev.entao.appbase.ex
 
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import dev.entao.appbase.ex.Colors
-import yet.ui.ext.dp
-import yet.ui.ext.px2dp
+import dev.entao.appbase.ex.dp
+import dev.entao.appbase.ex.px2dp
 
 /**
  *

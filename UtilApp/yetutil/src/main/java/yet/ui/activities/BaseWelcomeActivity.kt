@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.widget.ImageView
 import dev.entao.appbase.ex.ARGB
 import dev.entao.appbase.ex.RGB
+import dev.entao.appbase.ex.Shapes
 import dev.entao.base.Sleep
 import yet.ui.activities.BaseActivity
 import yet.ui.ext.*
-import yet.ui.res.Shapes
 import yet.ui.viewcreator.createRelative
 import yet.ui.viewcreator.imageView
 import yet.ui.viewcreator.textView

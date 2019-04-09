@@ -129,33 +129,5 @@ val android.content.res.Configuration.landscape: Boolean
 //    get() = (screenLayout and android.content.res.Configuration.SCREENLAYOUT_LONG_YES) != 0
 
 
-//--------------dp------------
 
-fun Context.dp(dp: Int): Int {
-	val v = dp * displayMetrics.density + 0.5f
-	return v.toInt()
-}
-
-fun Context.sp(sp: Int): Float {
-	return sp * displayMetrics.scaledDensity + 0.5f
-}
-
-fun dp(dp: Int): Int {
-	return (dp * App.density + 0.5f).toInt()
-}
-
-fun dp2(dp: Int?): Int? {
-	if (dp != null) {
-		return dp(dp)
-	}
-	return null
-}
-
-fun sp(sp: Int): Float {
-	return sp * App.scaledDensity + 0.5f
-}
-
-fun px2dp(px: Int): Int {
-	return (px / App.density + 0.5f).toInt()
-}
 

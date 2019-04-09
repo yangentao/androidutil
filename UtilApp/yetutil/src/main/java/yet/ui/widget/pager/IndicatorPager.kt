@@ -9,11 +9,11 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import dev.entao.appbase.ex.Shapes
 import dev.entao.appbase.ex.grayColor
+import dev.entao.appbase.ex.sized
 import yet.ui.ext.*
 import yet.ui.res.D
-import yet.ui.res.Shapes
-import yet.ui.res.sized
 import yet.ui.viewcreator.createImageView
 import yet.ui.viewcreator.imageView
 import yet.ui.viewcreator.linearHor
@@ -89,14 +89,9 @@ class IndicatorPager(context: Context) : RelativeLayout(context) {
 
     }
 
-    val tm = MyTimer {
-        timer.paused = false
-    }
 
     fun onUserTouch() {
         timer.paused = true
-        tm.cancel()
-        tm.schedule(20000)
     }
 
     private fun bind() {

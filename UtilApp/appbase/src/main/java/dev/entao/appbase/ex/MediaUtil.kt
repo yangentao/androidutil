@@ -1,10 +1,9 @@
-package yet.util
+package dev.entao.appbase.ex
 
 import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
-import dev.entao.log.loge
 import java.io.File
 import java.io.IOException
 
@@ -36,7 +35,7 @@ object MediaUtil {
 		if (extType.isEmpty()) {
 			extType = "*"
 		}
-		intent.setDataAndType(Uri.fromFile(file), "audio/" + extType)
+		intent.setDataAndType(Uri.fromFile(file), "audio/$extType")
 		context.startActivity(intent)
 	}
 
@@ -56,7 +55,6 @@ object MediaUtil {
 			return player
 		} catch (e: IOException) {
 			e.printStackTrace()
-			loge(e)
 			player.release()
 		}
 

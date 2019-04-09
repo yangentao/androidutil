@@ -5,12 +5,12 @@ import android.graphics.Color
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
-import dev.entao.log.Yog
 import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.sized
+import dev.entao.log.Yog
 import yet.ui.ext.*
 import yet.ui.list.views.HorItemView
 import yet.ui.list.views.ItemViewCheckable
-import yet.ui.res.sized
 import yet.ui.viewcreator.createLinearHorizontal
 import yet.ui.viewcreator.createTextViewA
 import yet.ui.widget.Action

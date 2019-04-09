@@ -1,7 +1,7 @@
-package yet.ui.res
+package dev.entao.appbase.ex
 
 import android.graphics.drawable.GradientDrawable
-import yet.ui.ext.dp
+import dev.entao.appbase.ex.dp
 
 /**
  * Created by entaoyang@163.com on 16/7/12.

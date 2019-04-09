@@ -10,10 +10,11 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
-import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.*
 import yet.ui.ext.*
 import yet.ui.page.Cmd
-import yet.ui.res.*
+import yet.ui.res.D
+import yet.ui.res.Res
 import yet.ui.viewcreator.createLinearVertical
 import yet.ui.viewcreator.createTextViewB
 import yet.util.Task

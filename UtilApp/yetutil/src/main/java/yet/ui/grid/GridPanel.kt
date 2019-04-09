@@ -7,11 +7,11 @@ import android.view.View
 import android.widget.AbsListView
 import android.widget.AdapterView
 import android.widget.GridView
-import yet.ui.ext.dp
+import dev.entao.appbase.ex.dp
+import dev.entao.appbase.ex.sized
 import yet.ui.ext.genId
 import yet.ui.ext.padding
 import yet.ui.list.AnyAdapter
-import yet.ui.res.sized
 
 /**
  * Created by entaoyang@163.com on 2016-08-27.

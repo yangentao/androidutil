@@ -3,7 +3,7 @@ package yet.ui.dialogs
 import android.app.Activity
 import android.app.Dialog
 import android.view.Gravity
-import yet.ui.ext.dp
+import dev.entao.appbase.ex.dp
 import yet.ui.ext.inputTypeNumber
 import yet.ui.ext.textS
 import yet.ui.page.BaseFragment

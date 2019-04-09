@@ -8,9 +8,10 @@ import android.support.annotation.DrawableRes
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.*
 import yet.ui.ext.*
-import yet.ui.res.*
+import yet.ui.res.D
+import yet.ui.res.Res
 import yet.ui.viewcreator.*
 import yet.util.Task
 

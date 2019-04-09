@@ -13,7 +13,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
-        versionName "1.1.0.2711"
+        versionName "1.1.1.2711"
     }
 
 
@@ -45,7 +45,7 @@ uploadArchives {
             repository(url: 'http://app800.cn/maven/repository/releases/') {
                 authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
             }
-            pom.artifactId = "yog"
+            pom.artifactId = "log"
             pom.groupId = project.group //'dev.entao'
             pom.version = android.defaultConfig.versionName
             pom.packaging = 'aar'
