@@ -1,8 +1,8 @@
 package yet.ui.ext
 
 import android.widget.Switch
-import yet.theme.Colors
-import yet.ui.res.ImageStated
+import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.ImageStated
 import yet.ui.res.Shapes
 import yet.util.app.OS
 

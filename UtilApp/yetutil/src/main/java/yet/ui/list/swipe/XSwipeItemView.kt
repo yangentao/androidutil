@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import dev.entao.log.Yog
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.*
 import yet.ui.list.views.HorItemView
 import yet.ui.list.views.ItemViewCheckable

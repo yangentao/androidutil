@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import dev.entao.base.Progress
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.MyColor
 import yet.ui.activities.TabBarActivity
 import yet.ui.ext.*

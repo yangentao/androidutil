@@ -1,4 +1,4 @@
-package yet.ui.res
+package dev.entao.appbase.ex
 
 import android.graphics.Bitmap
 import android.graphics.Bitmap.Config
@@ -10,8 +10,6 @@ import android.support.annotation.DrawableRes
 import android.util.DisplayMetrics
 import dev.entao.appbase.App
 import dev.entao.base.closeSafe
-import yet.theme.Colors
-import yet.util.MySize
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileNotFoundException

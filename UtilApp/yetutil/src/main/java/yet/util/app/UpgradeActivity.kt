@@ -9,8 +9,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import dev.entao.appbase.App
 import dev.entao.base.Progress
+import dev.entao.base.ex.keepDot
 import dev.entao.log.loge
-import yet.ext.keepDot
 import yet.ui.activities.TitledActivity
 import yet.ui.ext.*
 import yet.ui.viewcreator.buttonGreenRound

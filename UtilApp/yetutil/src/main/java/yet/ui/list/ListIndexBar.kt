@@ -8,13 +8,13 @@ import android.graphics.drawable.GradientDrawable
 import android.view.MotionEvent
 import android.view.View
 import android.widget.*
+import dev.entao.appbase.ex.colorParse
 import dev.entao.base.BlockUnit
-import yet.ext.RGB
+import dev.entao.base.ex.MultiHashMapArray
 import yet.ui.ext.*
 import yet.ui.res.Shapes
 import yet.ui.util.LayerUtil
 import yet.ui.viewcreator.createTextView
-import yet.util.MultiHashMapArray
 import yet.util.Task
 import java.util.*
 
@@ -26,7 +26,7 @@ abstract class ListIndexBar<T>(context: Context, feedbackParentView: RelativeLay
 	private var selectView: View? = null
 	private val selectDrawable = bgDraw()
 	private var tagList: ArrayList<Char>? = null
-	private val darkColor = RGB("#ccc")
+	private val darkColor = colorParse("#ccc")
 	private val normalColor = Color.TRANSPARENT
 	private var feedbackView: TextView
 	private val tagPosMap = HashMap<Char, Int>(30)
@@ -56,9 +56,9 @@ abstract class ListIndexBar<T>(context: Context, feedbackParentView: RelativeLay
 
 		val d = Shapes.rect {
 			cornerPx = dp(10)
-			fillColor = RGB("#555")
+			fillColor = colorParse("#555")
 			strokeWidthPx = dp(2)
-			strokeColor = RGB("#ddd")
+			strokeColor = colorParse("#ddd")
 		}
 		feedbackView.textColor_(Color.WHITE).textSize_(50).gravityCenter().backDrawable(d).gone()
 		feedbackParentView.addView(feedbackView, relativeParam().centerInParent().size(70))

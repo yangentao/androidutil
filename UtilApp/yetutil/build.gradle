@@ -48,7 +48,7 @@ dependencies {
     implementation project(':json')
     implementation project(':sql')
     implementation project(':http')
-    implementation project(':pinyin')
+//    implementation project(':pinyin')
 }
 
 task androidSourcesJar(type: Jar) {

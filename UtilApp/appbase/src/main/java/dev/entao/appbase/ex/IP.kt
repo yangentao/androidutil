@@ -1,4 +1,4 @@
-package yet.net
+package dev.entao.appbase.ex
 
 /**
  * @see java.net.Inet4Address

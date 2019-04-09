@@ -9,7 +9,7 @@ import dev.entao.sql.hasAnnotation
 import dev.entao.sql.selectOptionsStatic
 import dev.entao.log.logd
 import yet.ext.*
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.theme.ViewSize
 import yet.ui.dialogs.alert
 import yet.ui.ext.*

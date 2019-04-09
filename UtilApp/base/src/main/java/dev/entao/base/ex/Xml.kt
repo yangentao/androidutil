@@ -1,4 +1,4 @@
-package yet.ext
+package dev.entao.base.ex
 
 import dev.entao.base.MyDate
 import org.w3c.dom.Document
@@ -130,6 +130,3 @@ fun Element.elist(name: String): List<Element> {
 }
 
 
-fun escapeXML(s: String): String {
-	return s.replaceChars('<' to "&lt;", '>' to "&gt;", '&' to "&amp;", '"' to "&quot;", '\'' to "&apos;")
-}

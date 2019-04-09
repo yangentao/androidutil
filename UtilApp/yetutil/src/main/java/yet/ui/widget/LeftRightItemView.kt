@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.ImageView.ScaleType
 import android.widget.LinearLayout
 import android.widget.TextView
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.*
 import yet.ui.res.D
 import yet.ui.viewcreator.createCheckBox

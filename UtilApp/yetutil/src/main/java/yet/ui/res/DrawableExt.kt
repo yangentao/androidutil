@@ -2,8 +2,8 @@ package yet.ui.res
 
 import android.graphics.drawable.Drawable
 import android.support.v4.graphics.drawable.DrawableCompat
-import yet.ext.ColorListLight
-import yet.theme.Colors
+import dev.entao.appbase.ex.ColorListLight
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.dp
 
 /**

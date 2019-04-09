@@ -2,14 +2,14 @@ package yet.ui.widget.pager
 
 import android.content.Context
 import android.database.DataSetObserver
+import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.support.v4.view.ViewPager
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import yet.ext.AGRAY
-import yet.ext.GRAY
+import dev.entao.appbase.ex.grayColor
 import yet.ui.ext.*
 import yet.ui.res.D
 import yet.ui.res.Shapes
@@ -36,8 +36,8 @@ class IndicatorPager(context: Context) : RelativeLayout(context) {
 
     var onPageClick: (View, Int) -> Unit = { _, _ -> }
 
-    var dotColor = AGRAY(180, 150)
-    var dotLightColor = GRAY(255)
+    var dotColor = Color.argb(180, 150, 150, 150)
+    var dotLightColor = grayColor(255)
 
     var timer: MyTimer = MyTimer()
 

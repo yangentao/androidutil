@@ -2,7 +2,7 @@ package yet.ui.res
 
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.dp
 import yet.ui.ext.px2dp
 

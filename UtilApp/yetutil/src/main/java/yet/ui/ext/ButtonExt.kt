@@ -2,7 +2,7 @@ package yet.ui.ext
 
 import android.widget.Button
 import android.widget.CheckBox
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.theme.ViewSize
 import yet.ui.res.D
 

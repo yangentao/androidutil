@@ -1,9 +1,10 @@
-package yet.ui.res
+package dev.entao.appbase.ex
 
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.StateListDrawable
 import android.support.annotation.DrawableRes
+import dev.entao.appbase.App
 
 /**
  * Created by entaoyang@163.com on 2016-10-31.
@@ -12,7 +13,7 @@ import android.support.annotation.DrawableRes
 class ImageStated(var normal: Drawable? = null) {
 	private var stateDrawable = StateListDrawable()
 
-	constructor(@DrawableRes resId: Int) : this(D.res(resId))
+	constructor(@DrawableRes resId: Int) : this(App.drawable(resId))
 
 	//如果d是null, 不执行任何动作, 忽略掉
 	private fun addDrawable(d: Drawable?, vararg states: Int) {
@@ -41,7 +42,7 @@ class ImageStated(var normal: Drawable? = null) {
 	}
 
 	fun normal(@DrawableRes id: Int): ImageStated {
-		return normal(D.res(id))
+		return normal(App.drawable(id))
 	}
 
 	fun normal(d: Drawable): ImageStated {
@@ -55,7 +56,7 @@ class ImageStated(var normal: Drawable? = null) {
 	}
 
 	fun selected(@DrawableRes id: Int, selected: Boolean = true): ImageStated {
-		return selected(D.res(id), selected)
+		return selected(App.drawable(id), selected)
 	}
 
 	fun selected(d: Drawable?, selected: Boolean = true): ImageStated {
@@ -72,7 +73,7 @@ class ImageStated(var normal: Drawable? = null) {
 	}
 
 	fun pressed(@DrawableRes id: Int, pressed: Boolean = true): ImageStated {
-		return pressed(D.res(id), pressed)
+		return pressed(App.drawable(id), pressed)
 	}
 
 	fun pressed(d: Drawable?, pressed: Boolean = true): ImageStated {
@@ -89,7 +90,7 @@ class ImageStated(var normal: Drawable? = null) {
 	}
 
 	fun disabled(@DrawableRes id: Int): ImageStated {
-		return disabled(D.res(id))
+		return disabled(App.drawable(id))
 	}
 
 	fun disabled(d: Drawable?): ImageStated {
@@ -101,7 +102,7 @@ class ImageStated(var normal: Drawable? = null) {
 	}
 
 	fun enabled(@DrawableRes id: Int, enabled: Boolean = true): ImageStated {
-		return enabled(D.res(id), enabled)
+		return enabled(App.drawable(id), enabled)
 	}
 
 	fun enabled(d: Drawable?, enabled: Boolean = true): ImageStated {
@@ -118,7 +119,7 @@ class ImageStated(var normal: Drawable? = null) {
 	}
 
 	fun checked(@DrawableRes id: Int, checked: Boolean = true): ImageStated {
-		return checked(D.res(id), checked)
+		return checked(App.drawable(id), checked)
 	}
 
 	fun checked(d: Drawable?, checked: Boolean = true): ImageStated {
@@ -135,7 +136,7 @@ class ImageStated(var normal: Drawable? = null) {
 	}
 
 	fun focused(@DrawableRes id: Int, focused: Boolean = true): ImageStated {
-		return focused(D.res(id), focused)
+		return focused(App.drawable(id), focused)
 	}
 
 	fun focused(d: Drawable?, focused: Boolean = true): ImageStated {

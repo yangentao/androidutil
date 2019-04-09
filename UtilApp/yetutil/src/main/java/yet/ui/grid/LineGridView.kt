@@ -4,7 +4,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.widget.GridView
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 
 
 /**

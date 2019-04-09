@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.RelativeLayout
 import android.widget.TableLayout
 import android.widget.TableRow
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.*
 import yet.ui.viewcreator.createRelative
 import java.util.*

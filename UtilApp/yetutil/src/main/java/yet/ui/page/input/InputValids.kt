@@ -1,7 +1,7 @@
 package yet.ui.page.input
 
 import android.widget.EditText
-import yet.util.FormatPhone
+import dev.entao.base.ex.FormatPhone
 
 /**
  * Created by entaoyang@163.com on 2018-03-30.

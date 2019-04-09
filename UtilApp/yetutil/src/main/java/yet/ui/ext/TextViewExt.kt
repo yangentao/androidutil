@@ -15,8 +15,8 @@ import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
-import yet.ext.ColorListLight
-import yet.theme.Colors
+import dev.entao.appbase.ex.ColorListLight
+import dev.entao.appbase.ex.Colors
 import yet.theme.Space
 import yet.theme.TextSize
 import yet.ui.res.D

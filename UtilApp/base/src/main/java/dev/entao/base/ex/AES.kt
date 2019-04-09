@@ -1,4 +1,4 @@
-package yet.util
+package dev.entao.base.ex
 
 import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
@@ -27,44 +27,44 @@ import javax.crypto.spec.SecretKeySpec
  */
 class AES(val cipher: String) {
 
-	fun encode(key: ByteArray, data: ByteArray): ByteArray {
-		return doAES(Cipher.ENCRYPT_MODE, key, data)
-	}
+    fun encode(key: ByteArray, data: ByteArray): ByteArray {
+        return doAES(Cipher.ENCRYPT_MODE, key, data)
+    }
 
 
-	fun decode(key: ByteArray, data: ByteArray): ByteArray {
-		return doAES(Cipher.DECRYPT_MODE, key, data)
-	}
+    fun decode(key: ByteArray, data: ByteArray): ByteArray {
+        return doAES(Cipher.DECRYPT_MODE, key, data)
+    }
 
-	private fun doAES(mode: Int, key: ByteArray, data: ByteArray): ByteArray {
-		val cipher = Cipher.getInstance(cipher)
-		cipher.init(mode, SecretKeySpec(key, "AES"))
-		return cipher.doFinal(data)
-	}
+    private fun doAES(mode: Int, key: ByteArray, data: ByteArray): ByteArray {
+        val cipher = Cipher.getInstance(cipher)
+        cipher.init(mode, SecretKeySpec(key, "AES"))
+        return cipher.doFinal(data)
+    }
 
-	companion object {
-		@JvmStatic val ECB = AES("AES/ECB/NoPadding")
-		@JvmStatic val ECB_PKCS5 = AES("AES/ECB/PKCS5Padding")
-		@JvmStatic val ECB_ISO10126 = AES("AES/ECB/ISO10126Padding")
+    companion object {
+        val ECB = AES("AES/ECB/NoPadding")
+        val ECB_PKCS5 = AES("AES/ECB/PKCS5Padding")
+        val ECB_ISO10126 = AES("AES/ECB/ISO10126Padding")
 
-		@JvmStatic val CBC = AES("AES/CBC/NoPadding")
-		@JvmStatic val CBC_PKCS5 = AES("AES/CBC/PKCS5Padding")
-		@JvmStatic val CBC_ISO10126 = AES("AES/CBC/ISO10126Padding")
+        val CBC = AES("AES/CBC/NoPadding")
+        val CBC_PKCS5 = AES("AES/CBC/PKCS5Padding")
+        val CBC_ISO10126 = AES("AES/CBC/ISO10126Padding")
 
-		@JvmStatic val CFB = AES("AES/CFB/NoPadding")
-		@JvmStatic val CFB_PKCS5 = AES("AES/CFB/PKCS5Padding")
-		@JvmStatic val CFB_ISO10126 = AES("AES/CFB/ISO10126Padding")
-
-
-		@JvmStatic val OFB = AES("AES/OFB/NoPadding")
-		@JvmStatic val OFB_PKCS5 = AES("AES/OFB/PKCS5Padding")
-		@JvmStatic val OFB_ISO10126 = AES("AES/OFB/ISO10126Padding")
-
-		@JvmStatic val PCBC = AES("AES/PCBC/NoPadding")
-		@JvmStatic val PCBC_PKCS5 = AES("AES/PCBC/PKCS5Padding")
-		@JvmStatic val PCBC_ISO10126 = AES("AES/PCBC/ISO10126Padding")
+        val CFB = AES("AES/CFB/NoPadding")
+        val CFB_PKCS5 = AES("AES/CFB/PKCS5Padding")
+        val CFB_ISO10126 = AES("AES/CFB/ISO10126Padding")
 
 
-	}
+        val OFB = AES("AES/OFB/NoPadding")
+        val OFB_PKCS5 = AES("AES/OFB/PKCS5Padding")
+        val OFB_ISO10126 = AES("AES/OFB/ISO10126Padding")
+
+        val PCBC = AES("AES/PCBC/NoPadding")
+        val PCBC_PKCS5 = AES("AES/PCBC/PKCS5Padding")
+        val PCBC_ISO10126 = AES("AES/PCBC/ISO10126Padding")
+
+
+    }
 
 }

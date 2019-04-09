@@ -4,10 +4,10 @@ import android.content.Context
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
-import yet.theme.Colors
+import dev.entao.appbase.ex.ColorList
+import dev.entao.appbase.ex.ImageStated
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.*
-import yet.ui.res.ColorList
-import yet.ui.res.ImageStated
 import yet.ui.res.RectDraw
 import yet.ui.res.Shapes
 import yet.util.Task

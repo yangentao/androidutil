@@ -6,7 +6,7 @@ import android.graphics.Color
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ListView
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.genId
 import yet.ui.list.SimpleListView
 import yet.ui.res.D

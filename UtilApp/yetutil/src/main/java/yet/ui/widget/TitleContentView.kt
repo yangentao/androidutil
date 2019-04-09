@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import yet.ext.color
-import yet.theme.Colors
+import dev.entao.appbase.ex.color
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.*
 import yet.ui.list.views.TextDetailView
 import yet.ui.viewcreator.createTextView

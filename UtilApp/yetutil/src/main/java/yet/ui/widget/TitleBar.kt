@@ -8,7 +8,7 @@ import android.support.annotation.DrawableRes
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.*
 import yet.ui.res.*
 import yet.ui.viewcreator.*

@@ -2,8 +2,9 @@ package net.yet.kutil.ui.activities
 
 import android.os.Bundle
 import android.widget.ImageView
-import yet.ext.ARGB
-import yet.ext.RGB
+import dev.entao.appbase.ex.ARGB
+import dev.entao.appbase.ex.RGB
+import dev.entao.base.Sleep
 import yet.ui.activities.BaseActivity
 import yet.ui.ext.*
 import yet.ui.res.Shapes
@@ -11,7 +12,6 @@ import yet.ui.viewcreator.createRelative
 import yet.ui.viewcreator.imageView
 import yet.ui.viewcreator.textView
 import yet.ui.widget.pager.IndicatorPager
-import yet.util.Sleep
 import yet.util.Task
 import yet.util.Tick
 

@@ -3,7 +3,7 @@ package yet.ui.widget
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.widget.LinearLayout
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.*
 
 

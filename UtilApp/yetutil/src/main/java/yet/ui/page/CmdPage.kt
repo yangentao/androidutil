@@ -8,7 +8,7 @@ import android.widget.LinearLayout
 import dev.entao.base.getValue
 import dev.entao.base.labelProp_
 import dev.entao.base.nameProp
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.*
 import yet.ui.list.views.TextDetailView
 import yet.ui.list.views.TextItemView

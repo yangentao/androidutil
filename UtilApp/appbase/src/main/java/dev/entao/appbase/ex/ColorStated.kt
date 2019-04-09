@@ -1,4 +1,4 @@
-package yet.ui.res
+package dev.entao.appbase.ex
 
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.StateListDrawable

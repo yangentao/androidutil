@@ -1,10 +1,11 @@
-package yet.ui.res
+@file:Suppress("unused", "FunctionName")
+
+package dev.entao.appbase.ex
 
 import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
 import dev.entao.appbase.App
 import dev.entao.base.closeSafe
-import yet.ui.ext.dp
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
@@ -69,7 +70,7 @@ fun Bitmap.round(): Bitmap {
 
 //圆角bitmap, 保持高宽比
 fun Bitmap.round(cornerDp: Int): Bitmap {
-	val corner = dp(cornerDp).toFloat()
+	val corner = cornerDp.dp.toFloat()
 	val w = this.getScaledWidth(App.resource.displayMetrics)
 	val h = this.getScaledHeight(App.resource.displayMetrics)
 	val paint = Paint()
@@ -86,7 +87,7 @@ fun Bitmap.round(cornerDp: Int): Bitmap {
 
 // 高和宽较最小的值做直径,  圆角正方形
 fun Bitmap.roundSqure(cornerDp: Int): Bitmap {
-	val corner = dp(cornerDp).toFloat()
+	val corner = cornerDp.dp.toFloat()
 	val w = this.getScaledWidth(App.resource.displayMetrics)
 	val h = this.getScaledHeight(App.resource.displayMetrics)
 	val paint = Paint()

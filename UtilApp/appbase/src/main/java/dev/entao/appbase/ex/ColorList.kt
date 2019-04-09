@@ -1,7 +1,6 @@
-package yet.ui.res
-
+package dev.entao.appbase.ex
 import android.content.res.ColorStateList
-import dev.entao.log.Yog
+import android.util.Log
 
 /**
  * Created by entaoyang@163.com on 2016-10-31.
@@ -25,7 +24,7 @@ class ColorList(val normal: Int) {
 	private fun addColor(color: Int?, vararg states: Int) {
 		if (color != null) {
 			if (index >= 10) {
-				Yog.e("max color num is 10")
+				Log.e("colorlist","max color num is 10")
 				return
 			}
 			colors[index] = color

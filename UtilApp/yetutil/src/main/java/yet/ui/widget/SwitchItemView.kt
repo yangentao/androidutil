@@ -3,7 +3,7 @@ package yet.ui.widget
 import android.content.Context
 import android.widget.LinearLayout
 import android.widget.TextView
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.*
 import yet.ui.viewcreator.createTextViewB
 

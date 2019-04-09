@@ -3,9 +3,9 @@ package yet.ui.ext
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
-import yet.theme.Colors
-import yet.ui.res.Bmp
-import yet.ui.res.drawable
+import dev.entao.appbase.ex.Bmp
+import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.drawable
 
 /**
  * Created by entaoyang@163.com on 16/3/12.

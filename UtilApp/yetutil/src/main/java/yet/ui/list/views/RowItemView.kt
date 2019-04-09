@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.theme.TextSize
 import yet.ui.ext.*
 

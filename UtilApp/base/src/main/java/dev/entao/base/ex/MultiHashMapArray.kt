@@ -1,19 +1,18 @@
-package yet.util
+package dev.entao.base.ex
 
 import java.util.*
 import kotlin.collections.Map.Entry
 
 /**
- * 使用HashMap和LinkedList实现
- * 允许一个Key对应多个值的Map
- * 与Map接口基本一致
- * 注意: Value是否重复使用Value的equal方法来判断, 在put和remove方法中会用到Value.equal方法
+ * 使用HashMap和ArrayList实现
+ *
  * @param <K>
  * @param <V>
  * @author yangentao
 </V></K> */
-class MultiHashMap<K, V>(capacity: Int = 8) {
-	private val model: HashMap<K, LinkedList<V>> = HashMap(if (capacity < 8) 8 else capacity)
+class MultiHashMapArray<K, V>(capacity: Int = 8, listCapcity: Int = 8) {
+	private var listCapcity = if (listCapcity < 4) 4 else listCapcity
+	private val model: HashMap<K, ArrayList<V>> = HashMap(if (capacity < 8) 8 else capacity)
 
 	val isEmpty: Boolean
 		get() = model.isEmpty()
@@ -33,15 +32,15 @@ class MultiHashMap<K, V>(capacity: Int = 8) {
 	 * @return
 	 */
 	fun containsValue(value: V): Boolean {
-		for (ls in model.values) {
-			if (ls.contains(value)) {
+		for (value1 in model.values) {
+			if (value1.contains(value)) {
 				return true
 			}
 		}
 		return false
 	}
 
-	fun entrySet(): Set<Entry<K, LinkedList<V>>> {
+	fun entrySet(): Set<Entry<K, ArrayList<V>>> {
 		return model.entries
 	}
 
@@ -51,7 +50,7 @@ class MultiHashMap<K, V>(capacity: Int = 8) {
 	 * @param key
 	 * @return
 	 */
-	operator fun get(key: K): List<V>? {
+	operator fun get(key: K): ArrayList<V>? {
 		return model[key]
 	}
 
@@ -60,9 +59,18 @@ class MultiHashMap<K, V>(capacity: Int = 8) {
 	}
 
 	fun put(key: K, value: V) {
-		var ls: LinkedList<V>? = model[key]
+		var ls: ArrayList<V>? = model[key]
 		if (null == ls) {
-			ls = LinkedList()
+			ls = ArrayList(listCapcity)
+			model[key] = ls
+		}
+		ls.add(value)
+	}
+
+	fun putUnique(key: K, value: V) {
+		var ls: ArrayList<V>? = model[key]
+		if (null == ls) {
+			ls = ArrayList(listCapcity)
 			model[key] = ls
 		}
 		if (!ls.contains(value)) {
@@ -70,7 +78,7 @@ class MultiHashMap<K, V>(capacity: Int = 8) {
 		}
 	}
 
-	fun remove(key: K): LinkedList<V>? {
+	fun remove(key: K): ArrayList<V>? {
 		return model.remove(key)
 	}
 
@@ -85,8 +93,8 @@ class MultiHashMap<K, V>(capacity: Int = 8) {
 	 * @param value
 	 */
 	fun removeValue(value: V) {
-		for (ls in model.values) {
-			ls.remove(value)
+		for (v in model.values) {
+			v.remove(value)
 		}
 	}
 
@@ -94,7 +102,7 @@ class MultiHashMap<K, V>(capacity: Int = 8) {
 		return model.size
 	}
 
-	fun values(): Collection<LinkedList<V>> {
+	fun values(): Collection<ArrayList<V>> {
 		return model.values
 	}
 

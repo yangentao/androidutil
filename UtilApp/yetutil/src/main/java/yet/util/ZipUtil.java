@@ -1,6 +1,7 @@
 package yet.util;
 
-import yet.ui.res.Asset;
+
+import dev.entao.appbase.ex.Asset;
 
 import java.io.*;
 import java.util.zip.*;

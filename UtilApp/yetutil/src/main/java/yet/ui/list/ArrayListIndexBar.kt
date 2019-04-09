@@ -10,8 +10,8 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
+import dev.entao.appbase.ex.colorParse
 import dev.entao.base.BlockUnit
-import yet.ext.RGB
 import yet.ui.ext.*
 import yet.ui.res.Shapes
 import yet.ui.util.LayerUtil
@@ -26,7 +26,7 @@ class ArrayListIndexBar(context: Context, feedbackParentView: RelativeLayout) : 
 
 	private var selectView: View? = null
 	private val selectDrawable = bgDraw()
-	private val darkColor = RGB("#ccc")
+	private val darkColor = colorParse("#ccc")
 	private val normalColor = Color.TRANSPARENT
 	private var feedbackView: TextView
 
@@ -59,9 +59,9 @@ class ArrayListIndexBar(context: Context, feedbackParentView: RelativeLayout) : 
 			textColor_(Color.WHITE).textSize_(50).gravityCenter().backDrawable(
 					Shapes.rect {
 						cornerPx = dp(10)
-						fillColor = RGB("#555")
+						fillColor = colorParse("#555")
 						strokeWidthPx = dp(2)
-						strokeColor = RGB("#ddd")
+						strokeColor = colorParse("#ddd")
 					}
 
 			).gone()

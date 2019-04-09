@@ -15,7 +15,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import dev.entao.appbase.App
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.theme.ViewSize
 import yet.ui.ext.*
 import yet.ui.grid.SimpleGridView

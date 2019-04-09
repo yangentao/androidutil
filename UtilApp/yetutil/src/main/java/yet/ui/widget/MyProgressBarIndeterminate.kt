@@ -7,7 +7,7 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.view.View
 import dev.entao.appbase.App
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.util.Task
 
 /**

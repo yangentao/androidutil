@@ -5,9 +5,9 @@ import android.graphics.Bitmap
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import dev.entao.appbase.ex.round
 import yet.theme.Space
 import yet.ui.ext.*
-import yet.ui.res.round
 import yet.ui.viewcreator.createImageView
 import yet.ui.viewcreator.createTextViewA
 import yet.ui.viewcreator.createTextViewC

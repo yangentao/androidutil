@@ -10,7 +10,7 @@ import android.os.Bundle
 import dev.entao.appbase.App
 import dev.entao.log.Yog
 import dev.entao.json.YsonObject
-import yet.ext.extraString
+import dev.entao.base.ex.extraString
 
 /**
  * 明确带有Sys后缀的函数, 是面向Android系统的全局回调/调用

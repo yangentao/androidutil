@@ -4,12 +4,12 @@ import android.content.Context
 import android.view.View
 import android.widget.*
 import net.yet.R
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
+import dev.entao.appbase.ex.ImageStated
 import yet.theme.ViewSize
 import yet.ui.ext.*
 import yet.ui.page.BaseFragment
 import yet.ui.res.D
-import yet.ui.res.ImageStated
 import yet.ui.res.RectDraw
 import yet.ui.res.Res
 import yet.ui.util.TimeDown

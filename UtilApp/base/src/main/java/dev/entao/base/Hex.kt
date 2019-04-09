@@ -1,10 +1,10 @@
-package yet.util
+package dev.entao.base
 
 object Hex {
 	private val DICT = "0123456789ABCDEF"
 
 	// 8->08,  17->1f
-	fun encode(b: Int): String {
+	fun encodeByte(b: Int): String {
 		val arr = CharArray(2)
 		arr[0] = DICT[0x0f and (b ushr 4)]
 		arr[1] = DICT[0x0f and b]

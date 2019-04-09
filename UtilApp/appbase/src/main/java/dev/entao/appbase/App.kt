@@ -27,6 +27,7 @@ import android.util.DisplayMetrics
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import dev.entao.appbase.ex.color
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
@@ -39,6 +40,8 @@ import java.util.*
  */
 
 object App {
+    var themeColor = 0xFF34C4AA.color
+
     private var _inst: Application? = null
     val inst: Application
         get() {
@@ -145,14 +148,6 @@ object App {
 
     val prefer: Prefer by lazy { Prefer("app_global_prefer") }
 
-
-    fun drawable(@DrawableRes resId: Int): Drawable {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            resource.getDrawable(resId, inst.theme)
-        } else {
-            resource.getDrawable(resId)
-        }
-    }
 
     fun openOrCreateDatabase(name: String): SQLiteDatabase {
         return inst.openOrCreateDatabase(name, 0, null)
@@ -327,6 +322,13 @@ object App {
         }
     }
 
+    fun drawable(@DrawableRes resId: Int): Drawable {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            resource.getDrawable(resId, inst.theme)
+        } else {
+            resource.getDrawable(resId)
+        }
+    }
 
     object files {
 

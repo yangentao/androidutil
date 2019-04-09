@@ -24,6 +24,9 @@ import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
 import dev.entao.appbase.App
+import dev.entao.appbase.ex.Bmp
+import dev.entao.appbase.ex.saveJpg
+import dev.entao.appbase.ex.savePng
 import dev.entao.base.MyDate
 import dev.entao.base.getValue
 import dev.entao.log.Yog
@@ -36,9 +39,6 @@ import yet.ui.dialogs.DialogX
 import yet.ui.dialogs.GridConfig
 import yet.ui.dialogs.HorProgressDlg
 import yet.ui.dialogs.SpinProgressDlg
-import yet.ui.res.Bmp
-import yet.ui.res.saveJpg
-import yet.ui.res.savePng
 import yet.ui.widget.TabBar
 import yet.util.*
 import yet.util.app.Perm

@@ -5,8 +5,8 @@ import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.widget.RelativeLayout
 import android.widget.TextView
-import yet.ext.RGB
-import yet.theme.Colors
+import dev.entao.appbase.ex.RGB
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.*
 import yet.ui.res.D
 import yet.ui.res.Res

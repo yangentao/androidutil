@@ -9,9 +9,8 @@ import android.graphics.drawable.StateListDrawable
 import android.os.Build
 import android.support.annotation.DrawableRes
 import dev.entao.appbase.App
+import dev.entao.appbase.ex.*
 import net.yet.R
-import yet.ext.RGB
-import yet.theme.Colors
 import yet.theme.IconSize
 import yet.theme.ViewSize
 import yet.ui.ext.dp

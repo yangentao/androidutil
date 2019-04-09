@@ -5,7 +5,7 @@ import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.view.View
-import yet.theme.Colors
+import dev.entao.appbase.ex.Colors
 import yet.ui.ext.backColorWhite
 import yet.ui.res.Shapes
 import yet.util.Task
