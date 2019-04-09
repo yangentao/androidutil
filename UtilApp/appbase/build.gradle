@@ -12,17 +12,20 @@ android {
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.0.2711"
+        versionName "1.1.2.2711"
     }
 
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation project(':base')
-    implementation project(':log')
+    implementation 'dev.entao:base:1.1.2.2711'
+    implementation 'dev.entao:log:1.1.2.2711'
+//    implementation project(':base')
+//    implementation project(':log')
 }
 
 
@@ -43,7 +46,7 @@ uploadArchives {
             repository(url: 'http://app800.cn/maven/repository/releases/') {
                 authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
             }
-            pom.artifactId = "yapp"
+            pom.artifactId = "appbase"
             pom.groupId = project.group //'dev.entao'
             pom.version = android.defaultConfig.versionName
             pom.packaging = 'aar'

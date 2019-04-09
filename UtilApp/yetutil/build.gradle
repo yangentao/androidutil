@@ -16,7 +16,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.9.2711"
+        versionName "1.1.2.2711"
 
         //multiDexEnabled true
     }
@@ -40,14 +40,18 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
-//    implementation 'dev.entao:yapp:1.0.0.2711'
-//    implementation 'dev.entao:yog:1.1.0.2711'
-    implementation project(':log')
-    implementation project(':base')
-    implementation project(':appbase')
-    implementation project(':json')
-    implementation project(':sql')
-    implementation project(':http')
+
+//    implementation 'dev.entao:json:1.1.2.2711'
+    implementation 'dev.entao:sql:1.1.2.2711'
+    implementation 'dev.entao:http:1.1.2.2711'
+
+
+//    implementation project(':log')
+//    implementation project(':base')
+//    implementation project(':appbase')
+//    implementation project(':json')
+//    implementation project(':sql')
+//    implementation project(':http')
 //    implementation project(':pinyin')
 }
 

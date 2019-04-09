@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import dev.entao.appbase.ex.MyTimer
 import dev.entao.appbase.ex.Shapes
 import dev.entao.appbase.ex.grayColor
 import dev.entao.appbase.ex.sized
@@ -17,7 +18,6 @@ import yet.ui.res.D
 import yet.ui.viewcreator.createImageView
 import yet.ui.viewcreator.imageView
 import yet.ui.viewcreator.linearHor
-import yet.util.MyTimer
 import yet.util.Task
 
 class IndicatorPager(context: Context) : RelativeLayout(context) {
