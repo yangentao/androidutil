@@ -1,10 +1,11 @@
 package dev.entao.util.app
 
 import android.app.Activity
-import android.app.Fragment
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
+import android.support.v4.app.Fragment
+import dev.entao.ui.ext.act
 
 
 fun Context.hasPerm(p: String): Boolean {
@@ -50,5 +51,5 @@ fun Fragment.needPerm(pSet: Set<String>, block: (Map<String, Boolean>) -> Unit) 
 
 
 fun Fragment.hasPerm(p: String): Boolean {
-	return activity.hasPerm(p)
+	return act.hasPerm(p)
 }

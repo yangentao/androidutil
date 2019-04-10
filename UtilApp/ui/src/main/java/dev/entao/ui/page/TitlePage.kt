@@ -13,13 +13,14 @@ import dev.entao.ui.activities.TabBarActivity
 import dev.entao.ui.ext.*
 import dev.entao.ui.viewcreator.createLinearVertical
 import dev.entao.ui.widget.BottomBar
+import dev.entao.ui.widget.LinearLayoutX
 import dev.entao.ui.widget.TitleBar
 import dev.entao.ui.widget.TopProgressBar
 import dev.entao.util.Task
 import dev.entao.util.app.OS
 
 open class TitlePage : BaseFragment(), Progress {
-    lateinit var rootView: LinearLayout
+    lateinit var rootView: LinearLayoutX
         private set
 
     lateinit var titleBar: TitleBar
@@ -46,19 +47,20 @@ open class TitlePage : BaseFragment(), Progress {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        rootView = createLinearVertical()
+        rootView = LinearLayoutX(act)
+	    rootView.vertical()
         rootView.backColorWhite()
         if (hasTopProgress) {
-            val b = TopProgressBar(activity).gone()
+            val b = TopProgressBar(act).gone()
             rootView.addView(b, LParam.WidthFill.height(6))
             topProgress = b
         }
-        titleBar = TitleBar(activity)
+        titleBar = TitleBar(act)
         rootView.addView(titleBar, LParam.WidthFill.height(TitleBar.HEIGHT))
 
 
         if (hasSnak) {
-            val v = Snack(activity).gone()
+            val v = Snack(act).gone()
             rootView.addView(v, LParam.WidthFill.HeightWrap.GravityCenterVertical)
             snack = v
         }
@@ -73,7 +75,7 @@ open class TitlePage : BaseFragment(), Progress {
             rootView.addView(contentView, LParam.WidthFill.height(0).weight(1))
         }
         if (hasBottomBar) {
-            val bar = BottomBar(activity)
+            val bar = BottomBar(act)
             rootView.addView(bar, LParam.WidthFill.height(BottomBar.HEIGHT))
             bottomBar = bar
         }
@@ -84,7 +86,7 @@ open class TitlePage : BaseFragment(), Progress {
             }
         }
 
-        onCreateContent(this.activity, contentView)
+        onCreateContent(this.act, contentView)
         titleBar.commit()
         bottomBar?.commit()
         if (OS.GE50) {

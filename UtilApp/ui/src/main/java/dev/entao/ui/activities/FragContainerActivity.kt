@@ -1,14 +1,15 @@
-package dev.entao.utilapp
+package dev.entao.ui.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.FrameLayout
 import dev.entao.log.logd
+import dev.entao.ui.R
 import dev.entao.ui.ext.fragMgr
 import dev.entao.ui.page.BaseFragment
 import dev.entao.ui.viewcreator.createFrame
 
-class MainActivity : AppCompatActivity() {
+class FragContainerActivity : AppCompatActivity() {
 
 	private lateinit var containerView: FrameLayout
 
@@ -16,8 +17,6 @@ class MainActivity : AppCompatActivity() {
 		super.onCreate(savedInstanceState)
 		containerView = this.createFrame()
 		setContentView(containerView)
-
-		push(MainPage())
 	}
 
 
@@ -59,6 +58,12 @@ class MainActivity : AppCompatActivity() {
 			fragMgr.popBackStack()
 		} else {
 			finish()
+		}
+	}
+
+	fun popToBottom() {
+		while (fragMgr.backStackEntryCount > 1) {
+			fragMgr.popBackStackImmediate()
 		}
 	}
 

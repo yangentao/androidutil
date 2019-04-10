@@ -1,9 +1,12 @@
+@file:Suppress("unused")
+
 package dev.entao.ui.dialogs
 
 import android.app.Activity
 import android.app.Dialog
 import android.view.Gravity
 import dev.entao.appbase.ex.dp
+import dev.entao.ui.ext.act
 import dev.entao.ui.ext.inputTypeNumber
 import dev.entao.ui.ext.textS
 import dev.entao.ui.page.BaseFragment
@@ -35,16 +38,16 @@ fun Dialog.gravityBottom(margin: Int = 0): Dialog {
 
 
 fun BaseFragment.confirm(title: String?, msg: String, block: () -> Unit) {
-	DialogX.confirm(activity, msg, title, block)
+	DialogX.confirm(act, msg, title, block)
 }
 
 
 fun BaseFragment.showInput(title: String, defaultValue: String = "", block: (String) -> Unit) {
-	DialogX.input(activity, title, defaultValue, block)
+	DialogX.input(act, title, defaultValue, block)
 }
 
 fun BaseFragment.showInputInteger(title: String, n: Long = 0, block: (Long) -> Unit) {
-	val d = DialogX(activity)
+	val d = DialogX(act)
 	d.title(title)
 	d.bodyInput {
 		this.textS = n.toString()
@@ -64,12 +67,12 @@ fun BaseFragment.showInputInteger(title: String, n: Long = 0, block: (Long) -> U
 }
 
 fun BaseFragment.showInputMultiLine(title: String, defaultValue: String = "", block: (String) -> Unit) {
-	DialogX.inputLines(activity, title, defaultValue, block)
+	DialogX.inputLines(act, title, defaultValue, block)
 }
 
 fun BaseFragment.alert(msg: String, title: String? = null, dismissBlock: () -> Unit = {}) {
 	if (activity != null) {
-		DialogX.alert(activity, msg, title, dismissBlock)
+		DialogX.alert(act, msg, title, dismissBlock)
 	} else {
 		toast(msg)
 	}

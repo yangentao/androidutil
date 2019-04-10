@@ -67,7 +67,7 @@ abstract class CmdPage : TitlePage() {
 	}
 
 	fun textItemView(block: TextItemView.() -> Unit): TextItemView {
-		val v = TextItemView(activity)
+		val v = TextItemView(act)
 		v.backColorWhiteFade()
 		v.textSizeB()
 		v.textColorMajor()
@@ -76,7 +76,7 @@ abstract class CmdPage : TitlePage() {
 	}
 
 	fun textDetailItemView(block: TextDetailView.() -> Unit): TextDetailView {
-		val v = TextDetailView(activity)
+		val v = TextDetailView(act)
 		v.backColorWhiteFade()
 		v.textView.textSizeB()
 		v.detailView.textSizeC()
@@ -161,7 +161,7 @@ abstract class CmdPage : TitlePage() {
 
 	fun cmdUser(cmd: String = "user"): Cmd {
 		return cmd(cmd) {
-			val iv = UserItemView(activity)
+			val iv = UserItemView(act)
 			iv.bindValues("点击登录", "")
 			view = iv
 		}

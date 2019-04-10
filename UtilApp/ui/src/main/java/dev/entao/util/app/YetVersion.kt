@@ -9,6 +9,7 @@ import dev.entao.base.Progress
 import dev.entao.http.Http
 import dev.entao.json.YsonObject
 import dev.entao.ui.dialogs.DialogX
+import dev.entao.ui.ext.act
 import dev.entao.ui.ext.openActivity
 import dev.entao.ui.page.BaseFragment
 import dev.entao.util.Task
@@ -66,7 +67,7 @@ class YetVersion(val jo: YsonObject) {
                         lastCheckUpdate = now
                         if (!isIgnored(v.versionCode)) {
                             if (page.activity != null) {
-                                confirmInstall(page.activity, v, true)
+                                confirmInstall(page.act, v, true)
                             }
                         }
                     }

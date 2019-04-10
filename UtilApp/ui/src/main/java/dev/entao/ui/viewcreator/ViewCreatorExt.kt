@@ -1,9 +1,10 @@
 package dev.entao.ui.viewcreator
 
-import android.app.Fragment
 import android.content.Context
+import android.support.v4.app.Fragment
 import android.view.View
 import android.view.ViewGroup
+import dev.entao.ui.ext.act
 import dev.entao.ui.ext.genId
 
 /**
@@ -41,7 +42,7 @@ fun View.createView(): View {
 }
 
 fun Fragment.createView(): View {
-	return this.activity.createView()
+	return this.act.createView()
 }
 
 fun Context.createView(): View {

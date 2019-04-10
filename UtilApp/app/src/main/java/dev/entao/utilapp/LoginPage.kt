@@ -7,22 +7,26 @@ import dev.entao.ui.ext.*
 import dev.entao.ui.page.TitlePage
 import dev.entao.ui.viewcreator.textView
 
-class MainPage : TitlePage() {
+class LoginPage : TitlePage() {
 
 	override fun onCreateContent(context: Context, contentView: LinearLayout) {
 		super.onCreateContent(context, contentView)
 		titleBar {
-			title("Main")
+			title("Login")
 			showBack().onClick = {
-				this@MainPage.onBackPressed()
+				this@LoginPage.onBackPressed()
+
 			}
-			rightText("Push").onClick = {
-				(activity as MainActivity).push(LoginPage())
+			rightText("Pop").onClick = {
+				(activity as MainActivity).pop()
+			}
+			rightText("Dialog").onClick = {
+				alert("Hello")
 			}
 		}
 
-		contentView.textView(LParam.WidthFill.height(300).marginY(50)){
-			text = "Main"
+		contentView.textView(LParam.WidthFill.height(300).marginY(50)) {
+			text = "Login"
 			textColorRed()
 			gravityCenter()
 		}
@@ -30,7 +34,9 @@ class MainPage : TitlePage() {
 
 
 	override fun onBackPressed(): Boolean {
-		logd("MainPage", "onBackPressed")
-		return super.onBackPressed()
+		logd("LoginPage", "onBackPressed")
+		fragMgr.popBackStack()
+//		return super.onBackPressed()
+		return true
 	}
 }

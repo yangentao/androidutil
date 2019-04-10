@@ -11,6 +11,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <meta-data android:name="yang" android:value="entao"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

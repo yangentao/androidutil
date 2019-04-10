@@ -34,7 +34,7 @@ open class DrawerActivity : dev.entao.ui.activities.BaseActivity() {
 	@Suppress("DEPRECATION")
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_NONE).commit()
+		fragMgr.beginTransaction().setTransition(FragmentTransaction.TRANSIT_NONE).commit()
 
 		drawerLayout = DrawerLayout(this).genId()
 
@@ -60,7 +60,7 @@ open class DrawerActivity : dev.entao.ui.activities.BaseActivity() {
 		rootLinearLayout.addViewParam(containerFrameLayout) {
 			widthFill().height(0).weight(1f)
 		}
-		fragmentHelper = FragmentHelper(fragmentManager, containerId)
+		fragmentHelper = FragmentHelper(fragMgr, containerId)
 	}
 
 	override fun onPostCreate(savedInstanceState: Bundle?) {

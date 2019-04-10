@@ -8,6 +8,7 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.LinearLayout
+import dev.entao.ui.activities.Pages
 import dev.entao.ui.ext.HeightFlex
 import dev.entao.ui.ext.LParam
 import dev.entao.ui.ext.WidthFill
@@ -89,7 +90,7 @@ open class WebPage : TitlePage() {
 			val page = WebPage()
 			page.rootUrl = "file:///android_asset/$assetPath"
 			page.title = title
-			dev.entao.ui.activities.Pages.open(context, page)
+			 Pages.open(context, page)
 			return page
 		}
 	}

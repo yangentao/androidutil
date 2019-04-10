@@ -44,7 +44,7 @@ class DrawerTabBarContainerActivity : dev.entao.ui.activities.BaseActivity() {
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_NONE).commit()
+        fragMgr.beginTransaction().setTransition(FragmentTransaction.TRANSIT_NONE).commit()
 
         drawerLayout = DrawerLayout(this).genId()
 
@@ -73,7 +73,7 @@ class DrawerTabBarContainerActivity : dev.entao.ui.activities.BaseActivity() {
         }
         fragLayoutId = containerView.id
 
-        fragmentHelper = FragmentHelper(fragmentManager, fragLayoutId)
+        fragmentHelper = FragmentHelper(fragMgr, fragLayoutId)
 
         tabBar = TabBar(this)
         tabBar.onSelect = {

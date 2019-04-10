@@ -1,12 +1,15 @@
 package dev.entao.ui.ext
 
 import android.app.Activity
-import android.app.Fragment
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
+import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentActivity
+import android.support.v4.app.FragmentManager
+import android.support.v7.app.AppCompatActivity
 import kotlin.reflect.KClass
 
 /**
@@ -22,9 +25,9 @@ fun Context.openActivity(n: Intent) {
 
 
 fun Fragment.openActivity(cls: KClass<out Activity>, block: Intent.() -> Unit = {}) {
-	val n = Intent(activity, cls.java)
+	val n = Intent(act, cls.java)
 	n.block()
-	activity.openActivity(n)
+	act.openActivity(n)
 }
 
 fun Context.openActivity(cls: KClass<out Activity>, block: Intent.() -> Unit = {}) {
@@ -34,9 +37,9 @@ fun Context.openActivity(cls: KClass<out Activity>, block: Intent.() -> Unit = {
 }
 
 fun Fragment.openActivity(cls: Class<out Activity>, block: Intent.() -> Unit = {}) {
-	val n = Intent(activity, cls)
+	val n = Intent(act, cls)
 	n.block()
-	activity.openActivity(n)
+	act.openActivity(n)
 }
 
 fun Context.openActivity(cls: Class<out Activity>, block: Intent.() -> Unit = {}) {
@@ -72,3 +75,20 @@ fun Context.openApk(uri: Uri) {
 	}
 
 }
+
+val AppCompatActivity.fragMgr: FragmentManager
+	get() {
+		return this.supportFragmentManager
+	}
+
+
+val android.support.v4.app.Fragment.fragMgr: FragmentManager
+	get() {
+		return this.requireFragmentManager()
+	}
+
+val AppCompatActivity.currentPage: Fragment? get() = fragMgr.fragments?.lastOrNull()
+
+
+val android.support.v4.app.Fragment.act: FragmentActivity get() = this.requireActivity()
+

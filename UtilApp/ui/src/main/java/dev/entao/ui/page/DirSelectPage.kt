@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import dev.entao.appbase.App
 import dev.entao.log.Yog
 import dev.entao.ui.R
+import dev.entao.ui.ext.act
 import dev.entao.ui.list.ListPage
 import dev.entao.ui.list.views.TextDetailView
 import java.io.File
@@ -41,7 +42,7 @@ class DirSelectPage : ListPage() {
 
 	override fun beforeSetAdapter() {
 		super.beforeSetAdapter()
-		val v = TextDetailView(activity)
+		val v = TextDetailView(act)
 		v.setValues("上级目录..", null)
 		listView.addHeaderView(v)
 	}
@@ -53,7 +54,7 @@ class DirSelectPage : ListPage() {
 	private fun goUp() {
 		val f = file.parentFile
 		if (f != null) {
-			DirSelectPage.open(activity, f, onValue)
+			DirSelectPage.open(act, f, onValue)
 			finish()
 		}
 	}
@@ -72,7 +73,7 @@ class DirSelectPage : ListPage() {
 	override fun onItemClickAdapter(view: View, item: Any, position: Int) {
 		item as File
 		if (item.isDirectory) {
-			DirSelectPage.open(activity, item, onValue)
+			DirSelectPage.open(act, item, onValue)
 			finish()
 		}
 	}

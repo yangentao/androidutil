@@ -1,10 +1,13 @@
+@file:Suppress("unused")
+
 package dev.entao.ui.viewcreator
 
-import android.app.Fragment
 import android.content.Context
+import android.support.v4.app.Fragment
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import dev.entao.ui.ext.act
 import dev.entao.ui.ext.genId
 import dev.entao.ui.ext.horizontal
 import dev.entao.ui.ext.vertical
@@ -73,7 +76,7 @@ fun View.createLinear(): LinearLayout {
 }
 
 fun Fragment.createLinear(): LinearLayout {
-	return this.activity.createLinear()
+	return this.act.createLinear()
 }
 
 fun Context.createLinear(): LinearLayout {
@@ -86,7 +89,7 @@ fun View.createLinearVertical(): LinearLayout {
 }
 
 fun Fragment.createLinearVertical(): LinearLayout {
-	return this.activity.createLinearVertical()
+	return this.act.createLinearVertical()
 }
 
 fun Context.createLinearVertical(): LinearLayout {
@@ -98,7 +101,7 @@ fun View.createLinearHorizontal(): LinearLayout {
 }
 
 fun Fragment.createLinearHorizontal(): LinearLayout {
-	return this.activity.createLinearHorizontal()
+	return this.act.createLinearHorizontal()
 }
 
 fun Context.createLinearHorizontal(): LinearLayout {

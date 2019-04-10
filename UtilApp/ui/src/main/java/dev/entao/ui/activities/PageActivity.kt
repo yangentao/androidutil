@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.KeyEvent
 import android.widget.FrameLayout
+import dev.entao.ui.ext.fragMgr
 import dev.entao.ui.page.BaseFragment
 import dev.entao.ui.viewcreator.createFrame
 import dev.entao.util.Msg
@@ -14,7 +15,7 @@ import dev.entao.util.Msg
  */
 
 
-open class PageActivity : dev.entao.ui.activities.BaseActivity() {
+open class PageActivity : BaseActivity() {
 	private lateinit var fragmentContainerView: FrameLayout
 	var currentFragment: BaseFragment? = null
 
@@ -33,7 +34,7 @@ open class PageActivity : dev.entao.ui.activities.BaseActivity() {
 		if (wColor != null) {
 			window.setBackgroundDrawable(ColorDrawable(wColor))
 		}
-		fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_NONE).commit()
+		fragMgr.beginTransaction().setTransition(FragmentTransaction.TRANSIT_NONE).commit()
 
 		fragmentContainerView = this.createFrame()
 		setContentView(fragmentContainerView)
@@ -84,10 +85,10 @@ open class PageActivity : dev.entao.ui.activities.BaseActivity() {
 	fun replaceFragment(fragment: BaseFragment) {
 		val p = currentFragment
 		if (p != null) {
-            dev.entao.ui.activities.Pages.removePage(p)
+			dev.entao.ui.activities.Pages.removePage(p)
 		}
 		this.currentFragment = fragment
-		fragmentManager.beginTransaction().replace(fragmentContainerId, fragment).commitAllowingStateLoss()
+		fragMgr.beginTransaction().replace(fragmentContainerId, fragment).commitAllowingStateLoss()
 	}
 
 	override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {

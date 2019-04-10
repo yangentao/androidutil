@@ -1,7 +1,7 @@
 package dev.entao.ui.viewcreator
 
-import android.app.Fragment
 import android.content.Context
+import android.support.v4.app.Fragment
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -49,7 +49,7 @@ fun View.createButton(text: String = ""): Button {
 }
 
 fun Fragment.createButton(text: String = ""): Button {
-	return this.activity.createButton(text)
+	return this.act.createButton(text)
 }
 
 fun Context.createButton(text: String = ""): Button {

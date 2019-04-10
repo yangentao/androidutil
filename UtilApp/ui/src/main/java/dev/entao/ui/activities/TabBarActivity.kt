@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.widget.FrameLayout
 import android.widget.LinearLayout
-import dev.entao.ui.ext.addViewParam
-import dev.entao.ui.ext.heightDp
-import dev.entao.ui.ext.weight
-import dev.entao.ui.ext.widthFill
+import dev.entao.ui.ext.*
 import dev.entao.ui.page.BaseFragment
 import dev.entao.ui.util.FragmentHelper
 import dev.entao.ui.viewcreator.createFrame
@@ -17,11 +14,12 @@ import dev.entao.ui.viewcreator.createLinearVertical
 import dev.entao.ui.widget.TabBar
 import java.util.*
 import kotlin.collections.set
+
 /**
  * Created by entaoyang@163.com on 16/3/13.
  */
 
-open class TabBarActivity : dev.entao.ui.activities.BaseActivity() {
+open class TabBarActivity : BaseActivity() {
 	lateinit var rootView: LinearLayout
 		private set
 	lateinit var containerView: FrameLayout
@@ -39,7 +37,7 @@ open class TabBarActivity : dev.entao.ui.activities.BaseActivity() {
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_NONE).commit()
+		fragMgr.beginTransaction().setTransition(FragmentTransaction.TRANSIT_NONE).commit()
 		rootView = this.createLinearVertical()
 		this.setContentView(rootView)
 
@@ -49,7 +47,7 @@ open class TabBarActivity : dev.entao.ui.activities.BaseActivity() {
 		}
 		fragLayoutId = containerView.id
 
-		fragmentHelper = FragmentHelper(fragmentManager, fragLayoutId)
+		fragmentHelper = FragmentHelper(fragMgr, fragLayoutId)
 
 		tabBar = TabBar(this)
 
