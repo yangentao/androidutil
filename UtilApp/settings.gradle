@@ -1,1 +1,1 @@
-include ':app', ':ui', ':qr', ':gaode', ':log', ':appbase', ':json', ':base', ':orm', ':http', ':pinyin'
+include ':app',  ':qr', ':gaode'

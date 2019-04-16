@@ -2,10 +2,10 @@ package dev.entao.utilapp
 
 import android.content.Context
 import android.widget.LinearLayout
-import dev.entao.log.logd
+import dev.entao.ui.creator.textView
+import dev.entao.ui.dialogs.alert
 import dev.entao.ui.ext.*
 import dev.entao.ui.page.TitlePage
-import dev.entao.ui.viewcreator.textView
 
 class LoginPage : TitlePage() {
 
@@ -13,10 +13,7 @@ class LoginPage : TitlePage() {
 		super.onCreateContent(context, contentView)
 		titleBar {
 			title("Login")
-			showBack().onClick = {
-				this@LoginPage.onBackPressed()
-
-			}
+			showBack()
 			rightText("Pop").onClick = {
 				(activity as MainActivity).pop()
 			}
@@ -32,11 +29,4 @@ class LoginPage : TitlePage() {
 		}
 	}
 
-
-	override fun onBackPressed(): Boolean {
-		logd("LoginPage", "onBackPressed")
-		fragMgr.popBackStack()
-//		return super.onBackPressed()
-		return true
-	}
 }

@@ -16,6 +16,14 @@ android {
         versionCode 1
         versionName "1.1.5.2711"
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -26,7 +34,7 @@ dependencies {
     implementation 'com.amap.api:search:5.7.0'
     implementation 'com.amap.api:location:3.8.0'
 
-    implementation 'dev.entao:ui:1.1.6.2711'
+    implementation 'dev.entao:ui:2.0.3.2711'
 
 //    implementation project(':yetutil')
 //    implementation project(':sql')
